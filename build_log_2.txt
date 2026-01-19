@@ -1,0 +1,15 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Stoic_Companion.xcodeproj -scheme "Stoic_Companion Watch App" -destination "platform=watchOS Simulator,name=Apple Watch Series 10 (46mm)" clean build
+
+2026-01-19 13:51:18.005 xcodebuild[3483:1784688] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-01-19 13:52:18.032 xcodebuild[3483:1784688] Writing error result bundle to /var/folders/fy/nt00dfqn49x7tsn2b3kb67bc0000gn/T/ResultBundle_2026-19-01_13-52-0018.xcresult
+xcodebuild: error: Unable to find a device matching the provided destination specifier:
+		{ platform:watchOS Simulator, OS:latest, name:Apple Watch Series 10 (46mm) }
+
+	The requested device could not be found because no available devices matched the request.
+
+	Available destinations for the "Stoic_Companion Watch App" scheme:
+		{ platform:watchOS, id:dvtdevice-DVTiOSDevicePlaceholder-watchos:placeholder, name:Any watchOS Device }
+		{ platform:watchOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-watchsimulator:placeholder, name:Any watchOS Simulator Device }
+		{ platform:watchOS Simulator, arch:arm64, id:2687D77A-E409-405B-BD0B-EB5E00500EAA, OS:26.2, name:Apple Watch Series 9 }
+		{ platform:iOS Simulator, arch:arm64, id:0661A13F-C3AE-46BD-B623-CE5E05F9DABE, OS:26.2, name:iPhone 15 Pro }

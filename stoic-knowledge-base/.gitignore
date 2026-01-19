@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+ENV/
+.env
+
+# Data files (too large for git)
+data/raw/
+data/embeddings/supabase_rows.json
+*.json.gz
+
+# Local databases
+database/chroma_db/
+database/lance_db/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Railway local config
+.railway/

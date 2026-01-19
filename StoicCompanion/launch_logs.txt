@@ -1,0 +1,122 @@
+getpwuid_r did not find a match for uid 501
+Filtering the log data using "sender == "Carousel" OR process == "com.stoic.companion.watchkitapp""
+Timestamp               Ty Process[PID:TID]
+2026-01-15 15:49:35.850 A  Carousel[64861:b0f40] handleOpenApplicationRequest:
+2026-01-15 15:49:35.850 Df Carousel[64861:b0f40] [com.apple.Carousel:ui] (IOSSHLWorkspace) handleOpenApplicationRequest: <FBSystemServiceOpenApplicationRequest: 0x10b2260d0; trusted: YES; bundleID: com.stoic.companion.watchkitapp; client: osservice<com.apple.CoreSimulator.bridge>:64897>
+2026-01-15 15:49:35.850 Df Carousel[64861:b0f40] [com.apple.Carousel:passcode] Device is NOT locked
+2026-01-15 15:49:35.850 Df Carousel[64861:b0f40] [com.apple.Carousel:passcode] isBlocked: device is NOT passcode blocked
+2026-01-15 15:49:35.851 Df Carousel[64861:b0f40] [com.apple.Carousel:passcode] Device is NOT locked
+2026-01-15 15:49:35.851 Df Carousel[64861:b0f40] [com.apple.Carousel:passcode] isBlocked: device is NOT passcode blocked
+2026-01-15 15:49:35.852 Df Carousel[64861:b0f40] [com.apple.Carousel:workspace] Using explicit launch intent foreground-interactive for com.stoic.companion.watchkitapp
+2026-01-15 15:49:35.858 Df Carousel[64861:b0f40] [com.apple.Carousel:watch_gestures] observing scene com.stoic.companion.watchkitapp
+2026-01-15 15:49:35.862 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction _begin
+2026-01-15 15:49:35.865 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) beginPresentingState: <CSLMainUIState: 0x10f83e140; type: App; bundleIdentifier: com.stoic.companion.watchkitapp>, fromState: <CSLMainUIState: 0x10f127d40; type: Clock>
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) calling into -[CUISScenePresentationCoordinator beginTransitionToPresentations:withCompletion:]
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] provider:<CSLMainUIScenePresentationProvider:0x10f12cc40> requested to begin transition to presentations (
+    "<CUISScenePresentation: 0x10b201380; sceneIdentifier: com.apple.Carousel; state: animatingIn; level: -1>",
+    "<CUISScenePresentation: 0x10b2016e0; sceneIdentifier: com.apple.clockface; state: visible; level: -1>",
+    "<CUISScenePresentation: 0x10b203a50; sceneIdentifier: com.stoic.companion.watchkitapp; state: visible; level: -1>"
+), transitioning:[<CSLMainUIScenePresentationProvider; elapsed: 0.00s; completions: [5B86EB4A-4309-4BE2-BF2D-8E159A2F5EB6]>]
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _presentationProviders:{(
+    <CSLMainUIScenePresentationProvider: 0x10f12cc40>
+)} transitioning:[<CSLMainUIScenePresentationProvider; elapsed: 0.00s; completions: [5B86EB4A-4309-4BE2-BF2D-8E159A2F5EB6]>]
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _sortedScenePresentations is (
+    "<CSLScenePresentationAndProvider: 0x10f0b4d60; scenePresentation: <CUISScenePresentation: 0x10b201380; sceneIdentifier: com.apple.Carousel; state: animatingIn; level: -1>; sceneProvider: \134"<CSLMainUIScenePresentationProvider: 0x10f12cc40>\134"; levelWithinProvider: 3>",
+    "<CSLScenePresentationAndProvider: 0x10f0b5120; scenePresentation: <CUISScenePresentation: 0x10b2016e0; sceneIdentifier: com.apple.clockface; state: visible; level: -1>; sceneProvider: \134"<CSLMainUIScenePresentationProvider: 0x10f12cc40>\134"; levelWithinProvider: 2>",
+    "<CSLScenePresentationAndProvider: 0x10f0b6de0; scenePresentation: <CUISScenePresentation: 0x10b203a50; sceneIdentifier: com.stoic.companion.watchkitapp; state: visible; level: -1>; sceneProvider: \134"<CSLMainUIScenePresentationProvider: 0x10f12cc40>\134"; levelWithinProvider: 1>"
+)
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _presentationForFBScenes: scene (
+    "com.apple.Carousel",
+    "com.apple.clockface",
+    "com.stoic.companion.watchkitapp"
+), firstSceneSupportsAlwaysOn=YES, _alwaysOnEnabled=YES
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] processScenePresentations – updated presentation (no session) to <BLSHBacklightEnvironmentPresentation: 0x10b201860> {
+    <0x101fd9600:com.apple.Carousel>;
+    <0x10f108f00:com.apple.clockface>;
+    <0x10fb9b700:com.stoic.companion.watchkitapp>;
+    <0x10b026120:StatusBar-com.stoic.companion.watchkitapp>;
+}
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] calling completion for completionID 5B86EB4A-4309-4BE2-BF2D-8E159A2F5EB6
+2026-01-15 15:49:35.866 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) received callback from -[CUISScenePresentationCoordinator beginTransitionToPresentations:withCompletion:], completing
+2026-01-15 15:49:35.867 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction _beginCoordinated
+2026-01-15 15:49:35.867 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction tracking navigation completion because we have requested a completion handler
+2026-01-15 15:49:35.868 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction transitioning to state <CSLMainUIState: 0x10f83e140; type: App; bundleIdentifier: com.stoic.companion.watchkitapp>, for reason openURL, animated YES
+2026-01-15 15:49:35.868 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] MainUIStateMachine transitioned to state Application com.stoic.companion.watchkitapp, previous Clock
+2026-01-15 15:49:35.869 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Update from activeController to transitioning
+2026-01-15 15:49:35.869 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) willBeginTransitioning
+2026-01-15 15:49:35.869 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Gesture mainUITransitionState is settled on clock: false, mainUITransitionState is transitioning to clock: false, mainUITransitionState is transitioning from clock to home screen false,  notificationCenterVisibilityState is visible: false
+2026-01-15 15:49:35.870 Df Carousel[64861:b0f40] [com.apple.Carousel:scroll_center] CSLGlobalScrollCenterViewController updated gesture flags to none
+2026-01-15 15:49:35.870 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Starting transition <Carousel.ModalTransition: 0x10fbca040> from active controller
+2026-01-15 15:49:35.870 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Adding view controllers: {(
+    <Carousel.ApplicationContainerViewController: 0x101e0b700>
+)}
+2026-01-15 15:49:35.871 Df Carousel[64861:b0f40] [com.apple.Carousel:statusbar] Scene did update from style clock to visible
+2026-01-15 15:49:36.032 Df Carousel[64861:b8cef] [com.apple.Carousel:prelaunch] com.stoic.companion.watchkitapp has exited for reason 64; next permitted launch date after 2 exits is in 120.0s at Thu Jan 15 15:51:36 2026
+2026-01-15 15:49:36.032 Df Carousel[64861:b8cef] [com.apple.Carousel:prelaunch] com.apple.NanoMusic cannot be launched suspended by policy <CSLFirstUnlockSuspendedLaunchPolicy: 0x105890b00>
+2026-01-15 15:49:36.032 Df Carousel[64861:b8cef] [com.apple.Carousel:prelaunch] com.apple.SessionTrackerApp cannot be launched suspended by policy <CSLFirstUnlockSuspendedLaunchPolicy: 0x105890b00>
+2026-01-15 15:49:36.033 Df Carousel[64861:b8cef] [com.apple.Carousel:prelaunch] Test.Stoic-Companion.watchkitapp cannot be launched suspended by policy <CSLFirstUnlockSuspendedLaunchPolicy: 0x105890b00>
+2026-01-15 15:49:36.033 Df Carousel[64861:b8cef] [com.apple.Carousel:workspace] <FBApplicationProcess: 0x10b1edc80; app<com.stoic.companion.watchkitapp>:<invalid>> ->
+2026-01-15 15:49:36.033 Df Carousel[64861:b0f40] [com.apple.Carousel:workspace] <FBScene: 0x10fbf8000; FBSceneManager:com.stoic.companion.watchkitapp> will deactivate
+2026-01-15 15:49:36.033 Df Carousel[64861:b0f40] [com.apple.Carousel:workspace] <FBScene: 0x10fbf8000; FBSceneManager:com.stoic.companion.watchkitapp> did deactivate
+2026-01-15 15:49:36.033 Df Carousel[64861:b0f40] [com.apple.Carousel:workspace] relaunchObservers returned relaunchType 0
+2026-01-15 15:49:36.033 Df Carousel[64861:b0f40] [com.apple.Carousel:workspace] Invalidating <FBScene: 0x10fbf8000; FBSceneManager:com.stoic.companion.watchkitapp> because it is not relaunching
+2026-01-15 15:49:36.033 Df Carousel[64861:b0f40] [com.apple.Carousel:watch_gestures] no longer observing scene com.stoic.companion.watchkitapp
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CarouselClass handleMainUIEvent: <CSLMainUIEvent: 0x105b5cb40; type: CSLMainUIEventTypeExitedApplication; bundleIdentifier: com.stoic.companion.watchkitapp>
+2026-01-15 15:49:36.034 F  Carousel[64861:b0f40] [com.apple.Carousel:watch_gestures] couldn't find scene for currentSceneID com.stoic.companion.watchkitapp
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction _begin
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) beginPresentingState: <CSLMainUIState: 0x10b0610c0; type: Clock>, fromState: <CSLMainUIState: 0x105b9e4e0; type: App; bundleIdentifier: com.stoic.companion.watchkitapp>
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) calling into -[CUISScenePresentationCoordinator beginTransitionToPresentations:withCompletion:]
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] provider:<CSLMainUIScenePresentationProvider:0x10f12cc40> requested to begin transition to presentations (
+    "<CUISScenePresentation: 0x105b5e5b0; sceneIdentifier: com.apple.Carousel; state: animatingIn; level: -1>",
+    "<CUISScenePresentation: 0x105b5ca80; sceneIdentifier: com.apple.clockface; state: visible; level: -1>"
+), transitioning:[<CSLMainUIScenePresentationProvider; elapsed: 0.00s; completions: [C02C5D2A-4C09-44F1-B72D-A8A3BC9FC5C7]>]
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _presentationProviders:{(
+    <CSLMainUIScenePresentationProvider: 0x10f12cc40>
+)} transitioning:[<CSLMainUIScenePresentationProvider; elapsed: 0.00s; completions: [C02C5D2A-4C09-44F1-B72D-A8A3BC9FC5C7]>]
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _sortedScenePresentations is (
+    "<CSLScenePresentationAndProvider: 0x10bd231a0; scenePresentation: <CUISScenePresentation: 0x105b5e5b0; sceneIdentifier: com.apple.Carousel; state: animatingIn; level: -1>; sceneProvider: \134"<CSLMainUIScenePresentationProvider: 0x10f12cc40>\134"; levelWithinProvider: 2>",
+    "<CSLScenePresentationAndProvider: 0x10bd216c0; scenePresentation: <CUISScenePresentation: 0x105b5ca80; sceneIdentifier: com.apple.clockface; state: visible; level: -1>; sceneProvider: \134"<CSLMainUIScenePresentationProvider: 0x10f12cc40>\134"; levelWithinProvider: 1>"
+)
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _presentationForFBScenes: scene (
+    "com.apple.Carousel",
+    "com.apple.clockface"
+), firstSceneSupportsAlwaysOn=YES, _alwaysOnEnabled=YES
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] processScenePresentations – updated presentation (no session) to <BLSHBacklightEnvironmentPresentation: 0x105b5c510> {
+    <0x101fd9600:com.apple.Carousel>;
+    <0x10f108f00:com.apple.clockface>;
+}
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] calling completion for completionID C02C5D2A-4C09-44F1-B72D-A8A3BC9FC5C7
+2026-01-15 15:49:36.034 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) received callback from -[CUISScenePresentationCoordinator beginTransitionToPresentations:withCompletion:], completing
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:workspace] <FBScene: 0x10fbf8000; (null):com.stoic.companion.watchkitapp> is mutable
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:workspace] <IOSSHLApplication: 0x10f866bc0; bundleID: com.stoic.companion.watchkitapp; pid: -1; taskState: 0; activationState: 1> exited with exit reason 0x40
+2026-01-15 15:49:36.035 E  Carousel[64861:b0f40] [com.apple.Carousel:button] setHandler:forPid: invalid pid:-1
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction _beginCoordinated
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction tracking navigation completion because we have requested a completion handler
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] CSLMainUITransitionTransaction transitioning to state <CSLMainUIState: 0x10b0610c0; type: Clock>, for reason exitedApplication, animated NO
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Updated homeState to Clock
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] MainUIStateMachine transitioned to state Clock, previous Application com.stoic.companion.watchkitapp
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] stateMachine transitionToState non-animated
+2026-01-15 15:49:36.035 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Update from transitioning to activeController
+2026-01-15 15:49:36.036 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Completing transition <Carousel.ModalTransition: 0x10fbca040> and settling on destination <Carousel.ClockViewController: 0x10b3c9e00>
+2026-01-15 15:49:36.036 Df Carousel[64861:b0f40] [com.apple.Carousel:scroll_center] CSLGlobalScrollCenterViewController updated gesture flags to peek and drag
+2026-01-15 15:49:36.036 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] (CSLMainUIScenePresentationProvider) didSettle: <CSLMainUIState: 0x10f38f980; type: Clock>
+2026-01-15 15:49:36.036 Df Carousel[64861:b0f40] [com.apple.Carousel:idle_navigation] <Carousel.ScreenOffIdleNavigator: 0x10f14ff60> didSettle on <CSLMainUIState: 0x10f38f980; type: Clock>
+2026-01-15 15:49:36.037 Df Carousel[64861:b0f40] [com.apple.Carousel:fluidui] Gesture mainUITransitionState is settled on clock: true, mainUITransitionState is transitioning to clock: false, mainUITransitionState is transitioning from clock to home screen false,  notificationCenterVisibilityState is visible: false
+2026-01-15 15:49:36.037 Df Carousel[64861:b0f40] [com.apple.Carousel:idle_navigation] <Carousel.ScreenOffIdleNavigator: 0x10d314de0> didSettle on <CSLMainUIState: 0x10f38f980; type: Clock>
+2026-01-15 15:49:36.037 Df Carousel[64861:b0f40] [com.apple.Carousel:statusbar] Scene did update from style visible to clock
+2026-01-15 15:49:36.038 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] provider:<CSLMainUIScenePresentationProvider:0x10f12cc40> requested to end transition to presentations (
+    "<CUISScenePresentation: 0x10b0294a0; sceneIdentifier: com.apple.clockface; state: visible; level: -1>"
+) transitioning:[<CSLMainUIScenePresentationProvider; elapsed: 0.00s; completions: []>]
+2026-01-15 15:49:36.038 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _presentationProviders:{(
+    <CSLMainUIScenePresentationProvider: 0x10f12cc40>
+)} transitioning:[<CSLMainUIScenePresentationProvider; elapsed: 0.00s; completions: []>]
+2026-01-15 15:49:36.038 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _sortedScenePresentations is (
+    "<CSLScenePresentationAndProvider: 0x10f29a0a0; scenePresentation: <CUISScenePresentation: 0x10b0294a0; sceneIdentifier: com.apple.clockface; state: visible; level: -1>; sceneProvider: \134"<CSLMainUIScenePresentationProvider: 0x10f12cc40>\134"; levelWithinProvider: 1>"
+)
+2026-01-15 15:49:36.038 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] _presentationForFBScenes: scene (
+    "com.apple.clockface"
+), firstSceneSupportsAlwaysOn=YES, _alwaysOnEnabled=YES
+2026-01-15 15:49:36.038 Df Carousel[64861:b0f40] [com.apple.Carousel:scene_presentation] processScenePresentations – updated presentation (no session) to <BLSHBacklightEnvironmentPresentation: 0x105b5ff60> {
+    <0x10f108f00:com.apple.clockface>;
+}
+Child process terminated with signal 15: Terminated

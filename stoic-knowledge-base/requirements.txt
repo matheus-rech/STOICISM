@@ -1,0 +1,43 @@
+# Stoic Knowledge Base - Dependencies
+
+# Text Processing
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+requests>=2.31.0
+httpx>=0.27.0
+
+# NLP & Chunking
+spacy>=3.7.0
+nltk>=3.8.0
+
+# Embeddings
+openai>=1.0.0
+tiktoken>=0.5.0
+
+# Vector Database (choose one)
+# Option 1: Local - ChromaDB (simplest, no server)
+chromadb>=0.4.0
+
+# Option 2: Local - LanceDB (file-based, fastest)
+lancedb>=0.4.0
+pyarrow>=14.0.0
+
+# Option 3: Cloud - Supabase (production, managed)
+# supabase>=2.0.0
+
+# Data Processing
+pydantic>=2.5.0
+pandas>=2.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+rich>=13.7.0
+
+# API
+fastapi>=0.109.0
+uvicorn>=0.25.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.23.0

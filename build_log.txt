@@ -1,0 +1,5 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Stoic_Companion/Stoic_Companion.xcodeproj -scheme "Stoic_Companion Watch App" -destination "platform=watchOS Simulator,name=Apple Watch Series 9" build
+
+2026-01-19 13:47:27.244 xcodebuild[2343:1775821] Writing error result bundle to /var/folders/fy/nt00dfqn49x7tsn2b3kb67bc0000gn/T/ResultBundle_2026-19-01_13-47-0027.xcresult
+xcodebuild: error: 'Stoic_Companion/Stoic_Companion.xcodeproj' does not exist.

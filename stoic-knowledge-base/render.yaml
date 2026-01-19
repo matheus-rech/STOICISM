@@ -1,0 +1,19 @@
+# Render Blueprint - Auto-deploy configuration
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: stoic-api
+    runtime: python
+    rootDir: stoic-knowledge-base/api
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn stoic_api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+    plan: free
+    healthCheckPath: /health

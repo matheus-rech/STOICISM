@@ -1,0 +1,592 @@
+//
+//  ToolsGridView.swift
+//  StoicCompanion Watch App
+//
+//  Quick access grid to all stoic tools and favorites
+//
+
+import SwiftUI
+import Combine
+
+// MARK: - Tool Definition
+
+struct StoicTool: Identifiable {
+    let id = UUID()
+    let name: String
+    let shortName: String
+    let icon: String
+    let color: Color
+    let destination: AnyView
+
+    static let allTools: [StoicTool] = [
+        // Core wisdom tools
+        StoicTool(name: "Breathing", shortName: "Breathe", icon: "wind", color: .cyan, destination: AnyView(BreathingView())),
+        StoicTool(name: "Negative Visualization", shortName: "Premeditatio", icon: "eye.slash.fill", color: .purple, destination: AnyView(NegativeVisualizationView())),
+        StoicTool(name: "Journal", shortName: "Journal", icon: "book.fill", color: .green, destination: AnyView(JournalView())),
+        StoicTool(name: "Evening Audit", shortName: "Audit", icon: "moon.fill", color: .indigo, destination: AnyView(EveningAuditView())),
+        StoicTool(name: "Consult Marcus", shortName: "Marcus", icon: "person.bust", color: .orange, destination: AnyView(ConsultMarcusView())),
+        StoicTool(name: "Virtue Log", shortName: "Virtues", icon: "scale.3d", color: .yellow, destination: AnyView(VirtueLoggingView())),
+
+        // AI-Powered Personalization
+        StoicTool(name: "Your Story", shortName: "Story", icon: "sparkles", color: .mint, destination: AnyView(PersonalizedStoriesView())),
+
+        // Powerful features
+        StoicTool(name: "Memento Mori", shortName: "Death", icon: "hourglass", color: .gray, destination: AnyView(MementoMoriView())),
+        StoicTool(name: "Daily Challenge", shortName: "Challenge", icon: "flame.fill", color: .red, destination: AnyView(ChallengesView())),
+        StoicTool(name: "Tomorrow Focus", shortName: "Tomorrow", icon: "sunrise.fill", color: .pink, destination: AnyView(TomorrowFocusView())),
+        StoicTool(name: "SOS Calm", shortName: "SOS", icon: "heart.circle.fill", color: .red, destination: AnyView(SOSPanicView())),
+    ]
+}
+
+// MARK: - Favorite Tool
+
+struct FavoriteTool: Codable, Identifiable {
+    let id: UUID
+    let toolName: String
+
+    init(toolName: String) {
+        self.id = UUID()
+        self.toolName = toolName
+    }
+}
+
+// MARK: - Tools Manager
+
+class ToolsManager: ObservableObject {
+    static let shared = ToolsManager()
+
+    @Published var favorites: [String] = []
+
+    private let favoritesKey = "stoic_favorite_tools"
+
+    init() {
+        loadFavorites()
+        // Set defaults if empty
+        if favorites.isEmpty {
+            favorites = ["Breathing", "Daily Challenge", "Consult Marcus", "SOS Calm", "Memento Mori", "Journal"]
+            saveFavorites()
+        }
+    }
+
+    private func loadFavorites() {
+        if let saved = UserDefaults.standard.stringArray(forKey: favoritesKey) {
+            favorites = saved
+        }
+    }
+
+    func saveFavorites() {
+        UserDefaults.standard.set(favorites, forKey: favoritesKey)
+    }
+
+    func isFavorite(_ toolName: String) -> Bool {
+        favorites.contains(toolName)
+    }
+
+    func toggleFavorite(_ toolName: String) {
+        if favorites.contains(toolName) {
+            favorites.removeAll { $0 == toolName }
+        } else {
+            favorites.append(toolName)
+        }
+        saveFavorites()
+    }
+
+    func getFavoriteTools() -> [StoicTool] {
+        return StoicTool.allTools.filter { favorites.contains($0.name) }
+    }
+}
+
+// MARK: - Tools Grid View
+
+struct ToolsGridView: View {
+    @ObservedObject private var manager = ToolsManager.shared
+    @State private var showingAllTools = false
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 16) {
+                // Favorites grid
+                favoritesGrid
+
+                // All tools button
+                Button(action: { showingAllTools = true }) {
+                    HStack {
+                        Image(systemName: "square.grid.2x2")
+                        Text("All Tools")
+                    }
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+            .padding()
+        }
+        .navigationTitle("Favorites")
+        .sheet(isPresented: $showingAllTools) {
+            AllToolsSheet(manager: manager)
+        }
+    }
+
+    // MARK: - Favorites Grid
+
+    private var favoritesGrid: some View {
+        LazyVGrid(columns: [
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ], spacing: 12) {
+            ForEach(manager.getFavoriteTools()) { tool in
+                NavigationLink(destination: tool.destination) {
+                    ToolGridItem(tool: tool)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+        }
+    }
+}
+
+// MARK: - Tool Grid Item
+
+struct ToolGridItem: View {
+    let tool: StoicTool
+
+    var body: some View {
+        VStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(tool.color.opacity(0.15))
+                    .frame(width: 44, height: 44)
+                
+                Image(systemName: tool.icon)
+                    .font(.system(size: 22, weight: .semibold))
+                    .foregroundColor(tool.color)
+            }
+
+            Text(tool.shortName.uppercased())
+                .font(.system(size: 8, weight: .black))
+                .foregroundColor(.white.opacity(0.9))
+                .tracking(1)
+                .lineLimit(1)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 16)
+        .background(
+            PremiumAssets.GlassBackdrop(cornerRadius: 20)
+        )
+    }
+}
+
+// MARK: - All Tools Sheet
+
+struct AllToolsSheet: View {
+    @ObservedObject var manager: ToolsManager
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 8) {
+                Text("All Tools")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(.white)
+
+                Text("Tap to toggle favorites")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+
+                ForEach(StoicTool.allTools) { tool in
+                    ToolListItem(
+                        tool: tool,
+                        isFavorite: manager.isFavorite(tool.name)
+                    ) {
+                        manager.toggleFavorite(tool.name)
+                    }
+                }
+
+                Button(action: { dismiss() }) {
+                    Text("Done")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .padding(.top, 8)
+            }
+            .padding()
+        }
+    }
+}
+
+// MARK: - Tool List Item
+
+struct ToolListItem: View {
+    let tool: StoicTool
+    let isFavorite: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                Image(systemName: tool.icon)
+                    .font(.system(size: 18))
+                    .foregroundColor(tool.color)
+                    .frame(width: 30)
+
+                Text(tool.name)
+                    .font(.system(size: 12))
+                    .foregroundColor(.white)
+
+                Spacer()
+
+                Image(systemName: isFavorite ? "star.fill" : "star")
+                    .font(.system(size: 14))
+                    .foregroundColor(isFavorite ? .yellow : .gray)
+            }
+            .padding(10)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color.black.opacity(0.3))
+            )
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+}
+
+// MARK: - Favorites List View (Alternative Display)
+
+struct FavoritesListView: View {
+    @ObservedObject private var manager = ToolsManager.shared
+
+    var body: some View {
+        List {
+            ForEach(manager.getFavoriteTools()) { tool in
+                NavigationLink(destination: tool.destination) {
+                    HStack(spacing: 12) {
+                        Image(systemName: tool.icon)
+                            .font(.system(size: 16))
+                            .foregroundColor(tool.color)
+
+                        Text(tool.shortName)
+                            .font(.system(size: 12))
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+        }
+        .navigationTitle("Favorites")
+    }
+}
+
+#Preview {
+    NavigationView {
+        ToolsGridView()
+    }
+}
+
+// MARK: - Premium Assets Helper
+// Moved here to ensure it's part of the target without project file edits
+
+struct PremiumAssets {
+    // MARK: - Colors
+    
+    struct Colors {
+        // Nano Banana Pro Series Palette
+        static let deepBlack = Color.black
+        static let cardGrey = Color(white: 0.12)
+        
+        // Accurate Accents from Design
+        static let vibrantOrange = Color(red: 1.0, green: 0.58, blue: 0.0) // "Fire/Challenge"
+        static let electricBlue = Color(red: 0.0, green: 0.6, blue: 1.0) // "Calm/Journal"
+        static let successGreen = Color(red: 0.0, green: 0.9, blue: 0.4) // "Completion"
+        static let moonPurple = Color(red: 0.6, green: 0.4, blue: 1.0) // "Evening/Reflection"
+        
+        // Mappings to App Theme
+        static let ancientGold = Color(red: 0.85, green: 0.7, blue: 0.3)
+        static let romanRed = Color(red: 0.9, green: 0.2, blue: 0.2)
+        static let deepCharcoal = Color(white: 0.08)
+    }
+
+    // MARK: - Glassmorphism
+    
+    struct GlassBackdrop: View {
+        var cornerRadius: CGFloat = 16
+        var opacity: Double = 0.06
+        var borderColor: Color = .white.opacity(0.1)
+        
+        var body: some View {
+            RoundedRectangle(cornerRadius: cornerRadius)
+                .fill(Color.white.opacity(opacity))
+                .overlay(
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .stroke(borderColor, lineWidth: 1)
+                )
+        }
+    }
+    
+    // MARK: - Marcus Avatar
+    
+    struct MarcusAvatar: View {
+        var size: CGFloat = 70
+        
+        var body: some View {
+            ZStack {
+                // Background Marble Circle
+                Circle()
+                    .fill(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Colors.cardGrey, Colors.deepBlack]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .frame(width: size, height: size)
+                    .shadow(color: .black.opacity(0.3), radius: 4, x: 0, y: 2)
+                    .overlay(
+                        Circle()
+                            .stroke(Colors.vibrantOrange, lineWidth: 2)
+                    )
+                
+                // Stylized Bust Silhouette
+                Image(systemName: "person.bust.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: size * 0.55)
+                    .foregroundColor(Colors.cardGrey)
+                    .offset(y: size * 0.05)
+                
+                // Laurel Wreath Detail (Symbolic)
+                Image(systemName: "laurel.leading")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: size * 0.8, height: size * 0.8)
+                    .foregroundColor(Colors.vibrantOrange.opacity(0.8))
+                    .rotationEffect(.degrees(-15))
+            }
+        }
+    }
+    
+    // MARK: - Virtue Icons
+    
+    struct VirtueIcon: View {
+        enum Virtue {
+            case wisdom
+            case courage
+            case justice
+            case temperance
+        }
+        
+        let virtue: Virtue
+        var size: CGFloat = 40
+        
+        var body: some View {
+            ZStack {
+                // Background: Dark Card style
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Colors.cardGrey)
+                    .frame(width: size, height: size)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(colorForVirtue.opacity(0.5), lineWidth: 1)
+                    )
+                
+                Image(systemName: iconName)
+                    .font(.system(size: size * 0.5))
+                    .foregroundColor(colorForVirtue)
+            }
+        }
+        
+        private var iconName: String {
+            switch virtue {
+            case .wisdom: return "brain.head.profile" // Matches design "Wisdom"
+            case .courage: return "flame.fill" // Matches design "Fire/Courage"
+            case .justice: return "scale.3d" // Matches design "Scales"
+            case .temperance: return "drop.fill" // Matches design/General convention
+            }
+        }
+        
+        private var colorForVirtue: Color {
+            switch virtue {
+            case .wisdom: return Colors.electricBlue // Wisdom often Blue/Purple
+            case .courage: return Colors.vibrantOrange // Courage is Fire/Orange
+            case .justice: return Colors.successGreen // Justice often Green/White
+            case .temperance: return Colors.moonPurple // Temperance often Purple/Blue
+            }
+        }
+    }
+}
+
+// MARK: - Personalized Stories (Merged)
+
+struct PersonalizedStoriesView: View {
+    @StateObject private var storyManager = StoryManager.shared
+    @StateObject private var profileManager = ProfileManager()
+    @StateObject private var dynamicContextManager = DynamicUserContextManager.shared
+    @State private var showingPastStories = false
+    @State private var animateStory = false
+
+    var body: some View {
+        ZStack {
+            PremiumBackgroundView()
+            ScrollView {
+                VStack(spacing: 24) {
+                    headerSection
+                        .padding(.top, 10)
+
+                    if storyManager.isLoading {
+                        loadingView
+                    } else if let story = storyManager.todayStory {
+                        storyCard(story)
+                            .onAppear { withAnimation { animateStory = true } }
+                    } else {
+                        emptyState
+                    }
+
+                    if !storyManager.pastStories.isEmpty {
+                        Button(action: {
+                            WKInterfaceDevice.current().play(.click)
+                            showingPastStories = true 
+                        }) {
+                            Text("HISTORY (\(storyManager.pastStories.count))")
+                                .font(.system(size: 8, weight: .black))
+                                .tracking(1)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                                .background(PremiumAssets.GlassBackdrop(cornerRadius: 12))
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.top, 10)
+                    }
+                }
+                .padding(.horizontal)
+            }
+        }
+        .onAppear { 
+            if storyManager.needsNewStory { 
+                Task { await storyManager.generateDailyStory(profile: profileManager.profile, dynamicContext: dynamicContextManager.dynamicContext) } 
+            } 
+        }
+        .sheet(isPresented: $showingPastStories) {
+            ZStack {
+                PremiumBackgroundView()
+                
+                ScrollView {
+                    VStack(spacing: 16) {
+                        headerSection("PAST REFLECTIONS")
+                        
+                        ForEach(storyManager.pastStories.reversed()) { story in
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text(story.title.uppercased())
+                                    .font(.system(size: 9, weight: .black))
+                                    .foregroundColor(PremiumAssets.Colors.vibrantOrange)
+                                
+                                Text(story.content)
+                                    .font(.system(size: 11, weight: .medium, design: .serif))
+                                    .foregroundColor(.white.opacity(0.8))
+                                    .lineLimit(3)
+                            }
+                            .padding(12)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(PremiumAssets.GlassBackdrop(cornerRadius: 16))
+                        }
+                    }
+                    .padding()
+                }
+            }
+        }
+    }
+
+    private func headerSection(_ title: String) -> some View {
+        HStack {
+            Text(title)
+                .font(.system(size: 10, weight: .black))
+                .foregroundColor(PremiumAssets.Colors.vibrantOrange)
+                .tracking(2)
+            Spacer()
+        }
+        .padding(.top, 10)
+    }
+    private var headerSection: some View {
+        VStack(spacing: 8) {
+            PremiumAssets.MarcusAvatar(size: 70)
+                .shadow(color: PremiumAssets.Colors.vibrantOrange.opacity(0.3), radius: 10)
+            
+            Text("DAILY REFLECTION")
+                .font(.system(size: 10, weight: .black))
+                .foregroundColor(PremiumAssets.Colors.vibrantOrange)
+                .tracking(2)
+        }
+    }
+
+    private var loadingView: some View {
+        VStack(spacing: 12) {
+            ProgressView()
+                .tint(PremiumAssets.Colors.vibrantOrange)
+            Text("CONSULTING THE ARCHIVES...")
+                .font(.system(size: 8, weight: .bold))
+                .foregroundColor(.gray)
+                .tracking(1)
+        }
+        .frame(height: 150)
+    }
+
+    private func storyCard(_ story: PersonalizedStory) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(story.title.uppercased())
+                .font(.system(size: 11, weight: .black))
+                .foregroundColor(PremiumAssets.Colors.vibrantOrange)
+                .tracking(1)
+            
+            Text(story.content)
+                .font(.system(size: 13, weight: .medium, design: .serif))
+                .foregroundColor(.white.opacity(0.95))
+                .lineSpacing(3)
+        }
+        .padding(16)
+        .background(
+            PremiumAssets.GlassBackdrop(cornerRadius: 20)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(
+                    LinearGradient(colors: [.white.opacity(0.1), .clear], startPoint: .topLeading, endPoint: .bottomTrailing),
+                    lineWidth: 1
+                )
+        )
+    }
+
+    private var emptyState: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "book.closed.fill")
+                .font(.system(size: 30))
+                .foregroundColor(.gray.opacity(0.3))
+            Text("No reflections yet today.")
+                .font(.system(size: 10, weight: .medium))
+                .foregroundColor(.gray)
+        }
+        .padding(.vertical, 40)
+    }
+}
+
+class StoryManager: ObservableObject {
+    static let shared = StoryManager()
+    @Published var todayStory: PersonalizedStory?
+    @Published var pastStories: [PersonalizedStory] = []
+    @Published var isLoading = false
+    private let storiesKey = "stoic_personalized_stories"
+    init() { loadStories() }
+    func loadStories() {
+        if let data = UserDefaults.standard.data(forKey: storiesKey), let decoded = try? JSONDecoder().decode([PersonalizedStory].self, from: data) { pastStories = decoded; todayStory = pastStories.last }
+    }
+    var needsNewStory: Bool { todayStory == nil }
+    func generateDailyStory(profile: UserProfile, dynamicContext: DynamicContext) async {
+         await MainActor.run { isLoading = true }
+         try? await Task.sleep(nanoseconds: 1_000_000_000)
+         let story = PersonalizedStory(title: "The Path Ahead", content: "You are doing well, \(profile.name). Continue your practice.", type: .parable, createdAt: Date(), userContextSnapshot: "")
+         await MainActor.run { todayStory = story; pastStories.append(story); isLoading = false }
+    }
+}

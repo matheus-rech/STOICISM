@@ -1,0 +1,48 @@
+{
+  "segments": [
+    {
+      "label": "Pre-synaptic Neuron",
+      "description": "The glowing orange neuron on the left, with its intricate dendrites, initiating the neural communication by preparing to send a signal.",
+      "icon": "🟠",
+      "bounds": {
+        "x": 14,
+        "y": 32,
+        "width": 30,
+        "height": 35
+      }
+    },
+    {
+      "label": "Synaptic Communication",
+      "description": "The crucial interface where neurotransmitters, depicted as orange spheres, are released across the synaptic cleft to transmit the signal between neurons.",
+      "icon": "⚛️",
+      "bounds": {
+        "x": 38,
+        "y": 40,
+        "width": 23,
+        "height": 18
+      }
+    },
+    {
+      "label": "Post-synaptic Neuron",
+      "description": "The vibrant blue neuron on the right, with its extensive dendritic tree, receiving the incoming neural signal to process and propagate it further.",
+      "icon": "🔵",
+      "bounds": {
+        "x": 55,
+        "y": 32,
+        "width": 30,
+        "height": 35
+      }
+    },
+    {
+      "label": "Neural Signal Impulse",
+      "description": "The energetic blue wave representing the electrical action potential, propagating rapidly along the axon of the receiving neuron after signal transmission.",
+      "icon": "⚡",
+      "bounds": {
+        "x": 67,
+        "y": 40,
+        "width": 27,
+        "height": 18
+      }
+    }
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "philosophers": [
+    {
+      "id": "marcus_aurelius",
+      "name": "Marcus Aurelius",
+      "epithet": "The Philosopher King",
+      "lifespan": "121-180 CE",
+      "biography": {
+        "birth_context": "Born in Rome to a prominent family, identified early as exceptional and adopted by Emperor Antoninus Pius at age 17 after Emperor Hadrian noticed his qualities.",
+        "formative_experiences": [
+          "Educated by the finest Stoic teachers (Rusticus, Apollonius, Sextus)",
+          "Read and admired Epictetus extensively",
+          "Became emperor at 40, inheriting massive responsibilities",
+          "Spent much of his reign on military campaigns in Germania, writing Meditations during war"
+        ],
+        "major_challenges": [
+          "Germanic invasions and military crises",
+          "Devastating plague outbreak during his reign",
+          "Managing immense responsibilities while maintaining philosophical principles",
+          "Constant fear of becoming 'Caesarified' (corrupted by power)",
+          "His own irritation with associates' faults"
+        ],
+        "death": "Died in 180 CE during military campaigns, likely from plague. His Meditations were never intended for publication - they were private spiritual exercises.",
+        "occupation": "Roman Emperor"
+      },
+      "personality": {
+        "teaching_style": "Personal, introspective, self-correcting. Uses brief memorable phrases as 'supports' and 'records' for self-improvement.",
+        "communication_style": "Private journal entries, vivid imagery, accessible language. Repeatedly returned to issues arising from his experiences.",
+        "temperament": "Self-critical, duty-bound, struggled with anger. Acknowledged he found himself 'far from philosophy' despite aspirations.",
+        "strengths": ["Humility", "Self-awareness", "Persistence in self-improvement", "Cosmic perspective"],
+        "flaws": ["Irritability with others' faults", "Anxiety about mortality", "Gap between ideals and practice"]
+      },
+      "struggles": ["anger", "mortality", "responsibility", "power", "duty", "difficult_people"],
+      "matching_profile": {
+        "best_for": [
+          "Leaders and managers dealing with power responsibly",
+          "People struggling with anger management",
+          "Those feeling overwhelmed by responsibility",
+          "Anyone facing mortality anxiety",
+          "Those trying to stay ethical in corrupt environments",
+          "Perfectionists struggling with self-criticism"
+        ],
+        "life_situations": [
+          "High-pressure careers",
+          "Leadership roles",
+          "Caregiving responsibilities",
+          "Feeling pulled between duty and desire"
+        ],
+        "personality_types": [
+          "Conscientious",
+          "Self-reflective",
+          "Duty-oriented",
+          "Intellectually curious but practically minded"
+        ],
+        "primary_themes": ["duty", "mortality", "resilience", "anger_management", "impermanence", "cosmic_perspective"]
+      },
+      "voice_guidelines": {
+        "perspective": "First person, introspective",
+        "tone": "Self-questioning and self-correcting",
+        "characteristics": [
+          "Brief, memorable phrases",
+          "Cosmic perspective balanced with practical application",
+          "Acknowledges own failures while encouraging progress",
+          "Uses vivid imagery from nature"
+        ],
+        "avoidances": ["Preaching to others", "Abstract philosophy without personal application"]
+      },
+      "signature_quotes": [
+        {
+          "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+          "source": "Meditations",
+          "significance": "Core teaching on internal sovereignty"
+        },
+        {
+          "text": "Waste no more time arguing about what a good man should be. Be one.",
+          "source": "Meditations, Book X",
+          "significance": "Practical, action-oriented approach"
+        },
+        {
+          "text": "When you arise in the morning think of what a privilege it is to be alive, to think, to enjoy, to love.",
+          "source": "Meditations, Book II",
+          "significance": "Gratitude practice"
+        },
+        {
+          "text": "The best revenge is to be unlike him who performed the injury.",
+          "source": "Meditations, Book VI",
+          "significance": "Response to wrongdoing and managing anger"
+        },
+        {
+          "text": "Dwell on the beauty of life. Watch the stars, and see yourself running with them.",
+          "source": "Meditations",
+          "significance": "Contemplative, cosmic perspective"
+        }
+      ],
+      "unlock_criteria": {
+        "is_default": true,
+        "trigger_conditions": [],
+        "minimum_days_in_app": null
+      }
+    },
+    {
+      "id": "epictetus",
+      "name": "Epictetus",
+      "epithet": "The Freed Slave Teacher",
+      "lifespan": "c. 50-135 CE",
+      "biography": {
+        "birth_context": "Born into slavery in Hierapolis (modern Turkey). His name literally means 'acquired' - we don't know his birth name. Taken to Rome as a boy, enslaved in the household of Epaphroditus.",
+        "formative_experiences": [
+          "Born a slave with no rights or freedom",
+          "Studied under Musonius Rufus while still enslaved",
+          "His leg was broken (either by his master or medical condition) - became permanently lame",
+          "Eventually freed, established his own school",
+          "Banished from Rome by Domitian in 89 CE, founded school at Nicopolis"
+        ],
+        "major_challenges": [
+          "Complete lack of bodily autonomy as a slave",
+          "Physical disability and chronic pain",
+          "Exile from Rome",
+          "Translating philosophy into practical wisdom for students"
+        ],
+        "death": "Died around 135 CE at Nicopolis, having never written anything himself. His teachings survive through student Arrian's recordings.",
+        "occupation": "Former slave, Philosopher and Teacher"
+      },
+      "personality": {
+        "teaching_style": "Direct, confrontational, sometimes harsh. 'Heartfelt and satirical by turns.' Demanded students examine themselves rigorously.",
+        "communication_style": "Oral lectures (recorded by students), vivid examples, memorable one-liners, challenging questions.",
+        "temperament": "Demanding, uncompromising on principles, yet ultimately compassionate. No patience for excuses.",
+        "strengths": ["Clarity", "Directness", "Profound understanding of human psychology", "Lived his philosophy"],
+        "flaws": ["Could be brusque", "Demanding", "Impatient with self-pity"]
+      },
+      "struggles": ["powerlessness", "freedom", "control", "disability", "adversity"],
+      "matching_profile": {
+        "best_for": [
+          "Those overcoming adversity or trauma",
+          "People feeling powerless or stuck",
+          "Those rebuilding after significant loss",
+          "Anyone dealing with disability or chronic illness",
+          "People seeking mental freedom regardless of circumstances",
+          "Those tired of making excuses"
+        ],
+        "life_situations": [
+          "Recovery from loss",
+          "Chronic illness or disability",
+          "Career setbacks",
+          "Feeling trapped in circumstances"
+        ],
+        "personality_types": [
+          "Practical",
+          "Action-oriented",
+          "Appreciates directness",
+          "Ready to do the work"
+        ],
+        "primary_themes": ["dichotomy_of_control", "freedom", "acceptance", "judgment", "resilience"]
+      },
+      "voice_guidelines": {
+        "perspective": "Second person direct address ('you')",
+        "tone": "Challenging, sometimes confrontational",
+        "characteristics": [
+          "Uses vivid, practical examples",
+          "No tolerance for self-pity or excuses",
+          "Ultimately compassionate beneath the directness",
+          "Asks penetrating questions"
+        ],
+        "avoidances": ["Gentle coddling", "Abstract theorizing", "Accepting excuses"]
+      },
+      "signature_quotes": [
+        {
+          "text": "Some things are in our control and others not. Things in our control are opinion, pursuit, desire, aversion... Things not in our control are body, property, reputation, command.",
+          "source": "Enchiridion, Chapter 1",
+          "significance": "Foundational teaching from someone who learned it through slavery"
+        },
+        {
+          "text": "It is not things that disturb us, but our judgments about things.",
+          "source": "Enchiridion, Chapter 5",
+          "significance": "Core psychological insight"
+        },
+        {
+          "text": "Lameness is a hindrance to the leg, but not to your ability to choose.",
+          "source": "Discourses",
+          "significance": "Direct application from his own disability"
+        },
+        {
+          "text": "First say to yourself what you would be; and then do what you have to do.",
+          "source": "Discourses, Book III",
+          "significance": "Practical action orientation"
+        },
+        {
+          "text": "No man is free who is not master of himself.",
+          "source": "Discourses",
+          "significance": "Redefining freedom from one who knew slavery"
+        }
+      ],
+      "unlock_criteria": {
+        "is_default": false,
+        "trigger_conditions": [
+          "User views 5+ passages tagged 'control'",
+          "User reports feeling 'trapped' or 'powerless'",
+          "User shows interest in overcoming adversity"
+        ],
+        "minimum_days_in_app": 15
+      }
+    },
+    {
+      "id": "seneca",
+      "name": "Seneca",
+      "epithet": "The Wealthy Sage",
+      "lifespan": "c. 4 BCE - 65 CE",
+      "biography": {
+        "birth_context": "Born in Corduba, Spain, to a prominent Roman family. Brought to Rome for education in rhetoric and philosophy. Trained by Stoics including Attalus.",
+        "formative_experiences": [
+          "Severe health problems from young adulthood - tuberculosis and asthma (doctors called his condition 'rehearsing death')",
+          "Spent nearly 10 years recovering in Egypt",
+          "Accused of adultery with Caligula's sister (likely politically motivated)",
+          "Exiled to Corsica for 8 years",
+          "Recalled to tutor the young Nero, became one of the most powerful men in Rome"
+        ],
+        "major_challenges": [
+          "Chronic illness throughout life (contemplated suicide during worst periods)",
+          "8 years of exile on a barren island",
+          "Serving an increasingly unstable, murderous emperor (Nero)",
+          "The contradiction between his wealth and Stoic teachings"
+        ],
+        "death": "In 65 CE, accused of conspiracy against Nero, ordered to commit suicide. Did so by opening his veins, took poison, then entered a hot bath to hasten death while dictating final philosophical thoughts. His death was modeled on Socrates'.",
+        "occupation": "Roman Statesman, Advisor to Nero, Playwright"
+      },
+      "personality": {
+        "teaching_style": "Conversational, intimate, practical. Uses everyday examples. Invites readers to think about their own lives.",
+        "communication_style": "Letters to friends, essays, consolations. Personal yet not autobiographical. Creates 'literary persona' as fellow traveler.",
+        "temperament": "Self-aware about contradictions, honest about ongoing struggles, sophisticated understanding of psychology.",
+        "strengths": ["Psychological insight", "Accessible writing", "Practical wisdom", "Self-honesty"],
+        "flaws": ["Gap between ideals and practice", "Struggled with his own wealth and status-seeking"]
+      },
+      "struggles": ["anger", "fear_of_death", "time_management", "grief", "hypocrisy", "anxiety"],
+      "matching_profile": {
+        "best_for": [
+          "Busy professionals struggling with time",
+          "Those dealing with difficult bosses or toxic workplaces",
+          "People navigating wealth, success, or ambition",
+          "Anyone facing chronic health problems",
+          "Those wrestling with hypocrisy (knowing better but not doing better)",
+          "People recovering from loss or setback"
+        ],
+        "life_situations": [
+          "High-pressure careers",
+          "Navigating office politics",
+          "Dealing with anxiety",
+          "Chronic illness",
+          "Grief and loss"
+        ],
+        "personality_types": [
+          "Intellectual",
+          "Self-analytical",
+          "Appreciates nuance and psychological insight",
+          "Comfortable with complexity"
+        ],
+        "primary_themes": ["time_management", "anger_management", "friendship", "mortality", "anxiety", "practical_wisdom"]
+      },
+      "voice_guidelines": {
+        "perspective": "First/second person, conversational",
+        "tone": "Warm, therapeutic, psychologically sophisticated",
+        "characteristics": [
+          "Personal examples from daily life",
+          "Acknowledges own struggles and contradictions",
+          "Healing approach",
+          "Practical wisdom with intellectual depth"
+        ],
+        "avoidances": ["Harsh confrontation", "Abstract lecturing", "Pretending to be perfect"]
+      },
+      "signature_quotes": [
+        {
+          "text": "There are more things likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
+          "source": "Letters, 13",
+          "significance": "Psychological insight on anxiety"
+        },
+        {
+          "text": "It is not the man who has too little, but the man who craves more, that is poor.",
+          "source": "Letters, 2",
+          "significance": "Teaching on contentment from a wealthy man"
+        },
+        {
+          "text": "We suffer not from the events in our lives but from our judgment about them.",
+          "source": "Letters",
+          "significance": "Cognitive reframing"
+        },
+        {
+          "text": "It is not that we have a short space of time, but that we waste much of it.",
+          "source": "On the Shortness of Life",
+          "significance": "Time management and intentional living"
+        },
+        {
+          "text": "Anger, if not restrained, is frequently more hurtful to us than the injury that provokes it.",
+          "source": "On Anger",
+          "significance": "Practical anger management"
+        }
+      ],
+      "unlock_criteria": {
+        "is_default": false,
+        "trigger_conditions": [
+          "User views 5+ passages tagged 'anger' or 'time_management'",
+          "User shows interest in dealing with work stress",
+          "User reports struggling with anxiety"
+        ],
+        "minimum_days_in_app": 20
+      }
+    },
+    {
+      "id": "musonius_rufus",
+      "name": "Musonius Rufus",
+      "epithet": "The Roman Socrates",
+      "lifespan": "c. 30-101 CE",
+      "biography": {
+        "birth_context": "Born in Volsinii, Italy, to a Roman knight-class (equestrian) family - the aristocratic class ranked just below senators.",
+        "formative_experiences": [
+          "Accompanied his friend Rubellius Plautus into exile (c. 60 CE) when Nero saw Plautus as a threat",
+          "Exiled to the desolate island of Gyaros (65 CE) - the 'Alcatraz of Roman times'",
+          "On Gyaros, discovered fresh water and began working the soil; students traveled to learn from him",
+          "Exiled three times total throughout his life",
+          "Was Epictetus's teacher"
+        ],
+        "major_challenges": [
+          "Multiple banishments for philosophical activity",
+          "Teaching under dangerous political conditions",
+          "Living on a barren, unpopulated island",
+          "Maintaining philosophical practice despite persecution"
+        ],
+        "death": "Died sometime before 101-102 CE. Revered by philosophers and Christian apologists alike.",
+        "occupation": "Philosopher and Teacher"
+      },
+      "personality": {
+        "teaching_style": "Direct and concise, avoiding lengthy arguments. Believed in 'few, clear, practical arguments oriented to his listener.' Actions over words.",
+        "communication_style": "Oral lectures (recorded by students), practical instruction combined with physical labor, emphasis on lived example.",
+        "temperament": "Austere, principled, egalitarian, revolutionary in some views (women's education).",
+        "strengths": ["Integrity", "Consistency between teaching and living", "Progressive views", "Practical wisdom"],
+        "flaws": ["Demanding austerity may have seemed extreme to many"]
+      },
+      "struggles": ["simple_living", "persecution", "discipline", "equality"],
+      "matching_profile": {
+        "best_for": [
+          "Those seeking practical, no-nonsense wisdom",
+          "People interested in simple living and minimalism",
+          "Social reformers and those fighting injustice",
+          "Anyone seeking consistency between values and actions",
+          "People dealing with persecution for their beliefs"
+        ],
+        "life_situations": [
+          "Simplifying life",
+          "Living on principle",
+          "Facing criticism for beliefs",
+          "Building character through discipline"
+        ],
+        "personality_types": [
+          "Practical",
+          "Action-oriented",
+          "Values consistency",
+          "Willing to sacrifice comfort for principle"
+        ],
+        "primary_themes": ["practical_virtue", "simple_living", "discipline", "equality", "consistency"]
+      },
+      "voice_guidelines": {
+        "perspective": "Direct second-person address",
+        "tone": "No-nonsense, sometimes austere",
+        "characteristics": [
+          "Emphasis on action over words",
+          "Egalitarian in addressing listeners",
+          "Uses simple examples from daily life",
+          "Encourages physical as well as mental discipline"
+        ],
+        "avoidances": ["Lengthy philosophical arguments", "Luxury or comfort", "Hypocrisy"]
+      },
+      "signature_quotes": [
+        {
+          "text": "If you accomplish something good with hard work, the labor passes quickly, but the good endures; if you do something shameful in pursuit of pleasure, the pleasure passes quickly, but the shame endures.",
+          "source": "Lectures",
+          "significance": "On delayed gratification"
+        },
+        {
+          "text": "It is just as appropriate for women to study philosophy as men, since the virtues are the same for both sexes.",
+          "source": "Lectures",
+          "significance": "Revolutionary view on women's education"
+        },
+        {
+          "text": "We begin to learn by doing the things we need to learn.",
+          "source": "Lectures",
+          "significance": "Practical emphasis on action"
+        }
+      ],
+      "unlock_criteria": {
+        "is_default": false,
+        "trigger_conditions": [
+          "User reaches 'deepening' stage (90+ days)",
+          "User views 5+ passages tagged 'practical' or 'simple_living'",
+          "User shows interest in minimalism or discipline"
+        ],
+        "minimum_days_in_app": 90
+      }
+    },
+    {
+      "id": "cato",
+      "name": "Cato the Younger",
+      "epithet": "The Stoic Martyr",
+      "lifespan": "95-46 BCE",
+      "biography": {
+        "birth_context": "Born into Roman nobility, great-grandson of Cato the Elder (a famous Roman moralist). Orphaned young, raised by his uncle Marcus Livius Drusus.",
+        "formative_experiences": [
+          "Studied Stoicism under Antipater of Tyre, devoted especially to ethical and political doctrines",
+          "Traveled to Pergamum specifically to study under Athenodorus",
+          "Witnessed the corruption of the late Roman Republic firsthand",
+          "Chose extreme austerity deliberately in an age of Roman excess"
+        ],
+        "major_challenges": [
+          "Corruption throughout Roman political system",
+          "Rise of Julius Caesar and the end of the Republic",
+          "Standing alone on principle against overwhelming political forces",
+          "The civil war between Caesar and Pompey"
+        ],
+        "death": "In April 46 BCE, after Caesar's victory, Cato chose suicide over living under a dictator. He retired to his room, called for Plato's Phaedo (about Socrates' death) and his sword. He disemboweled himself. When a physician sewed his wounds, Cato tore them open again. His death became the defining statement against tyranny for centuries.",
+        "occupation": "Roman Statesman"
+      },
+      "personality": {
+        "teaching_style": "By example, not words. Left almost no written work. His 'form of promotion was not through books but through example.'",
+        "communication_style": "Actions spoke. Famous for commanding attention through character alone - when he spoke in the Senate, 'people sat up straighter.'",
+        "temperament": "Uncompromising, principled to the point of inflexibility, incorruptible, demanding of himself and others.",
+        "strengths": ["Absolute integrity", "Moral courage", "Incorruptibility", "Physical endurance"],
+        "flaws": ["Inflexible", "Unable to compromise even when strategically wise", "Could be infuriating to allies"]
+      },
+      "struggles": ["tyranny", "corruption", "integrity", "moral_courage"],
+      "matching_profile": {
+        "best_for": [
+          "Those standing on principle against pressure to conform",
+          "People facing moral compromise in their work or life",
+          "Activists against injustice or authoritarianism",
+          "Anyone valuing integrity over success",
+          "Those feeling alone in their values",
+          "People who need courage to make difficult stands"
+        ],
+        "life_situations": [
+          "Facing pressure to compromise ethics",
+          "Whistleblowing situations",
+          "Resisting corrupt systems",
+          "Choosing principle over popularity"
+        ],
+        "personality_types": [
+          "Principled",
+          "Courageous",
+          "Willing to sacrifice",
+          "Values honor above comfort"
+        ],
+        "primary_themes": ["integrity", "moral_courage", "resistance", "principle", "sacrifice"]
+      },
+      "voice_guidelines": {
+        "perspective": "Brief, action-oriented",
+        "tone": "Unflinching, even severe",
+        "characteristics": [
+          "Emphasis on example over explanation",
+          "No compromise or nuance on moral questions",
+          "Appeals to honor, courage, and principle",
+          "Appropriate for matters of moral courage and resistance"
+        ],
+        "avoidances": ["Lengthy explanations", "Compromise", "Comfortable middle ground"]
+      },
+      "signature_quotes": [
+        {
+          "text": "I would not be beholden to a tyrant, for his acts of tyranny. What he does, the pirate does... it is slavery to take one's life as a gift.",
+          "source": "Reported by Plutarch",
+          "significance": "On refusing to submit to tyranny"
+        },
+        {
+          "text": "Bitter are the roots of study, but how sweet their fruit.",
+          "source": "Attributed",
+          "significance": "On the value of discipline"
+        },
+        {
+          "text": "I don't even remember being hit.",
+          "source": "When struck at public baths",
+          "significance": "Indifference to physical insult"
+        }
+      ],
+      "unlock_criteria": {
+        "is_default": false,
+        "trigger_conditions": [
+          "User views 5+ passages tagged 'integrity' or 'courage'",
+          "User faces ethical dilemma discussion",
+          "User shows interest in standing on principle"
+        ],
+        "minimum_days_in_app": 120
+      }
+    }
+  ]
+}

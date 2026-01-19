@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Counter</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass: rgba(255, 255, 255, 0.9);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: var(--bg-gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Animated Background Particles */
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 20s infinite linear;
+        }
+
+        .shape:nth-child(1) { width: 150px; height: 150px; top: 10%; left: 10%; animation-duration: 25s; }
+        .shape:nth-child(2) { width: 100px; height: 100px; top: 70%; left: 80%; animation-duration: 30s; animation-delay: -5s; }
+        .shape:nth-child(3) { width: 200px; height: 200px; top: 40%; left: 40%; animation-duration: 35s; animation-delay: -10s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(20px, 40px) rotate(180deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background: var(--glass);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 24px;
+            padding: 3rem 4rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s ease;
+            min-width: 320px;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #4a5568;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            opacity: 0.7;
+        }
+
+        #counter-value {
+            font-size: 6rem;
+            font-weight: 800;
+            color: #2d3748;
+            margin-bottom: 2rem;
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+            transition: color 0.3s ease, transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: default;
+            user-select: none;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        .btn-dec {
+            background-color: #fff;
+            color: #e53e3e;
+            border: 2px solid #fed7d7;
+        }
+
+        .btn-dec:hover {
+            background-color: #fff5f5;
+            border-color: #e53e3e;
+            box-shadow: 0 6px 12px rgba(229, 62, 62, 0.2);
+        }
+
+        .btn-inc {
+            background-color: #fff;
+            color: #38a169;
+            border: 2px solid #c6f6d5;
+        }
+
+        .btn-inc:hover {
+            background-color: #f0fff4;
+            border-color: #38a169;
+            box-shadow: 0 6px 12px rgba(56, 161, 105, 0.2);
+        }
+
+        .btn-reset {
+            background: transparent;
+            color: #718096;
+            font-size: 0.9rem;
+            width: auto;
+            height: auto;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-top: 2rem;
+            box-shadow: none;
+            border: 1px solid transparent;
+        }
+
+        .btn-reset:hover {
+            color: #2d3748;
+            background: rgba(0,0,0,0.05);
+            border-color: rgba(0,0,0,0.1);
+        }
+
+        /* Animation classes */
+        .pop-up {
+            transform: scale(1.2);
+        }
+        
+        .pop-down {
+            transform: scale(0.8);
+        }
+
+        .positive { color: #38a169 !important; }
+        .negative { color: #e53e3e !important; }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <h1>Counter</h1>
+        <div id="counter-value">0</div>
+        
+        <div class="controls">
+            <button class="btn-dec" id="decrement" aria-label="Decrease count">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <button class="btn-inc" id="increment" aria-label="Increase count">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+        </div>
+
+        <button class="btn-reset" id="reset">Reset</button>
+    </div>
+
+    <script>
+        // State
+        let count = 0;
+
+        // Elements
+        const valueDisplay = document.getElementById('counter-value');
+        const btnInc = document.getElementById('increment');
+        const btnDec = document.getElementById('decrement');
+        const btnReset = document.getElementById('reset');
+
+        // Functions
+        function updateDisplay(animationType) {
+            valueDisplay.innerText = count;
+            
+            // Color logic
+            if (count > 0) {
+                valueDisplay.className = 'positive';
+            } else if (count < 0) {
+                valueDisplay.className = 'negative';
+            } else {
+                valueDisplay.className = '';
+            }
+
+            // Animation logic
+            if (animationType) {
+                valueDisplay.classList.add(animationType);
+                setTimeout(() => {
+                    valueDisplay.classList.remove(animationType);
+                }, 150);
+            }
+        }
+
+        function increment() {
+            count++;
+            updateDisplay('pop-up');
+        }
+
+        function decrement() {
+            count--;
+            updateDisplay('pop-down');
+        }
+
+        function reset() {
+            count = 0;
+            updateDisplay('pop-down');
+        }
+
+        // Event Listeners
+        btnInc.addEventListener('click', increment);
+        btnDec.addEventListener('click', decrement);
+        btnReset.addEventListener('click', reset);
+
+        // Keyboard Support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp' || e.key === '+') {
+                increment();
+                btnInc.style.transform = 'scale(0.9)';
+                setTimeout(() => btnInc.style.transform = '', 100);
+            } else if (e.key === 'ArrowDown' || e.key === '-') {
+                decrement();
+                btnDec.style.transform = 'scale(0.9)';
+                setTimeout(() => btnDec.style.transform = '', 100);
+            } else if (e.key === 'Escape' || e.key === '0') {
+                reset();
+            }
+        });
+
+    </script>
+</body>
+</html>
