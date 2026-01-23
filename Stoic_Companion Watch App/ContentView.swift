@@ -572,6 +572,11 @@ struct OnboardingView: View {
     @State private var selectedGoals: Set<StoicGoal> = []
     @State private var selectedPhilosopher: PreferredPhilosopher = .noPreference
     @State private var userName: String = ""
+    @State private var philosopherMatch: BackendAPIService.MatchResponse? = nil
+    @State private var isMatchingPhilosopher = false
+    @State private var matchError: String? = nil
+
+    private let backendAPI = BackendAPIService()
 
     var body: some View {
         ZStack {
@@ -587,6 +592,7 @@ struct OnboardingView: View {
                 contextStep.tag(OnboardingStep.context)
                 goalsStep.tag(OnboardingStep.goals)
                 philosopherStep.tag(OnboardingStep.philosopher)
+                matchResultStep.tag(OnboardingStep.matchResult)
                 completeStep.tag(OnboardingStep.complete)
             }
             .tabViewStyle(.verticalPage)
@@ -867,10 +873,58 @@ struct OnboardingView: View {
 
     private var philosopherStep: some View {
         ScrollView {
-            VStack(spacing: 12) {
-                Text("Choose your guide")
+            VStack(spacing: 14) {
+                Text("Meet Your Stoic")
                     .font(.system(size: 14, weight: .medium, design: .serif))
                     .foregroundColor(.white)
+
+                Text("Let AI match you with the philosopher who best fits your journey")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 4)
+
+                // AI Matching Button
+                Button(action: matchWithAI) {
+                    HStack {
+                        if isMatchingPhilosopher {
+                            ProgressView()
+                                .tint(.orange)
+                                .scaleEffect(0.8)
+                        } else {
+                            Image(systemName: "sparkles")
+                                .font(.system(size: 12))
+                        }
+                        Text(isMatchingPhilosopher ? "Finding your match..." : "AI-Powered Match")
+                            .font(.system(size: 12, weight: .medium))
+                    }
+                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                    .background(LinearGradient(
+                        colors: [Color.orange, Color.orange.opacity(0.8)],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    ))
+                    .cornerRadius(12)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .disabled(isMatchingPhilosopher)
+
+                if let error = matchError {
+                    Text(error)
+                        .font(.system(size: 9))
+                        .foregroundColor(.red)
+                        .multilineTextAlignment(.center)
+                }
+
+                Divider()
+                    .background(Color.gray.opacity(0.3))
+                    .padding(.vertical, 8)
+
+                Text("Or choose manually")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
 
                 ForEach(PreferredPhilosopher.allCases, id: \.self) { philosopher in
                     philosopherButton(philosopher)
@@ -906,6 +960,64 @@ struct OnboardingView: View {
         .buttonStyle(PlainButtonStyle())
     }
 
+    // MARK: - Match Result Step
+
+    private var matchResultStep: some View {
+        ScrollView {
+            VStack(spacing: 16) {
+                if let match = philosopherMatch {
+                    // Philosopher matched!
+                    Image(systemName: "person.bust.fill")
+                        .font(.system(size: 40))
+                        .foregroundColor(.orange)
+                        .padding(20)
+                        .background(Circle().fill(Color.orange.opacity(0.1)))
+
+                    Text(match.philosopher_name)
+                        .font(.system(size: 18, weight: .bold, design: .serif))
+                        .foregroundColor(.white)
+
+                    Text("Your Matched Philosopher")
+                        .font(.system(size: 11, weight: .medium))
+                        .foregroundColor(.orange)
+                        .tracking(1)
+
+                    // Match reason (AI-generated)
+                    Text(match.match_reason)
+                        .font(.system(size: 12))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                        .background(Color.white.opacity(0.05))
+                        .cornerRadius(12)
+
+                    // Confidence indicator
+                    HStack(spacing: 4) {
+                        Image(systemName: "sparkles")
+                            .font(.system(size: 10))
+                        Text("\(Int(match.confidence * 100))% Match")
+                            .font(.system(size: 10, weight: .medium))
+                    }
+                    .foregroundColor(.orange.opacity(0.8))
+
+                    Button(action: { withAnimation { currentStep = .complete } }) {
+                        Text("Continue")
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundColor(.black)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 12)
+                            .background(Color.orange)
+                            .cornerRadius(20)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding(.top, 8)
+                }
+            }
+            .padding()
+        }
+    }
+
     // MARK: - Complete Step
 
     private var completeStep: some View {
@@ -919,10 +1031,17 @@ struct OnboardingView: View {
                     .font(.system(size: 16, weight: .semibold, design: .serif))
                     .foregroundColor(.white)
 
-                Text("I will tailor the wisdom of the Stoics to your journey as \(selectedProfession.displayName) working on \(selectedFocus.displayName).")
-                    .font(.system(size: 11))
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
+                if let match = philosopherMatch {
+                    Text("I will share the wisdom of \(match.philosopher_name) with you, tailored to your journey as \(selectedProfession.displayName) working on \(selectedFocus.displayName).")
+                        .font(.system(size: 11))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                } else {
+                    Text("I will tailor the wisdom of the Stoics to your journey as \(selectedProfession.displayName) working on \(selectedFocus.displayName).")
+                        .font(.system(size: 11))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                }
 
                 Button(action: completeOnboarding) {
                     Text("Begin Practice")
@@ -958,8 +1077,64 @@ struct OnboardingView: View {
         .disabled(!enabled)
     }
 
+    private func matchWithAI() {
+        WKInterfaceDevice.current().play(.click)
+        isMatchingPhilosopher = true
+        matchError = nil
+
+        // Create temporary profile for matching
+        let tempProfile = UserProfile(
+            name: userName.isEmpty ? "Friend" : userName,
+            profession: selectedProfession,
+            currentFocus: selectedFocus,
+            lifeContext: Array(selectedContexts),
+            stoicGoals: Array(selectedGoals),
+            preferredPhilosopher: selectedPhilosopher,
+            onboardingCompleted: false
+        )
+
+        Task {
+            do {
+                // Generate unique user ID
+                let userId = UUID().uuidString
+
+                // Call backend API for philosopher matching
+                let match = try await backendAPI.matchPhilosopher(userId: userId, profile: tempProfile)
+
+                await MainActor.run {
+                    philosopherMatch = match
+                    isMatchingPhilosopher = false
+                    WKInterfaceDevice.current().play(.success)
+
+                    // Auto-advance to match result
+                    withAnimation {
+                        currentStep = .matchResult
+                    }
+                }
+            } catch {
+                await MainActor.run {
+                    matchError = "Matching failed. Please choose manually."
+                    isMatchingPhilosopher = false
+                    if Config.debugMode {
+                        print("🔴 Philosopher matching failed: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
+    }
+
     private func completeOnboarding() {
         WKInterfaceDevice.current().play(.success)
+
+        // Determine philosopher preference
+        let finalPhilosopher: PreferredPhilosopher
+        if let match = philosopherMatch {
+            // Use AI-matched philosopher
+            finalPhilosopher = mapPhilosopherIdToEnum(match.philosopher_id)
+        } else {
+            // Use manually selected philosopher
+            finalPhilosopher = selectedPhilosopher
+        }
 
         // Save profile
         profileManager.profile = UserProfile(
@@ -968,11 +1143,20 @@ struct OnboardingView: View {
             currentFocus: selectedFocus,
             lifeContext: Array(selectedContexts),
             stoicGoals: Array(selectedGoals),
-            preferredPhilosopher: selectedPhilosopher,
+            preferredPhilosopher: finalPhilosopher,
             onboardingCompleted: true
         )
-        
+
         isPresented = false
+    }
+
+    private func mapPhilosopherIdToEnum(_ id: String) -> PreferredPhilosopher {
+        switch id.lowercased() {
+        case "marcus_aurelius", "marcus": return .marcus
+        case "seneca": return .seneca
+        case "epictetus": return .epictetus
+        default: return .noPreference
+        }
     }
 }
 
@@ -986,5 +1170,6 @@ enum OnboardingStep {
     case context
     case goals
     case philosopher
+    case matchResult  // NEW: Display AI match result
     case complete
 }

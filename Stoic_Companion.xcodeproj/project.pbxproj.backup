@@ -45,13 +45,7 @@
 		FCFB2024A62FB4F6AAE6FF9B /* PhilosopherMatchingFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */; };
 		FF85256D2F186FDD008BD212 /* Stoic_Companion Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FF85256C2F186FDD008BD212 /* Stoic_Companion Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FF92A386D7DA4A5E957D703D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9647512824E45F39FCE2D23 /* Assets.xcassets */; };
-		C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */; };
-		D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */; };
-		ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */; };
-		5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */; };
-		B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */; };
-		633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */; };
-	/* End PBXBuildFile section */
+/* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
 		FFC22C6B2F1EBF9A00BF79FD /* PBXBuildRule */ = {
@@ -186,13 +180,7 @@
 		FF85257B2F186FDE008BD212 /* Stoic_Companion Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic_Companion Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8525852F186FDE008BD212 /* Stoic_Companion Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic_Companion Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF90444CC060CA8CEA7829F2 /* BackendAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIServiceTests.swift; sourceTree = "<group>"; };
-		4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MementoMoriDisplayView.swift; sourceTree = "<group>"; };
-		140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysPrioritiesView.swift; sourceTree = "<group>"; };
-		0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDisplayCardView.swift; sourceTree = "<group>"; };
-		DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesMenuView.swift; sourceTree = "<group>"; };
-		5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationDisplayView.swift; sourceTree = "<group>"; };
-		2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingDisplayView.swift; sourceTree = "<group>"; };
-	/* End PBXFileReference section */
+/* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FF85257E2F186FDE008BD212 /* Stoic_Companion Watch AppTests */ = {
@@ -326,12 +314,6 @@
 				90F2F7E088CE4806B4615162 /* ContentView.swift */,
 				40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */,
 				CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */,
-							4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */,
-				140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */,
-				0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */,
-				DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */,
-				5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */,
-				2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */,
 			);
 			path = "Stoic_Companion Watch App";
 			sourceTree = "<group>";
@@ -588,12 +570,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,12 +577,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,12 +584,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,12 +636,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

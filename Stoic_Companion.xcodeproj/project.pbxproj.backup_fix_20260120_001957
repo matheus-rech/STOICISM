@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0109CF186B454E8B8C602D60 /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1962B368DFC74ADD88A04DF2 /* AppIntents.framework */; };
-		0253D58C893594E5ECA3568D /* BackendAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF90444CC060CA8CEA7829F2 /* BackendAPIServiceTests.swift */; };
+		D7D55DEF89694579B4322153 /* BackendAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */; };
+		742DE5BE0C5F421183737D94 /* PhilosopherLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */; };
 		032759D6302941A69AA12DAB /* ToolsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5570DC90F242D69464C013 /* ToolsGridView.swift */; };
 		189736C8DBE84801AEEB999B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A2435D9542C3A81BF3AB /* PersistenceManager.swift */; };
 		2375C6D82B6F4CD78C4D391F /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B5DEDE881461EA880ED81 /* GeminiService.swift */; };
 		2AB4208C421E4ED08FD9E323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2F7E088CE4806B4615162 /* ContentView.swift */; };
 		33B7307B6A75452EB7AEC973 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E063D01E7ACD453093CBBBC4 /* NotificationManager.swift */; };
-		3DE2899A935CB769C32253AF /* PhilosopherLibraryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E43E149AB3B8BBDBB5F4B8 /* PhilosopherLibraryViewTests.swift */; };
 		49C3A1F58B0042E3AFF74261 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9085C813D7874E6EA75F65BC /* Config.swift */; };
 		4BB1E0A45EA145C7AA129DA0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A666E999B364E6C88B57AAE /* FavoritesView.swift */; };
 		520B0DE08DB148D48D7422C9 /* StoicQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1844B87D691E4D6097E9DC75 /* StoicQuotes.json */; };
@@ -23,7 +23,6 @@
 		574A9994C76C49EC9C71793B /* NegativeVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64148D955A5A4127985F6A1A /* NegativeVisualizationView.swift */; };
 		60B6EED071D3475F9DA145FC /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44230E5DDF4B8DBD0B31EC /* ChallengesView.swift */; };
 		61518664E2C64DEA82F3D602 /* SOSPanicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967468A79FB41D7B231CC28 /* SOSPanicView.swift */; };
-		742DE5BE0C5F421183737D94 /* PhilosopherLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */; };
 		7B31FD1539334F4A9BFB4AC4 /* LLMServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6AEA3E793433BB268D93A /* LLMServiceFactory.swift */; };
 		7D7346DB88534EFCB3FA8CE6 /* MementoMoriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4A39BDE1A4CBAB75CC541 /* MementoMoriView.swift */; };
 		7F8C40545AAE41FAA89EBA7F /* VirtueLoggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0693CA6D694ADD9BF27BFA /* VirtueLoggingView.swift */; };
@@ -38,20 +37,12 @@
 		C45761B950454815B78F449A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D71FB02E9254FE3B3AA9563 /* SwiftUI.framework */; };
 		CAB0109EA1A94D349D31612B /* EveningAuditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5926A94FF84475EB5DB82A6 /* EveningAuditView.swift */; };
 		CDA3392952464BE6AFB9597B /* ConsultMarcusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B31F90F7CB420FBE82589F /* ConsultMarcusView.swift */; };
-		D7D55DEF89694579B4322153 /* BackendAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */; };
 		DFE25ED78A48488FB7AB31A5 /* ClaudeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4661AADC2E54DAD88964CCA /* ClaudeService.swift */; };
 		F7578C864C9F43159CB81491 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFE4A16B32E47DFB51D0C70 /* UserNotifications.framework */; };
 		FB1A120BE9AD4C638F01B6B6 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2261CC6E48848F6A932B52B /* HistoryView.swift */; };
-		FCFB2024A62FB4F6AAE6FF9B /* PhilosopherMatchingFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */; };
 		FF85256D2F186FDD008BD212 /* Stoic_Companion Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FF85256C2F186FDD008BD212 /* Stoic_Companion Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FF92A386D7DA4A5E957D703D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9647512824E45F39FCE2D23 /* Assets.xcassets */; };
-		C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */; };
-		D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */; };
-		ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */; };
-		5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */; };
-		B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */; };
-		633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */; };
-	/* End PBXBuildFile section */
+/* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
 		FFC22C6B2F1EBF9A00BF79FD /* PBXBuildRule */ = {
@@ -143,6 +134,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIService.swift; sourceTree = "<group>"; };
+		CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherLibraryView.swift; sourceTree = "<group>"; };
 		11DFD8AD0EF9458881D5E032 /* StoicIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicIntents.swift; sourceTree = "<group>"; };
 		15897FA7557143948EE6A11E /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		1844B87D691E4D6097E9DC75 /* StoicQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StoicQuotes.json; sourceTree = "<group>"; };
@@ -152,9 +145,7 @@
 		2B0693CA6D694ADD9BF27BFA /* VirtueLoggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtueLoggingView.swift; sourceTree = "<group>"; };
 		3588714C32B74461B379FC5A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		3D71FB02E9254FE3B3AA9563 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIService.swift; sourceTree = "<group>"; };
 		4A666E999B364E6C88B57AAE /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
-		5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherMatchingFlowTests.swift; sourceTree = "<group>"; };
 		5AD4A39BDE1A4CBAB75CC541 /* MementoMoriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MementoMoriView.swift; sourceTree = "<group>"; };
 		5E2AEC7D6A14433EBCAD5C84 /* Stoic_CompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stoic_CompanionApp.swift; sourceTree = "<group>"; };
 		64148D955A5A4127985F6A1A /* NegativeVisualizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeVisualizationView.swift; sourceTree = "<group>"; };
@@ -172,12 +163,10 @@
 		BC44230E5DDF4B8DBD0B31EC /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
 		BFFE4A16B32E47DFB51D0C70 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		C8CC740D7FB54515ABF1A8FD /* LLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMService.swift; sourceTree = "<group>"; };
-		CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherLibraryView.swift; sourceTree = "<group>"; };
 		CC2B6856A53C4FF38EB1E054 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		D5926A94FF84475EB5DB82A6 /* EveningAuditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningAuditView.swift; sourceTree = "<group>"; };
 		E063D01E7ACD453093CBBBC4 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		EFB3A2435D9542C3A81BF3AB /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
-		F1E43E149AB3B8BBDBB5F4B8 /* PhilosopherLibraryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherLibraryViewTests.swift; sourceTree = "<group>"; };
 		F9647512824E45F39FCE2D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF8525492F186FDB008BD212 /* Stoic_Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stoic_Companion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8525562F186FDD008BD212 /* Stoic_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stoic_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,16 +174,24 @@
 		FF85256C2F186FDD008BD212 /* Stoic_Companion Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stoic_Companion Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF85257B2F186FDE008BD212 /* Stoic_Companion Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic_Companion Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8525852F186FDE008BD212 /* Stoic_Companion Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic_Companion Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF90444CC060CA8CEA7829F2 /* BackendAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIServiceTests.swift; sourceTree = "<group>"; };
-		4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MementoMoriDisplayView.swift; sourceTree = "<group>"; };
-		140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysPrioritiesView.swift; sourceTree = "<group>"; };
-		0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDisplayCardView.swift; sourceTree = "<group>"; };
-		DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesMenuView.swift; sourceTree = "<group>"; };
-		5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationDisplayView.swift; sourceTree = "<group>"; };
-		2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingDisplayView.swift; sourceTree = "<group>"; };
-	/* End PBXFileReference section */
+/* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		FF85254B2F186FDB008BD212 /* Stoic_Companion */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Stoic_Companion;
+			sourceTree = "<group>";
+		};
+		FF8525592F186FDD008BD212 /* Stoic_CompanionTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Stoic_CompanionTests;
+			sourceTree = "<group>";
+		};
+		FF8525632F186FDD008BD212 /* Stoic_CompanionUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Stoic_CompanionUITests;
+			sourceTree = "<group>";
+		};
 		FF85257E2F186FDE008BD212 /* Stoic_Companion Watch AppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Stoic_Companion Watch AppTests";
@@ -271,12 +268,14 @@
 		FF8525402F186FDB008BD212 = {
 			isa = PBXGroup;
 			children = (
+				FF85254B2F186FDB008BD212 /* Stoic_Companion */,
+				FF8525592F186FDD008BD212 /* Stoic_CompanionTests */,
+				FF8525632F186FDD008BD212 /* Stoic_CompanionUITests */,
 				FF8525702F186FDD008BD212 /* Stoic_Companion Watch App */,
 				FF85257E2F186FDE008BD212 /* Stoic_Companion Watch AppTests */,
 				FF8525882F186FDE008BD212 /* Stoic_Companion Watch AppUITests */,
 				FF85254A2F186FDB008BD212 /* Products */,
 				531E767F0D464B1A88458498 /* Frameworks */,
-				FFCD8A0F2F1F5756002797B4 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -326,24 +325,8 @@
 				90F2F7E088CE4806B4615162 /* ContentView.swift */,
 				40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */,
 				CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */,
-							4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */,
-				140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */,
-				0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */,
-				DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */,
-				5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */,
-				2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */,
 			);
 			path = "Stoic_Companion Watch App";
-			sourceTree = "<group>";
-		};
-		FFCD8A0F2F1F5756002797B4 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				FF90444CC060CA8CEA7829F2 /* BackendAPIServiceTests.swift */,
-				5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */,
-				F1E43E149AB3B8BBDBB5F4B8 /* PhilosopherLibraryViewTests.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +348,9 @@
 			dependencies = (
 				FF85256F2F186FDD008BD212 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				FF85254B2F186FDB008BD212 /* Stoic_Companion */,
+			);
 			name = Stoic_Companion;
 			packageProductDependencies = (
 			);
@@ -385,6 +371,9 @@
 			dependencies = (
 				FF8525582F186FDD008BD212 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				FF8525592F186FDD008BD212 /* Stoic_CompanionTests */,
+			);
 			name = Stoic_CompanionTests;
 			packageProductDependencies = (
 			);
@@ -404,6 +393,9 @@
 			);
 			dependencies = (
 				FF8525622F186FDD008BD212 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FF8525632F186FDD008BD212 /* Stoic_CompanionUITests */,
 			);
 			name = Stoic_CompanionUITests;
 			packageProductDependencies = (
@@ -588,25 +580,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
-			);
+				D7D55DEF89694579B4322153 /* BackendAPIService.swift in Sources */,
+				742DE5BE0C5F421183737D94 /* PhilosopherLibraryView.swift in Sources */,);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FF8525522F186FDD008BD212 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,12 +595,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,8 +628,6 @@
 				FB1A120BE9AD4C638F01B6B6 /* HistoryView.swift in Sources */,
 				B27B38C9DCCE43C7B50D086F /* Stoic_CompanionApp.swift in Sources */,
 				2AB4208C421E4ED08FD9E323 /* ContentView.swift in Sources */,
-				D7D55DEF89694579B4322153 /* BackendAPIService.swift in Sources */,
-				742DE5BE0C5F421183737D94 /* PhilosopherLibraryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,9 +635,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0253D58C893594E5ECA3568D /* BackendAPIServiceTests.swift in Sources */,
-				FCFB2024A62FB4F6AAE6FF9B /* PhilosopherMatchingFlowTests.swift in Sources */,
-				3DE2899A935CB769C32253AF /* PhilosopherLibraryViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,12 +642,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-							C285B914D1A14A2E8A8FB16F /* MementoMoriDisplayView.swift in Sources */,
-				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
-				ACB525ED88BF4693B1F93FDC /* QuoteDisplayCardView.swift in Sources */,
-				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
-				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
-				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,20 +873,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2U6JRPZ53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Companion;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -948,20 +909,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2U6JRPZ53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Companion;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1034,12 +992,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-CompanionUITests";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = "Matheus-Rech";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
@@ -1057,12 +1014,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-CompanionUITests";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = "Matheus-Rech";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;

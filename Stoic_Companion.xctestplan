@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "D59D9C47-044C-44ED-80C5-B4FE9F3B6081",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Stoic_Companion.xcodeproj",
+      "identifier" : "FF8525482F186FDB008BD212",
+      "name" : "Stoic_Companion"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Stoic_Companion.xcodeproj",
+        "identifier" : "FF8525552F186FDD008BD212",
+        "name" : "Stoic_CompanionTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Stoic_Companion.xcodeproj",
+        "identifier" : "FF85255F2F186FDD008BD212",
+        "name" : "Stoic_CompanionUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -67,7 +67,7 @@ class AuditManager: ObservableObject {
     }
 
     func saveCurrentEntry() {
-        guard var entry = currentEntry else { return }
+        guard let entry = currentEntry else { return }
 
         let calendar = Calendar.current
         // Remove any existing entry for today
