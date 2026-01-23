@@ -145,6 +145,9 @@ class GeminiService: LLMService {
     }
 
     func generateResponse(prompt: String) async throws -> String {
+        // Note: Gemini API requires API key as query parameter (Google's design)
+        // This is secure over HTTPS, but key appears in server logs
+        // Alternative: Use backend proxy to hide key from client (future enhancement)
         let urlString = "\(baseURL)/models/\(model.id):generateContent?key=\(apiKey)"
         guard let url = URL(string: urlString) else {
             throw LLMError.invalidResponse
@@ -482,6 +485,8 @@ class GeminiService: LLMService {
         aspectRatio: ImageAspectRatio
     ) async throws -> GeneratedImage {
 
+        // Note: Gemini API requires API key as query parameter (Google's API design)
+        // Secure over HTTPS; key retrieved from Secrets.plist (not hardcoded)
         let urlString = "\(baseURL)/models/\(imageModel.id):generateContent?key=\(apiKey)"
         guard let url = URL(string: urlString) else {
             throw LLMError.invalidResponse
@@ -733,6 +738,21 @@ class GeminiService: LLMService {
     }
 
     private func selectQuoteFallback(context: HealthContext, quotes: [StoicQuote]) -> StoicQuote {
+        // Guard against empty quote array
+        guard !quotes.isEmpty else {
+            // Return a hardcoded fallback quote if array is empty
+            return StoicQuote(
+                id: "fallback_epictetus_001",
+                text: "It's not what happens to you, but how you react to it that matters.",
+                author: "Epictetus",
+                book: "Enchiridion",
+                contexts: ["control", "perspective", "response"],
+                timeOfDay: nil,
+                heartRateContext: nil,
+                activityContext: nil
+            )
+        }
+
         // Fallback logic if API fails
         let filtered = quotes.filter { quote in
             var matches = false
@@ -759,7 +779,7 @@ class GeminiService: LLMService {
             return matches
         }
 
-        // Return random from filtered, or random from all if no matches
-        return filtered.randomElement() ?? quotes.randomElement() ?? quotes[0]
+        // Return random from filtered, or random from all (safe now since we checked isEmpty)
+        return filtered.randomElement() ?? quotes.randomElement()!
     }
 }

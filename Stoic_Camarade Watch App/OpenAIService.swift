@@ -214,6 +214,21 @@ class OpenAIService: LLMService {
     }
 
     private func selectQuoteFallback(context: HealthContext, quotes: [StoicQuote]) -> StoicQuote {
+        // Guard against empty quote array
+        guard !quotes.isEmpty else {
+            // Return a hardcoded fallback quote if array is empty
+            return StoicQuote(
+                id: "fallback_seneca_001",
+                text: "We suffer more often in imagination than in reality.",
+                author: "Seneca",
+                book: "Letters from a Stoic",
+                contexts: ["anxiety", "perspective", "wisdom"],
+                timeOfDay: nil,
+                heartRateContext: nil,
+                activityContext: nil
+            )
+        }
+
         // Fallback logic if API fails
         let filtered = quotes.filter { quote in
             var matches = false
@@ -240,7 +255,7 @@ class OpenAIService: LLMService {
             return matches
         }
 
-        // Return random from filtered, or random from all if no matches
-        return filtered.randomElement() ?? quotes.randomElement() ?? quotes[0]
+        // Return random from filtered, or random from all (safe now since we checked isEmpty)
+        return filtered.randomElement() ?? quotes.randomElement()!
     }
 }

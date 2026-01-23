@@ -58,7 +58,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Individual Templates
     
     private func modularSmallTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKImageProvider(onePieceImage: image)
         return CLKComplicationTemplateModularSmallSimpleImage(imageProvider: imageProvider)
     }
     
@@ -69,34 +70,40 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     private func utilitarianSmallTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKImageProvider(onePieceImage: image)
         return CLKComplicationTemplateUtilitarianSmallSquare(imageProvider: imageProvider)
     }
     
     private func utilitarianLargeTemplate() -> CLKComplicationTemplate {
         let textProvider = CLKSimpleTextProvider(text: "Stoic Wisdom")
         let template = CLKComplicationTemplateUtilitarianLargeFlat(textProvider: textProvider)
-        template.imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        template.imageProvider = CLKImageProvider(onePieceImage: image)
         return template
     }
     
     private func circularSmallTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKImageProvider(onePieceImage: image)
         return CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: imageProvider)
     }
-    
+
     private func extraLargeTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKImageProvider(onePieceImage: image)
         return CLKComplicationTemplateExtraLargeSimpleImage(imageProvider: imageProvider)
     }
-    
+
     private func graphicCornerTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKFullColorImageProvider(fullColorImage: image)
         return CLKComplicationTemplateGraphicCornerTextImage(textProvider: CLKSimpleTextProvider(text: "Stoic"), imageProvider: imageProvider)
     }
-    
+
     private func graphicCircularTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKFullColorImageProvider(fullColorImage: image)
         return CLKComplicationTemplateGraphicCircularImage(imageProvider: imageProvider)
     }
     
@@ -107,13 +114,15 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     private func graphicBezelTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKFullColorImageProvider(fullColorImage: image)
         let circularTemplate = CLKComplicationTemplateGraphicCircularImage(imageProvider: imageProvider)
         return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: circularTemplate, textProvider: CLKSimpleTextProvider(text: "Stoic Wisdom"))
     }
-    
+
     private func graphicExtraLargeTemplate() -> CLKComplicationTemplate {
-        let imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(systemName: "laurel.leading")!)
+        let image = UIImage(systemName: "laurel.leading") ?? UIImage(systemName: "star.fill")!
+        let imageProvider = CLKFullColorImageProvider(fullColorImage: image)
         return CLKComplicationTemplateGraphicExtraLargeCircularImage(imageProvider: imageProvider)
     }
     

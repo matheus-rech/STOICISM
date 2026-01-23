@@ -39,7 +39,10 @@ class ClaudeService: LLMService {
     }
 
     func generateResponse(prompt: String) async throws -> String {
-        var request = URLRequest(url: URL(string: apiURL)!)
+        guard let url = URL(string: apiURL) else {
+            throw LLMError.invalidURL(apiURL)
+        }
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
@@ -114,7 +117,10 @@ class ClaudeService: LLMService {
     }
     
     private func callClaude(prompt: String) async throws -> String {
-        var request = URLRequest(url: URL(string: apiURL)!)
+        guard let url = URL(string: apiURL) else {
+            throw LLMError.invalidURL(apiURL)
+        }
+        var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
@@ -166,34 +172,49 @@ class ClaudeService: LLMService {
     }
     
     private func selectQuoteFallback(context: HealthContext, quotes: [StoicQuote]) -> StoicQuote {
+        // Guard against empty quote array
+        guard !quotes.isEmpty else {
+            // Return a hardcoded fallback quote if array is empty
+            return StoicQuote(
+                id: "fallback_marcus_001",
+                text: "The impediment to action advances action. What stands in the way becomes the way.",
+                author: "Marcus Aurelius",
+                book: "Meditations",
+                contexts: ["obstacle", "action", "adversity"],
+                timeOfDay: nil,
+                heartRateContext: nil,
+                activityContext: nil
+            )
+        }
+
         // Fallback logic if Claude API fails
         let filtered = quotes.filter { quote in
             var matches = false
-            
+
             // Match on time of day
             if let timeOfDay = context.timeOfDay,
                let quoteTime = quote.timeOfDay,
                (quoteTime == timeOfDay || quoteTime == "any") {
                 matches = true
             }
-            
+
             // Match on context
             if quote.contexts.contains(context.primaryContext) {
                 matches = true
             }
-            
+
             // Match on stress/heart rate
             if context.stressLevel == .elevated || context.stressLevel == .high {
                 if quote.heartRateContext == "elevated" {
                     matches = true
                 }
             }
-            
+
             return matches
         }
-        
-        // Return random from filtered, or random from all if no matches
-        return filtered.randomElement() ?? quotes.randomElement() ?? quotes[0]
+
+        // Return random from filtered, or random from all (safe now since we checked isEmpty)
+        return filtered.randomElement() ?? quotes.randomElement()!
     }
 }
 

@@ -20,9 +20,13 @@ struct ContentView: View {
     @State private var quoteImage: UIImage?
     @State private var isLoading = false
     @State private var showingOnboarding = false
-    
+
     // Animation states
     @State private var animateQuote = false
+
+    // Error handling
+    @State private var errorMessage: String?
+    @State private var showError = false
 
     var body: some View {
         NavigationView {
@@ -216,6 +220,14 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $showingOnboarding) {
             OnboardingView(profileManager: profileManager, isPresented: $showingOnboarding)
         }
+        .alert("Error", isPresented: $showError) {
+            Button("Try Again") {
+                Task { await fetchNewQuote() }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text(errorMessage ?? "An unknown error occurred")
+        }
     }
     
     private func fetchNewQuote() async {
@@ -224,27 +236,38 @@ struct ContentView: View {
             isLoading = true
         }
 
-        let context = await healthManager.getCurrentContext()
-        let quote = await quoteManager.getContextualQuote(
-            context: context,
-            profile: profileManager.profile.onboardingCompleted ? profileManager.profile : nil,
-            dynamicContext: dynamicContextManager.dynamicContext
-        )
+        // Clear any previous errors
+        errorMessage = nil
 
-        // Generate AI Background Image if Gemini is active
-        var image: UIImage? = nil
-        if Config.llmProvider == .gemini {
-            if let generated = try? await quoteManager.generateBackground(for: quote) {
-                image = UIImage(data: generated)
+        do {
+            let context = await healthManager.getCurrentContext()
+            let quote = try await quoteManager.getContextualQuote(
+                context: context,
+                profile: profileManager.profile.onboardingCompleted ? profileManager.profile : nil,
+                dynamicContext: dynamicContextManager.dynamicContext
+            )
+
+            // Generate AI Background Image if Gemini is active
+            var image: UIImage? = nil
+            if Config.llmProvider == .gemini {
+                if let generated = try? await quoteManager.generateBackground(for: quote) {
+                    image = UIImage(data: generated)
+                }
             }
-        }
 
-        await MainActor.run {
-            currentQuote = quote
-            quoteImage = image
-            isLoading = false
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                animateQuote = true
+            await MainActor.run {
+                currentQuote = quote
+                quoteImage = image
+                isLoading = false
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                    animateQuote = true
+                }
+            }
+        } catch {
+            await MainActor.run {
+                errorMessage = "Unable to fetch wisdom: \(error.localizedDescription)"
+                showError = true
+                isLoading = false
             }
         }
     }
@@ -548,6 +571,19 @@ class QuoteManager: ObservableObject {
 
     private func selectLocalQuote(for context: HealthContext, profile: UserProfile?) -> StoicQuote {
         let filtered = allQuotes.filter { $0.contexts.contains(context.primaryContext) }
+        // Guard against empty quotes array
+        guard !allQuotes.isEmpty else {
+            return StoicQuote(
+                id: "fallback_default",
+                text: "You have power over your mind - not outside events. Realize this, and you will find strength.",
+                author: "Marcus Aurelius",
+                book: "Meditations",
+                contexts: ["control", "strength", "mindset"],
+                timeOfDay: nil,
+                heartRateContext: nil,
+                activityContext: nil
+            )
+        }
         return filtered.randomElement() ?? allQuotes.randomElement()!
     }
 }

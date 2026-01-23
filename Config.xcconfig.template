@@ -1,0 +1,17 @@
+// Stoic Camarade - Secure Configuration Template
+// Copy this file to Config.xcconfig and add your actual API keys
+// Config.xcconfig is in .gitignore and will NOT be committed to git
+
+// IMPORTANT: After copying, add your real API keys below
+
+// Claude API Key (get from: https://console.anthropic.com/)
+CLAUDE_API_KEY = YOUR_CLAUDE_API_KEY_HERE
+
+// OpenAI API Key (get from: https://platform.openai.com/)
+OPENAI_API_KEY = YOUR_OPENAI_API_KEY_HERE
+
+// OpenRouter API Key (get from: https://openrouter.ai/)
+OPENROUTER_API_KEY = YOUR_OPENROUTER_API_KEY_HERE
+
+// Gemini API Key (get from: https://aistudio.google.com/)
+GEMINI_API_KEY = YOUR_GEMINI_API_KEY_HERE

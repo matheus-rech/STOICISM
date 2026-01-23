@@ -202,9 +202,11 @@ enum LLMError: Error, LocalizedError {
     case requestFailed(statusCode: Int)
     case invalidResponse
     case invalidAPIKey
+    case invalidURL(String)
     case rateLimitExceeded
     case networkError(Error)
     case modelNotAvailable
+    case emptyQuoteArray
 
     var errorDescription: String? {
         switch self {
@@ -214,12 +216,16 @@ enum LLMError: Error, LocalizedError {
             return "Invalid response from LLM provider"
         case .invalidAPIKey:
             return "Invalid or missing API key"
+        case .invalidURL(let urlString):
+            return "Invalid URL: \(urlString)"
         case .rateLimitExceeded:
             return "Rate limit exceeded. Please try again later."
         case .networkError(let error):
             return "Network error: \(error.localizedDescription)"
         case .modelNotAvailable:
             return "Selected model is not available"
+        case .emptyQuoteArray:
+            return "No quotes available to select from"
         }
     }
 }

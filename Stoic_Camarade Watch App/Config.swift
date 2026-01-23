@@ -21,11 +21,14 @@ struct Config {
     static let llmModel: LLMModel = .gemini25Flash
 
     // MARK: - API Keys
+    // ⚠️ SECURITY: API keys should be provided via environment variables or Secrets.plist
+    // See Config.xcconfig.template for setup instructions
+    // Never hardcode API keys in source code!
 
-    static let claudeAPIKey = "YOUR_CLAUDE_API_KEY_HERE"
-    static let openAIKey = "" // RESTORE FOR LOCAL SIMULATION ONLY
-    static let openRouterKey = "YOUR_OPENROUTER_API_KEY_HERE"
-    static let geminiKey = "AIzaSyDpIxsbBxCz7Llt9w3T1-Rhx3DF5byIfFk"
+    static let claudeAPIKey = ""  // Load from environment or Secrets.plist
+    static let openAIKey = ""     // Load from environment or Secrets.plist
+    static let openRouterKey = "" // Load from environment or Secrets.plist
+    static let geminiKey = ""     // Load from environment or Secrets.plist
 
     // MARK: - RAG API Settings
 
