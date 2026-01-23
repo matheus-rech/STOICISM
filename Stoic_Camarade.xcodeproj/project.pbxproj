@@ -47,6 +47,7 @@
 		F7578C864C9F43159CB81491 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFE4A16B32E47DFB51D0C70 /* UserNotifications.framework */; };
 		FB1A120BE9AD4C638F01B6B6 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2261CC6E48848F6A932B52B /* HistoryView.swift */; };
 		FCFB2024A62FB4F6AAE6FF9B /* PhilosopherMatchingFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */; };
+		FF16C4A52F23D922007DCF7F /* Stoic Camarade Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FF16C4A42F23D922007DCF7F /* Stoic Camarade Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FF85256D2F186FDD008BD212 /* Stoic_Camarade Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FF85256C2F186FDD008BD212 /* Stoic_Camarade Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FF92A386D7DA4A5E957D703D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9647512824E45F39FCE2D23 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,27 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
+		FF16C4A62F23D922007DCF7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF16C4A32F23D922007DCF7F;
+			remoteInfo = "Stoic Camarade Watch App";
+		};
+		FF16C4B42F23D924007DCF7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF16C4A32F23D922007DCF7F;
+			remoteInfo = "Stoic Camarade Watch App";
+		};
+		FF16C4BE2F23D924007DCF7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF16C4A32F23D922007DCF7F;
+			remoteInfo = "Stoic Camarade Watch App";
+		};
 		FF8525572F186FDD008BD212 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
@@ -127,6 +149,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FF16C4C82F23D924007DCF7F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FF16C4A52F23D922007DCF7F /* Stoic Camarade Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF8525922F186FDE008BD212 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +217,10 @@
 		F1E43E149AB3B8BBDBB5F4B8 /* PhilosopherLibraryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherLibraryViewTests.swift; sourceTree = "<group>"; };
 		F9647512824E45F39FCE2D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF16C4902F23A2D5007DCF7F /* Stoic_Camarade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stoic_Camarade.entitlements; sourceTree = "<group>"; };
+		FF16C49F2F23D922007DCF7F /* Stoic Camarade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stoic Camarade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF16C4A42F23D922007DCF7F /* Stoic Camarade Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stoic Camarade Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF16C4B32F23D924007DCF7F /* Stoic Camarade Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic Camarade Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF16C4BD2F23D924007DCF7F /* Stoic Camarade Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic Camarade Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8525492F186FDB008BD212 /* Stoic_Camarade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stoic_Camarade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8525562F186FDD008BD212 /* Stoic_CamaradeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stoic_CamaradeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8525602F186FDD008BD212 /* Stoic_CamaradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stoic_CamaradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +231,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		FF16C4A82F23D922007DCF7F /* Stoic Camarade Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Stoic Camarade Watch App";
+			sourceTree = "<group>";
+		};
+		FF16C4B62F23D924007DCF7F /* Stoic Camarade Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Stoic Camarade Watch AppTests";
+			sourceTree = "<group>";
+		};
+		FF16C4C02F23D924007DCF7F /* Stoic Camarade Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Stoic Camarade Watch AppUITests";
+			sourceTree = "<group>";
+		};
 		FF85257E2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Stoic_Camarade Watch AppTests";
@@ -207,6 +259,27 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FF16C4A12F23D922007DCF7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF16C4B02F23D924007DCF7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF16C4BA2F23D924007DCF7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF8525462F186FDB008BD212 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +347,9 @@
 				FF8525702F186FDD008BD212 /* Stoic_Camarade Watch App */,
 				FF85257E2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */,
 				FF8525882F186FDE008BD212 /* Stoic_Camarade Watch AppUITests */,
+				FF16C4A82F23D922007DCF7F /* Stoic Camarade Watch App */,
+				FF16C4B62F23D924007DCF7F /* Stoic Camarade Watch AppTests */,
+				FF16C4C02F23D924007DCF7F /* Stoic Camarade Watch AppUITests */,
 				FF85254A2F186FDB008BD212 /* Products */,
 				531E767F0D464B1A88458498 /* Frameworks */,
 				FFCD8A0F2F1F5756002797B4 /* Recovered References */,
@@ -289,6 +365,10 @@
 				FF85256C2F186FDD008BD212 /* Stoic_Camarade Watch App.app */,
 				FF85257B2F186FDE008BD212 /* Stoic_Camarade Watch AppTests.xctest */,
 				FF8525852F186FDE008BD212 /* Stoic_Camarade Watch AppUITests.xctest */,
+				FF16C49F2F23D922007DCF7F /* Stoic Camarade.app */,
+				FF16C4A42F23D922007DCF7F /* Stoic Camarade Watch App.app */,
+				FF16C4B32F23D924007DCF7F /* Stoic Camarade Watch AppTests.xctest */,
+				FF16C4BD2F23D924007DCF7F /* Stoic Camarade Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -349,6 +429,93 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FF16C49E2F23D922007DCF7F /* Stoic Camarade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF16C4C92F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade" */;
+			buildPhases = (
+				FF16C49D2F23D922007DCF7F /* Resources */,
+				FF16C4C82F23D924007DCF7F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF16C4A72F23D922007DCF7F /* PBXTargetDependency */,
+			);
+			name = "Stoic Camarade";
+			packageProductDependencies = (
+			);
+			productName = "Stoic Camarade";
+			productReference = FF16C49F2F23D922007DCF7F /* Stoic Camarade.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		FF16C4A32F23D922007DCF7F /* Stoic Camarade Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF16C4C52F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade Watch App" */;
+			buildPhases = (
+				FF16C4A02F23D922007DCF7F /* Sources */,
+				FF16C4A12F23D922007DCF7F /* Frameworks */,
+				FF16C4A22F23D922007DCF7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FF16C4A82F23D922007DCF7F /* Stoic Camarade Watch App */,
+			);
+			name = "Stoic Camarade Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Stoic Camarade Watch App";
+			productReference = FF16C4A42F23D922007DCF7F /* Stoic Camarade Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF16C4B22F23D924007DCF7F /* Stoic Camarade Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF16C4CC2F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade Watch AppTests" */;
+			buildPhases = (
+				FF16C4AF2F23D924007DCF7F /* Sources */,
+				FF16C4B02F23D924007DCF7F /* Frameworks */,
+				FF16C4B12F23D924007DCF7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF16C4B52F23D924007DCF7F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FF16C4B62F23D924007DCF7F /* Stoic Camarade Watch AppTests */,
+			);
+			name = "Stoic Camarade Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Stoic Camarade Watch AppTests";
+			productReference = FF16C4B32F23D924007DCF7F /* Stoic Camarade Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF16C4BC2F23D924007DCF7F /* Stoic Camarade Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF16C4CF2F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade Watch AppUITests" */;
+			buildPhases = (
+				FF16C4B92F23D924007DCF7F /* Sources */,
+				FF16C4BA2F23D924007DCF7F /* Frameworks */,
+				FF16C4BB2F23D924007DCF7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF16C4BF2F23D924007DCF7F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FF16C4C02F23D924007DCF7F /* Stoic Camarade Watch AppUITests */,
+			);
+			name = "Stoic Camarade Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Stoic Camarade Watch AppUITests";
+			productReference = FF16C4BD2F23D924007DCF7F /* Stoic Camarade Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FF8525482F186FDB008BD212 /* Stoic_Camarade */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF8525932F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade" */;
@@ -488,6 +655,20 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					FF16C49E2F23D922007DCF7F = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FF16C4A32F23D922007DCF7F = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FF16C4B22F23D924007DCF7F = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FF16C4A32F23D922007DCF7F;
+					};
+					FF16C4BC2F23D924007DCF7F = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FF16C4A32F23D922007DCF7F;
+					};
 					FF8525482F186FDB008BD212 = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -532,11 +713,43 @@
 				FF85256B2F186FDD008BD212 /* Stoic_Camarade Watch App */,
 				FF85257A2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */,
 				FF8525842F186FDE008BD212 /* Stoic_Camarade Watch AppUITests */,
+				FF16C49E2F23D922007DCF7F /* Stoic Camarade */,
+				FF16C4A32F23D922007DCF7F /* Stoic Camarade Watch App */,
+				FF16C4B22F23D924007DCF7F /* Stoic Camarade Watch AppTests */,
+				FF16C4BC2F23D924007DCF7F /* Stoic Camarade Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FF16C49D2F23D922007DCF7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF16C4A22F23D922007DCF7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF16C4B12F23D924007DCF7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF16C4BB2F23D924007DCF7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF8525472F186FDB008BD212 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,6 +797,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FF16C4A02F23D922007DCF7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF16C4AF2F23D924007DCF7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF16C4B92F23D924007DCF7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF8525452F186FDB008BD212 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -664,6 +898,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FF16C4A72F23D922007DCF7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF16C4A32F23D922007DCF7F /* Stoic Camarade Watch App */;
+			targetProxy = FF16C4A62F23D922007DCF7F /* PBXContainerItemProxy */;
+		};
+		FF16C4B52F23D924007DCF7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF16C4A32F23D922007DCF7F /* Stoic Camarade Watch App */;
+			targetProxy = FF16C4B42F23D924007DCF7F /* PBXContainerItemProxy */;
+		};
+		FF16C4BF2F23D924007DCF7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF16C4A32F23D922007DCF7F /* Stoic Camarade Watch App */;
+			targetProxy = FF16C4BE2F23D924007DCF7F /* PBXContainerItemProxy */;
+		};
 		FF8525582F186FDD008BD212 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FF8525482F186FDB008BD212 /* Stoic_Camarade */;
@@ -692,6 +941,200 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		FF16C4C62F23D924007DCF7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stoic Camarade";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stoic.camarade.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		FF16C4C72F23D924007DCF7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stoic Camarade";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stoic.camarade.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		FF16C4CA2F23D924007DCF7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stoic Camarade";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FF16C4CB2F23D924007DCF7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				INFOPLIST_KEY_CFBundleDisplayName = "Stoic Camarade";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF16C4CD2F23D924007DCF7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stoic Camarade Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stoic Camarade Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		FF16C4CE2F23D924007DCF7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stoic Camarade Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stoic Camarade Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		FF16C4D02F23D924007DCF7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Stoic Camarade Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		FF16C4D12F23D924007DCF7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Stoic Camarade Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
 		FF85258D2F186FDE008BD212 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -818,9 +1261,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Stoic_Camarade Watch App/Stoic_Camarade.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=watchos*]" = Z2U6JRPZ53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info_Watch.plist;
@@ -831,12 +1276,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stoic.camarade.watchkitapp;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "Stoic Camarade App Store Connect Profile";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "watchos watchsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -857,9 +1303,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Stoic_Camarade Watch App/Stoic_Camarade.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=watchos*]" = Z2U6JRPZ53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info_Watch.plist;
@@ -873,8 +1321,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stoic.camarade.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "Stoic Camarade App Store Connect Profile";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "watchos watchsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -895,11 +1344,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Stoic_Camarade.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=watchos*]" = Z2U6JRPZ53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Camarade;
@@ -920,7 +1368,6 @@
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "Matheus-Rech";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "Stoic Matheus";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "watchos watchsimulator";
@@ -943,11 +1390,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Stoic_Camarade.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=watchos*]" = Z2U6JRPZ53;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Camarade;
@@ -967,7 +1413,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "Stoic Matheus";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "watchos watchsimulator";
@@ -1035,7 +1480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1189,6 +1634,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FF16C4C52F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF16C4C62F23D924007DCF7F /* Debug */,
+				FF16C4C72F23D924007DCF7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF16C4C92F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF16C4CA2F23D924007DCF7F /* Debug */,
+				FF16C4CB2F23D924007DCF7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF16C4CC2F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF16C4CD2F23D924007DCF7F /* Debug */,
+				FF16C4CE2F23D924007DCF7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF16C4CF2F23D924007DCF7F /* Build configuration list for PBXNativeTarget "Stoic Camarade Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF16C4D02F23D924007DCF7F /* Debug */,
+				FF16C4D12F23D924007DCF7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FF8525442F186FDB008BD212 /* Build configuration list for PBXProject "Stoic_Camarade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

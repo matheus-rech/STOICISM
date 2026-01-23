@@ -1,0 +1,5 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild archive  -scheme "Stoic_Camarade Watch App"  -configuration Release  -archivePath ./build/StoicCamarade.xcarchive  -destination generic/platform=watchOS  -allowProvisioningUpdates
+
+2026-01-23 14:13:08.350 xcodebuild[23204:2021908] Writing error result bundle to /var/folders/fy/nt00dfqn49x7tsn2b3kb67bc0000gn/T/ResultBundle_2026-23-01_14-13-0008.xcresult
+xcodebuild: error: Unknown build action ''.

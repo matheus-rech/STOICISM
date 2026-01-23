@@ -2,26 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>method</key>
-    <string>app-store</string>
+    <key>destination</key>
+    <string>upload</string>
     <key>teamID</key>
     <string>Z2U6JRPZ53</string>
     <key>uploadSymbols</key>
     <true/>
-    <key>uploadBitcode</key>
-    <false/>
-    <key>compileBitcode</key>
-    <false/>
-    <key>manageAppVersionAndBuildNumber</key>
-    <false/>
-    <key>destination</key>
-    <string>export</string>
     <key>signingStyle</key>
-    <string>automatic</string>
+    <string>manual</string>
     <key>provisioningProfiles</key>
     <dict>
         <key>com.stoic.camarade.watchkitapp</key>
-        <string>Stoic Camarade Watch App Store</string>
+        <string>Stoic Camarade App Store Connect Profile</string>
     </dict>
 </dict>
 </plist>
