@@ -241,7 +241,7 @@ struct ContentView: View {
 
         do {
             let context = await healthManager.getCurrentContext()
-            let quote = try await quoteManager.getContextualQuote(
+            let quote = await quoteManager.getContextualQuote(
                 context: context,
                 profile: profileManager.profile.onboardingCompleted ? profileManager.profile : nil,
                 dynamicContext: dynamicContextManager.dynamicContext
@@ -250,7 +250,7 @@ struct ContentView: View {
             // Generate AI Background Image if Gemini is active
             var image: UIImage? = nil
             if Config.llmProvider == .gemini {
-                if let generated = try? await quoteManager.generateBackground(for: quote) {
+                if let generated = try await quoteManager.generateBackground(for: quote) {
                     image = UIImage(data: generated)
                 }
             }
@@ -1209,3 +1209,4 @@ enum OnboardingStep {
     case matchResult  // NEW: Display AI match result
     case complete
 }
+
