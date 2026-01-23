@@ -1,0 +1,5 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild build  -scheme "Stoic_Companion Watch App"  -project Stoic_Companion.xcodeproj  -configuration Debug  -destination "platform=watchOS Simulator,name=Apple Watch Series 9"  -allowProvisioningUpdates 
+
+2026-01-22 23:16:47.219 xcodebuild[65447:436159] Writing error result bundle to /var/folders/fy/nt00dfqn49x7tsn2b3kb67bc0000gn/T/ResultBundle_2026-22-01_23-16-0047.xcresult
+xcodebuild: error: Unknown build action ''.

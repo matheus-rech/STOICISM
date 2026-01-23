@@ -38,10 +38,17 @@ struct StoicTool: Identifiable {
         StoicTool(name: "SOS Calm", shortName: "SOS", icon: "heart.circle.fill", color: .red, destination: AnyView(SOSPanicView())),
 
         // Enhanced Display Components (NEW - from HTML mockup conversion)
-        StoicTool(name: "Today's Priorities", shortName: "Priorities", icon: "checklist", color: .blue, destination: AnyView(TodaysPrioritiesView())),
-        StoicTool(name: "Daily Affirmations", shortName: "Affirm", icon: "sparkle", color: .purple, destination: AnyView(AffirmationDisplayView())),
-        StoicTool(name: "Box Breathing", shortName: "Breathe", icon: "wind.circle.fill", color: .cyan, destination: AnyView(BoxBreathingDisplayView())),
-        StoicTool(name: "Quick Favorites", shortName: "Favorites", icon: "star.fill", color: .yellow, destination: AnyView(FavoritesMenuView())),
+        // TODO: Add these files to the Watch App target in Xcode to enable these tools
+         StoicTool(name: "Today's Priorities", shortName: "Priorities", icon: "checklist", color: .blue, destination: AnyView(TodaysPrioritiesView())),
+        StoicTool(
+            name: "Daily Affirmations",
+            shortName: "Affirm",
+            icon: "sparkle",
+            color: .purple,
+            destination: AnyView(AffirmationDisplayView(affirmation: DailyAffirmation(text: "I am disciplined and master of my own actions.", category: .discipline)))
+        ),
+         StoicTool(name: "Box Breathing", shortName: "Breathe", icon: "wind.circle.fill", color: .cyan, destination: AnyView(BoxBreathingDisplayView())),
+         StoicTool(name: "Quick Favorites", shortName: "Favorites", icon: "star.fill", color: .yellow, destination: AnyView(FavoritesMenuView())),
     ]
 }
 
