@@ -1,6 +1,6 @@
-# Complete Guide: Publishing Stoic Companion to App Store Connect
+# Complete Guide: Publishing Stoic Camarade to App Store Connect
 
-**watchOS App - Stoic Companion**
+**watchOS App - Stoic Camarade**
 **Date**: January 22, 2026
 **Status**: Ready for Archive & Upload
 
@@ -12,7 +12,7 @@ Before starting, ensure you have:
 
 - [ ] ✅ **Apple Developer Program** membership ($99/year)
 - [ ] ✅ **Team ID**: Z2U6JRPZ53 (already configured in project)
-- [ ] ✅ **Bundle ID**: com.stoic.companion.watchkitapp
+- [ ] ✅ **Bundle ID**: com.stoic.camarade.watchkitapp
 - [ ] ✅ **Xcode 26.2** installed
 - [ ] ✅ **Project opened** in Xcode (just opened for you!)
 
@@ -25,16 +25,16 @@ Before starting, ensure you have:
 **Xcode is now open. Follow these steps:**
 
 1. **Select the Project** (top of left sidebar)
-   - Click "Stoic_Companion" (blue icon)
+   - Click "Stoic_Camarade" (blue icon)
 
 2. **Select the Watch App Target**
    - In the main area, under "TARGETS"
-   - Click "Stoic_Companion Watch App"
+   - Click "Stoic_Camarade Watch App"
 
 3. **Go to "Signing & Capabilities" Tab**
    - Verify these settings:
      - ✅ **Team**: Your Apple Developer Team (Z2U6JRPZ53)
-     - ✅ **Bundle Identifier**: com.stoic.companion.watchkitapp
+     - ✅ **Bundle Identifier**: com.stoic.camarade.watchkitapp
      - ✅ **Signing**: "Automatically manage signing" should be CHECKED
 
 4. **Check watchOS Deployment Target**
@@ -55,7 +55,7 @@ Before starting, ensure you have:
 
 **Correct Selection Looks Like:**
 ```
-Stoic_Companion Watch App > Any watchOS Device (arm64)
+Stoic_Camarade Watch App > Any watchOS Device (arm64)
 ```
 
 ---
@@ -110,7 +110,7 @@ Before archiving, test that the project builds:
 **After archive completes, the Organizer window will open:**
 
 1. **Select Your Archive**
-   - Should see "Stoic_Companion Watch App" with today's date
+   - Should see "Stoic_Camarade Watch App" with today's date
    - Click to select it
 
 2. **Click "Distribute App"**
@@ -164,7 +164,7 @@ Before archiving, test that the project builds:
 
 2. **Check Status**
    - Go to: https://appstoreconnect.apple.com
-   - Navigate to: **My Apps → Stoic Companion → Activity**
+   - Navigate to: **My Apps → Stoic Camarade → Activity**
    - You'll see your build processing
 
 ### Within 1 Hour
@@ -200,7 +200,7 @@ Before archiving, test that the project builds:
 5. **Test on Your Watch**
    - Testers receive email with TestFlight link
    - Install TestFlight app on paired iPhone
-   - Install Stoic Companion from TestFlight
+   - Install Stoic Camarade from TestFlight
    - Test on actual Apple Watch!
 
 ### External Testing (Requires Beta App Review)
@@ -217,14 +217,14 @@ Before archiving, test that the project builds:
 
 1. **Go to App Store Connect**
    - https://appstoreconnect.apple.com
-   - Select "Stoic Companion"
+   - Select "Stoic Camarade"
 
 2. **Create New Version (if needed)**
    - Click "+" next to "iOS App" or "watchOS App"
    - Enter version number (e.g., 1.0)
 
 3. **Fill Out App Information**
-   - App name: Stoic Companion
+   - App name: Stoic Camarade
    - Subtitle: Daily Stoic Wisdom for Apple Watch
    - Description: (Write compelling description)
    - Keywords: stoic, philosophy, quotes, mindfulness, watch
@@ -367,17 +367,17 @@ xcrun simctl boot "Apple Watch Series 9"
 cd /Users/matheusrech/Desktop/STOICISM-main
 
 # Clean build
-xcodebuild -scheme "Stoic_Companion Watch App" clean
+xcodebuild -scheme "Stoic_Camarade Watch App" clean
 
 # Build for simulator (testing)
-xcodebuild -scheme "Stoic_Companion Watch App" \
+xcodebuild -scheme "Stoic_Camarade Watch App" \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 9' \
   -allowProvisioningUpdates \
   build
 
 # Archive for App Store (RECOMMENDED: use Xcode GUI instead)
 xcodebuild archive \
-  -scheme "Stoic_Companion Watch App" \
+  -scheme "Stoic_Camarade Watch App" \
   -archivePath "./build/StoicCompanion.xcarchive" \
   -destination 'generic/platform=watchOS' \
   -allowProvisioningUpdates
@@ -459,6 +459,6 @@ If you encounter any issues, refer to the troubleshooting section above, or chec
 ---
 
 **Guide Created**: January 22, 2026
-**Project**: Stoic Companion (watchOS)
+**Project**: Stoic Camarade (watchOS)
 **Team ID**: Z2U6JRPZ53
-**Bundle ID**: com.stoic.companion.watchkitapp
+**Bundle ID**: com.stoic.camarade.watchkitapp

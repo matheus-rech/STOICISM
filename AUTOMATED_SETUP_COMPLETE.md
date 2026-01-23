@@ -38,7 +38,7 @@
 ### Step 1: Select Device (30 seconds)
 **Location**: Xcode toolbar (top-left)
 
-Click the dropdown next to "Stoic_Companion Watch App"
+Click the dropdown next to "Stoic_Camarade Watch App"
 → Select: **"Any watchOS Device (arm64)"**
 
 ⚠️ **CRITICAL**: Must be DEVICE, not simulator!
@@ -75,8 +75,8 @@ Click the dropdown next to "Stoic_Companion Watch App"
 ### The Technical Issue:
 ```
 Your Xcode scheme is configured to archive TWO targets:
-  1. "Stoic_Companion" (legacy iOS container)
-  2. "Stoic_Companion Watch App" (your watchOS app)
+  1. "Stoic_Camarade" (legacy iOS container)
+  2. "Stoic_Camarade Watch App" (your watchOS app)
 
 The legacy target requires provisioning profiles that aren't configured.
 ```
@@ -186,7 +186,7 @@ This script will:
 
 ### Later Today (1 hour)
 - [ ] Go to https://appstoreconnect.apple.com
-- [ ] Check My Apps → Stoic Companion
+- [ ] Check My Apps → Stoic Camarade
 - [ ] Build shows "Processing"
 - [ ] Wait for "Ready to Submit"
 
@@ -295,7 +295,7 @@ Go to Xcode → Select "Any watchOS Device (arm64)" → Product → Archive
 
 **Good luck with your App Store submission!** 🍀
 
-Your Stoic Companion app is about to be available to Apple Watch users worldwide! 🌎⌚
+Your Stoic Camarade app is about to be available to Apple Watch users worldwide! 🌎⌚
 
 ---
 

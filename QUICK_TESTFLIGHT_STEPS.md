@@ -1,7 +1,7 @@
 # Quick TestFlight Archive Steps
 
 ## ⚠️ Current Issue
-Command-line archive failed because the legacy "Stoic_Companion" target needs provisioning.
+Command-line archive failed because the legacy "Stoic_Camarade" target needs provisioning.
 
 ## ✅ Best Solution: Use Xcode GUI
 
@@ -9,7 +9,7 @@ Command-line archive failed because the legacy "Stoic_Companion" target needs pr
 
 **1. Open in Xcode**
 ```bash
-open Stoic_Companion.xcodeproj
+open Stoic_Camarade.xcodeproj
 ```
 
 **2. Select Device**
@@ -29,16 +29,16 @@ If you want to fix command-line archiving:
 
 **Fix the scheme** (in Xcode):
 1. Product → Scheme → Edit Scheme
-2. Select "Stoic_Companion Watch App"
+2. Select "Stoic_Camarade Watch App"
 3. Archive (left sidebar)
-4. Uncheck "Stoic_Companion" target
-5. Keep only "Stoic_Companion Watch App" checked
+4. Uncheck "Stoic_Camarade" target
+5. Keep only "Stoic_Camarade Watch App" checked
 6. Save
 
 Then retry:
 ```bash
 xcodebuild archive \
-  -scheme "Stoic_Companion Watch App" \
+  -scheme "Stoic_Camarade Watch App" \
   -archivePath "./build/StoicCompanion.xcarchive" \
   -destination 'generic/platform=watchOS' \
   -allowProvisioningUpdates
@@ -47,7 +47,7 @@ xcodebuild archive \
 ## What You Need
 
 ✅ Apple Developer Program ($99/year)
-✅ App ID created (Bundle: com.stoic.companion.watchkitapp)
+✅ App ID created (Bundle: com.stoic.camarade.watchkitapp)
 ✅ Team ID: Z2U6JRPZ53 (already configured)
 
 **See TESTFLIGHT_DISTRIBUTION_GUIDE.md for complete details.**

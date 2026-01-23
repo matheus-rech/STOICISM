@@ -1,8 +1,8 @@
-# Stoic Companion + Gemini Integration Guide
+# Stoic Camarade + Gemini Integration Guide
 
 ## Overview
 
-This guide shows how to integrate Gemini AI capabilities into your Stoic Companion app, respecting watchOS constraints while adding powerful features via an iOS companion app.
+This guide shows how to integrate Gemini AI capabilities into your Stoic Camarade app, respecting watchOS constraints while adding powerful features via an iOS companion app.
 
 ---
 
@@ -245,12 +245,12 @@ export GOOGLE_API_KEY="AIzaSy..."
 ## 📁 Files to Add
 
 ```
-Stoic_Companion/
-├── Stoic_Companion Watch App/
+Stoic_Camarade/
+├── Stoic_Camarade Watch App/
 │   ├── GeminiService.swift      # Add this (watch-compatible)
 │   └── ConsultMarcusView.swift  # Update to use Gemini
 │
-└── Stoic_Companion iOS/         # NEW companion app
+└── Stoic_Camarade iOS/         # NEW companion app
     ├── StoicGeminiService.swift # Full feature service
     ├── QuoteCardView.swift      # Card generator UI
     ├── PhotoWisdomView.swift    # Photo analysis UI

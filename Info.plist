@@ -27,7 +27,7 @@
     
     <!-- HealthKit Permissions -->
     <key>NSHealthShareUsageDescription</key>
-    <string>Stoic Companion reads your heart rate and activity data to provide personalized wisdom tailored to your current state.</string>
+    <string>Stoic Camarade reads your heart rate and activity data to provide personalized wisdom tailored to your current state.</string>
     
     <key>NSHealthUpdateUsageDescription</key>
     <string>This app does not write any health data.</string>

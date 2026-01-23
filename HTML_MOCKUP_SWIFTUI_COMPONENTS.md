@@ -2,7 +2,7 @@
 
 **Created**: January 22, 2026
 **Source**: `/Users/matheusrech/Library/CloudStorage/Dropbox/Fichas Papers/gemini_generated_image_bnei8ybnei8ybnei_jpg_artifact.json`
-**Target**: Stoic Companion watchOS App
+**Target**: Stoic Camarade watchOS App
 
 ---
 
@@ -242,12 +242,12 @@ BreathingCard()             // Breathing exercise
 
 All 6 SwiftUI files are already in:
 ```
-/Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Companion Watch App/
+/Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Camarade Watch App/
 ```
 
-1. Open `Stoic_Companion.xcodeproj` in Xcode
-2. In Xcode Navigator, right-click on "Stoic_Companion Watch App"
-3. Select "Add Files to Stoic_Companion Watch App"
+1. Open `Stoic_Camarade.xcodeproj` in Xcode
+2. In Xcode Navigator, right-click on "Stoic_Camarade Watch App"
+3. Select "Add Files to Stoic_Camarade Watch App"
 4. Select these files:
    - `MementoMoriDisplayView.swift`
    - `TodaysPrioritiesView.swift`
@@ -255,7 +255,7 @@ All 6 SwiftUI files are already in:
    - `FavoritesMenuView.swift`
    - `AffirmationDisplayView.swift`
    - `BoxBreathingDisplayView.swift`
-5. Ensure **Target Membership** = "Stoic_Companion Watch App"
+5. Ensure **Target Membership** = "Stoic_Camarade Watch App"
 
 ### Step 2: Test with Previews
 
@@ -432,7 +432,7 @@ xcrun simctl boot "Apple Watch Series 11 (42mm)"
 
 Then run from Xcode or:
 ```bash
-xcodebuild -scheme "Stoic_Companion Watch App" \
+xcodebuild -scheme "Stoic_Camarade Watch App" \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)' \
   -allowProvisioningUpdates \
   build
@@ -536,4 +536,4 @@ Created **6 SwiftUI files** with **18 individual components**:
 
 **Status**: ✅ **COMPLETE - ALL SCREENS RECREATED IN SWIFTUI**
 
-Ready to make your Stoic Companion app look exactly like the beautiful HTML mockup, with native watchOS performance and enhancements! 🎉
+Ready to make your Stoic Camarade app look exactly like the beautiful HTML mockup, with native watchOS performance and enhancements! 🎉

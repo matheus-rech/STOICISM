@@ -10,7 +10,7 @@
 ```
 ❌ Communication with Apple failed: Your team has no devices
 ❌ No profiles for 'Test.Stoic-Companion' were found
-❌ No profiles for 'com.stoic.companion.watchkitapp' were found
+❌ No profiles for 'com.stoic.camarade.watchkitapp' were found
 ```
 
 **Root Cause**:
@@ -37,7 +37,7 @@
 **Action**: Reopen the project
 
 ```bash
-open /Users/matheusrech/Desktop/STOICISM-main/Stoic_Companion.xcodeproj
+open /Users/matheusrech/Desktop/STOICISM-main/Stoic_Camarade.xcodeproj
 ```
 
 Wait for Xcode to fully load...
@@ -51,13 +51,13 @@ Wait for Xcode to fully load...
 **Detailed Steps**:
 
 1. **Click Project in Navigator** (left sidebar)
-   - Look for "Stoic_Companion" with blue icon
+   - Look for "Stoic_Camarade" with blue icon
    - Click it
 
 2. **Select Watch App Target**
    - In main area, under "TARGETS"
-   - Click "**Stoic_Companion Watch App**"
-   - (NOT "Stoic_Companion" without "Watch App")
+   - Click "**Stoic_Camarade Watch App**"
+   - (NOT "Stoic_Camarade" without "Watch App")
 
 3. **Go to Signing & Capabilities Tab**
    - Click tab at top of main area
@@ -83,16 +83,16 @@ Wait for Xcode to fully load...
 
 ### Step 4: Fix Legacy Container Target (IMPORTANT!)
 
-**The legacy "Stoic_Companion" target causes the error!**
+**The legacy "Stoic_Camarade" target causes the error!**
 
 **Option A: Exclude from Archive (RECOMMENDED)**
 
 1. **Menu**: Product → Scheme → Edit Scheme
 2. **Select "Archive"** in left sidebar
 3. **Look at "Build" section**
-4. **Find "Stoic_Companion" (without "Watch App")**
+4. **Find "Stoic_Camarade" (without "Watch App")**
 5. **UNCHECK** the box next to it
-6. **Keep ONLY "Stoic_Companion Watch App" checked**
+6. **Keep ONLY "Stoic_Camarade Watch App" checked**
 7. **Click "Close"**
 
 **This tells Xcode to ONLY archive the Watch App, ignoring the legacy target!**
@@ -103,7 +103,7 @@ Wait for Xcode to fully load...
 
 If you want to keep it in the scheme:
 
-1. **Select "Stoic_Companion" target** (NOT Watch App)
+1. **Select "Stoic_Camarade" target** (NOT Watch App)
 2. **Go to "Signing & Capabilities"**
 3. **UNCHECK "Automatically manage signing"**
 4. **Leave signing identity empty/unconfigured**
@@ -171,7 +171,7 @@ If you want to keep it in the scheme:
 
 1. **Automatic signing is ENABLED**
    - Both Debug and Release
-   - For "Stoic_Companion Watch App" target
+   - For "Stoic_Camarade Watch App" target
 
 2. **Legacy target is EXCLUDED from Archive**
    - Edit Scheme → Archive → Unchecked
@@ -194,9 +194,9 @@ If you want to keep it in the scheme:
 2. **Create App Store Provisioning Profile**:
    - Resources → Profiles → "+"
    - Type: **App Store**
-   - App ID: Select "com.stoic.companion.watchkitapp"
+   - App ID: Select "com.stoic.camarade.watchkitapp"
    - Certificate: Select your Distribution certificate
-   - Name: "Stoic Companion App Store"
+   - Name: "Stoic Camarade App Store"
    - Download
 
 3. **Double-click downloaded profile** to install
@@ -213,7 +213,7 @@ If you want to keep it in the scheme:
 ## ✅ Success Checklist
 
 - [ ] Xcode closed and reopened
-- [ ] "Stoic_Companion Watch App" target selected
+- [ ] "Stoic_Camarade Watch App" target selected
 - [ ] "Automatically manage signing" is CHECKED
 - [ ] Team: Z2U6JRPZ53
 - [ ] Legacy target excluded from Archive scheme
@@ -258,7 +258,7 @@ If you want to keep it in the scheme:
    https://appstoreconnect.apple.com
 
 2. **Check Build Status**:
-   - My Apps → Stoic Companion → Activity
+   - My Apps → Stoic Camarade → Activity
    - Status: "Processing" (10-60 minutes)
 
 3. **When Ready**:

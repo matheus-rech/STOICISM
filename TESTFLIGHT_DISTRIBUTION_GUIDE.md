@@ -1,13 +1,13 @@
-# TestFlight Distribution Guide for Stoic Companion
+# TestFlight Distribution Guide for Stoic Camarade
 
 ## Current Issue
 
-The command-line archive failed due to provisioning profile requirements. The **legacy "Stoic_Companion" target** (which we archived earlier) is causing conflicts.
+The command-line archive failed due to provisioning profile requirements. The **legacy "Stoic_Camarade" target** (which we archived earlier) is causing conflicts.
 
 **Error Summary:**
 ```
 - Legacy target needs provisioning profile for "Test.Stoic-Companion" ❌
-- Watch App target needs provisioning profile for "com.stoic.companion.watchkitapp" ✅
+- Watch App target needs provisioning profile for "com.stoic.camarade.watchkitapp" ✅
 - Your team has no registered devices for automatic provisioning
 ```
 
@@ -23,7 +23,7 @@ Before archiving, ensure you have:
 
 - ✅ Active Apple Developer Program membership ($99/year)
 - ✅ App ID created in https://developer.apple.com/account/
-  - Bundle ID: `com.stoic.companion.watchkitapp`
+  - Bundle ID: `com.stoic.camarade.watchkitapp`
   - Capabilities: HealthKit enabled
 - ✅ At least one Apple Watch registered (for testing)
 
@@ -31,20 +31,20 @@ Before archiving, ensure you have:
 
 ```bash
 cd /Users/matheusrech/Desktop/STOICISM-main
-open Stoic_Companion.xcodeproj
+open Stoic_Camarade.xcodeproj
 ```
 
 #### 3. Configure Signing (One-time Setup)
 
-1. Select **Stoic_Companion.xcodeproj** in Project Navigator
-2. Select **"Stoic_Companion Watch App" target**
+1. Select **Stoic_Camarade.xcodeproj** in Project Navigator
+2. Select **"Stoic_Camarade Watch App" target**
 3. Go to **"Signing & Capabilities"** tab
 4. Ensure settings:
    - ✅ **Automatically manage signing** is CHECKED
    - ✅ **Team:** Your team (Z2U6JRPZ53)
-   - ✅ **Bundle Identifier:** com.stoic.companion.watchkitapp
+   - ✅ **Bundle Identifier:** com.stoic.camarade.watchkitapp
 
-5. **IMPORTANT:** Also check the legacy "Stoic_Companion" target:
+5. **IMPORTANT:** Also check the legacy "Stoic_Camarade" target:
    - Either set a valid bundle ID or disable it for archiving
    - Or set it to "Automatically manage signing" with your team
 
@@ -99,17 +99,17 @@ If you prefer command-line archiving:
 
 1. Open Xcode
 2. **Product → Scheme → Edit Scheme**
-3. Select **"Stoic_Companion Watch App"** scheme
+3. Select **"Stoic_Camarade Watch App"** scheme
 4. Go to **Archive** (left sidebar)
-5. Under **"Archive"**, uncheck **"Stoic_Companion"** target
-6. Keep only **"Stoic_Companion Watch App"** checked
+5. Under **"Archive"**, uncheck **"Stoic_Camarade"** target
+6. Keep only **"Stoic_Camarade Watch App"** checked
 7. Save and try archiving again
 
 ### Option B: Fix Legacy Target Bundle ID
 
 Edit the legacy target to have a proper bundle ID:
 
-1. Select "Stoic_Companion" target
+1. Select "Stoic_Camarade" target
 2. Change Bundle Identifier from `Test.Stoic-Companion` to something valid
 3. Or match it to your actual app
 
@@ -124,8 +124,8 @@ Then retry the command-line archive:
 
 ```bash
 xcodebuild archive \
-  -scheme "Stoic_Companion Watch App" \
-  -project Stoic_Companion.xcodeproj \
+  -scheme "Stoic_Camarade Watch App" \
+  -project Stoic_Camarade.xcodeproj \
   -archivePath "./build/StoicCompanion.xcarchive" \
   -destination 'generic/platform=watchOS' \
   -allowProvisioningUpdates
@@ -164,7 +164,7 @@ After uploading to TestFlight:
 
 **Your Project:**
 - Team ID: Z2U6JRPZ53
-- Bundle ID: com.stoic.companion.watchkitapp ✅
+- Bundle ID: com.stoic.camarade.watchkitapp ✅
 - Signing: Automatic ✅
 - Capabilities: HealthKit ✅
 - Platform: watchOS only ✅
@@ -175,7 +175,7 @@ After uploading to TestFlight:
 - ✅ Signing configuration exists
 
 **What Needs Attention:**
-- ⚠️ Legacy "Stoic_Companion" target (archived but still in project)
+- ⚠️ Legacy "Stoic_Camarade" target (archived but still in project)
 - ⚠️ Need to register devices OR use Xcode GUI for provisioning
 - ⚠️ Need to create App ID in App Store Connect (if not done)
 

@@ -1,6 +1,6 @@
 /**
  * StoicGeminiService.swift
- * Gemini AI integration for Stoic Companion
+ * Gemini AI integration for Stoic Camarade
  *
  * This can be used in both watchOS (limited) and iOS companion app (full features)
  */

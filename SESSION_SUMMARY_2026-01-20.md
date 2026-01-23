@@ -16,7 +16,7 @@
 ---
 
 ### 2. ✅ Legacy Scheme Archival
-- **Archived** legacy "Stoic_Companion" scheme safely
+- **Archived** legacy "Stoic_Camarade" scheme safely
 - **Created** archive folder: `_ARCHIVE_Legacy_Scheme_20260119/`
 - **Backed up** all project files before changes
 - **Cleaned up** Xcode UI to show only active Watch App scheme
@@ -28,7 +28,7 @@
 - `xcschememanagement.plist.backup` - Original scheme config
 - `project.pbxproj.backup_20260119_232629` - Project file backup
 
-**Result:** Xcode UI now shows only "Stoic_Companion Watch App" scheme (cleaner interface)
+**Result:** Xcode UI now shows only "Stoic_Camarade Watch App" scheme (cleaner interface)
 
 ---
 
@@ -94,7 +94,7 @@ Priority 3: Local quotes (guaranteed availability)
 
 **Issue Found:**
 - Command-line archive failed due to legacy target needing provisioning
-- Legacy "Stoic_Companion" target has invalid bundle ID: `Matheus-Rech`
+- Legacy "Stoic_Camarade" target has invalid bundle ID: `Matheus-Rech`
 
 **Solutions Provided:**
 - **Recommended:** Use Xcode GUI (Product → Archive)
@@ -103,7 +103,7 @@ Priority 3: Local quotes (guaranteed availability)
 
 **Quick Steps for TestFlight:**
 ```bash
-open Stoic_Companion.xcodeproj
+open Stoic_Camarade.xcodeproj
 # Select "Any watchOS Device" → Product → Archive → Distribute
 ```
 
@@ -154,7 +154,7 @@ open Stoic_Companion.xcodeproj
 - [ ] Verify domain configuration in Railway settings
 
 ### Priority 3: TestFlight Distribution
-- [ ] Open Xcode: `open Stoic_Companion.xcodeproj`
+- [ ] Open Xcode: `open Stoic_Camarade.xcodeproj`
 - [ ] Select "Any watchOS Device (arm64)"
 - [ ] Product → Archive
 - [ ] Distribute to App Store Connect
@@ -196,9 +196,9 @@ curl -X POST https://stoicism-production.up.railway.app/quote \
 
 ### Project Information
 - **Location:** `/Users/matheusrech/Desktop/STOICISM-main/`
-- **Xcode Project:** `Stoic_Companion.xcodeproj`
-- **Active Scheme:** "Stoic_Companion Watch App"
-- **Bundle ID:** `com.stoic.companion.watchkitapp`
+- **Xcode Project:** `Stoic_Camarade.xcodeproj`
+- **Active Scheme:** "Stoic_Camarade Watch App"
+- **Bundle ID:** `com.stoic.camarade.watchkitapp`
 - **Team ID:** `Z2U6JRPZ53`
 
 ### AI Configuration (in Config.swift)
@@ -233,8 +233,8 @@ debugMode = true
 
 ### 2. "Why are there 2 schemes?"
 **Answer:** Legacy project structure:
-- "Stoic_Companion" - Legacy iOS target with invalid bundle ID
-- "Stoic_Companion Watch App" - Active watchOS app (use this)
+- "Stoic_Camarade" - Legacy iOS target with invalid bundle ID
+- "Stoic_Camarade Watch App" - Active watchOS app (use this)
 - **Fixed:** Archived legacy scheme to avoid confusion
 
 ### 3. "Is AI working in the app?"
@@ -289,7 +289,7 @@ debugMode = true
 
 4. **Continue with TestFlight** if Railway is working:
    ```bash
-   open Stoic_Companion.xcodeproj
+   open Stoic_Camarade.xcodeproj
    ```
 
 ---
@@ -299,17 +299,17 @@ debugMode = true
 ### Build & Test
 ```bash
 # Build for simulator
-xcodebuild -scheme "Stoic_Companion Watch App" \
+xcodebuild -scheme "Stoic_Camarade Watch App" \
   -configuration Debug \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)' \
   -allowProvisioningUpdates \
   build
 
 # Open in Xcode
-open Stoic_Companion.xcodeproj
+open Stoic_Camarade.xcodeproj
 
 # List schemes
-xcodebuild -list -project Stoic_Companion.xcodeproj
+xcodebuild -list -project Stoic_Camarade.xcodeproj
 ```
 
 ### Test RAG API
@@ -326,7 +326,7 @@ curl -X POST https://stoicism-production.up.railway.app/quote \
 ### Restore Archived Scheme (if needed)
 ```bash
 cp _ARCHIVE_Legacy_Scheme_20260119/xcschememanagement.plist.backup \
-   Stoic_Companion.xcodeproj/xcuserdata/matheusrech.xcuserdatad/xcschemes/xcschememanagement.plist
+   Stoic_Camarade.xcodeproj/xcuserdata/matheusrech.xcuserdatad/xcschemes/xcschememanagement.plist
 ```
 
 ---

@@ -24,7 +24,7 @@
 - `FIX_SIGNING_VISUAL_GUIDE.md` - Visual signing guide
 
 **Test Configuration (1)**:
-- `Stoic_Companion.xctestplan` - Proper test plan setup
+- `Stoic_Camarade.xctestplan` - Proper test plan setup
 
 ### ⚙️ CONFIGURATION UPDATES (3)
 
@@ -35,11 +35,11 @@
    - Disabled deprecated bitcode settings
    - Disabled auto version management
 
-2. **Stoic_Companion Watch App.xcscheme** - Improved build:
+2. **Stoic_Camarade Watch App.xcscheme** - Improved build:
    - Enabled automatic dependency resolution (`buildImplicitDependencies: YES`)
    - Added legacy iOS target to build entries (safer builds)
 
-3. **Stoic_Companion.xcscheme** - New scheme added:
+3. **Stoic_Camarade.xcscheme** - New scheme added:
    - Additional scheme for legacy target compatibility
 
 ### 🗑️ REMOVED OUTDATED FILES (14)
@@ -98,7 +98,7 @@ cd /Users/matheusrech/Downloads/deploy/STOICISM-main
 ./AUTOMATED_ARCHIVE.sh
 
 # Option 2: Manual via Xcode
-open Stoic_Companion.xcodeproj
+open Stoic_Camarade.xcodeproj
 # Then: Product → Archive → Distribute App
 ```
 

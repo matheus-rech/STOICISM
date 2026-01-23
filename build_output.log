@@ -1,0 +1,5 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme "Stoic_Camarade Watch App"  -configuration Debug  -destination "platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)"  -allowProvisioningUpdates  build
+
+2026-01-23 10:42:09.520 xcodebuild[55464:1489692] Writing error result bundle to /var/folders/fy/nt00dfqn49x7tsn2b3kb67bc0000gn/T/ResultBundle_2026-23-01_10-42-0009.xcresult
+xcodebuild: error: Unknown build action ''.

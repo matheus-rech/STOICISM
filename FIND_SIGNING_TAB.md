@@ -11,7 +11,7 @@
 **What you should see:**
 ```
 ┌─────────────────────┐
-│ 📁 Stoic_Companion  │ ← Blue folder icon (this is the PROJECT)
+│ 📁 Stoic_Camarade  │ ← Blue folder icon (this is the PROJECT)
 │   📄 File1.swift    │
 │   📄 File2.swift    │
 │   📁 Folder         │
@@ -28,7 +28,7 @@
 
 **Where**: LEFT sidebar, very TOP item
 
-**Look for**: "Stoic_Companion" with a **blue app icon** (not a folder)
+**Look for**: "Stoic_Camarade" with a **blue app icon** (not a folder)
 
 **Action**: **Click this ONCE**
 
@@ -41,29 +41,29 @@ After clicking the project, the **main center area** should change to show:
 ```
 ┌──────────────────────────────────────────┐
 │ PROJECT                                  │
-│   Stoic_Companion                        │
+│   Stoic_Camarade                        │
 │                                          │
 │ TARGETS                                  │
-│   Stoic_Companion                        │ ← Legacy iOS target
-│   Stoic_CompanionTests                   │
-│   Stoic_CompanionUITests                 │
-│   Stoic_Companion Watch App              │ ← YOUR TARGET (click this!)
-│   Stoic_Companion Watch AppTests         │
-│   Stoic_Companion Watch AppUITests       │
+│   Stoic_Camarade                        │ ← Legacy iOS target
+│   Stoic_CamaradeTests                   │
+│   Stoic_CamaradeUITests                 │
+│   Stoic_Camarade Watch App              │ ← YOUR TARGET (click this!)
+│   Stoic_Camarade Watch AppTests         │
+│   Stoic_Camarade Watch AppUITests       │
 └──────────────────────────────────────────┘
 ```
 
 **If you DON'T see this list:**
 - You didn't click the project icon
-- Try clicking "Stoic_Companion" with the blue icon again
+- Try clicking "Stoic_Camarade" with the blue icon again
 
 ---
 
-### Step 4: Click "Stoic_Companion Watch App" Target
+### Step 4: Click "Stoic_Camarade Watch App" Target
 
 **Where**: In the TARGETS list (center area)
 
-**Which one**: "**Stoic_Companion Watch App**" (has "Watch App" in the name)
+**Which one**: "**Stoic_Camarade Watch App**" (has "Watch App" in the name)
 
 **Action**: Click it ONCE
 
@@ -114,7 +114,7 @@ After clicking the target, you should see tabs at the TOP of the main area:
 │                                             │
 │ Team: [Dropdown]                            │
 │                                             │
-│ Bundle Identifier: com.stoic.companion...   │
+│ Bundle Identifier: com.stoic.camarade...   │
 │                                             │
 └─────────────────────────────────────────────┘
 ```
@@ -144,7 +144,7 @@ After clicking the target, you should see tabs at the TOP of the main area:
 
 2. **You selected the wrong item**
    - Make sure you selected a TARGET, not the PROJECT
-   - Select "Stoic_Companion Watch App" under TARGETS
+   - Select "Stoic_Camarade Watch App" under TARGETS
 
 ---
 
@@ -154,7 +154,7 @@ After clicking the target, you should see tabs at the TOP of the main area:
 
 1. Press **⌘1** to show the Project Navigator
 2. Click the **blue folder icon** at top-left of left sidebar
-3. Then click "Stoic_Companion" (project, blue icon)
+3. Then click "Stoic_Camarade" (project, blue icon)
 
 ---
 
@@ -190,9 +190,9 @@ Follow this in order:
 
 - [ ] **Step 1**: Press ⌘1 (or click folder icon top-left)
 - [ ] **Step 2**: Left sidebar shows file list
-- [ ] **Step 3**: Click "Stoic_Companion" (blue icon, top of list)
+- [ ] **Step 3**: Click "Stoic_Camarade" (blue icon, top of list)
 - [ ] **Step 4**: Main area now shows PROJECT and TARGETS
-- [ ] **Step 5**: Under TARGETS, click "Stoic_Companion Watch App"
+- [ ] **Step 5**: Under TARGETS, click "Stoic_Camarade Watch App"
 - [ ] **Step 6**: Look at TOP of main area for tabs
 - [ ] **Step 7**: Click "Signing & Capabilities" tab
 - [ ] **Step 8**: You should now see signing options!
@@ -204,12 +204,12 @@ Follow this in order:
 Try this alternative path:
 
 1. **Close Xcode completely** (⌘Q)
-2. **Reopen**: `open Stoic_Companion.xcodeproj`
+2. **Reopen**: `open Stoic_Camarade.xcodeproj`
 3. **Wait** for Xcode to fully load
 4. **Press ⌘1** to ensure Navigator is showing
-5. **Click** the project icon (blue, says "Stoic_Companion")
+5. **Click** the project icon (blue, says "Stoic_Camarade")
 6. **Look** at the main center area - you should see TARGETS list
-7. **Click** "Stoic_Companion Watch App" in TARGETS
+7. **Click** "Stoic_Camarade Watch App" in TARGETS
 8. **Look** at the tabs at top of main area
 9. **Click** "Signing & Capabilities"
 
@@ -219,8 +219,8 @@ Try this alternative path:
 
 ### Left Sidebar (Navigator):
 ```
-📁 Stoic_Companion          ← This is a PROJECT (blue icon)
-  📄 Stoic_CompanionApp.swift
+📁 Stoic_Camarade          ← This is a PROJECT (blue icon)
+  📄 Stoic_CamaradeApp.swift
   📄 ContentView.swift
   📁 Assets.xcassets
 ```
@@ -228,11 +228,11 @@ Try this alternative path:
 ### Main Area After Selecting Project:
 ```
 PROJECT
-  Stoic_Companion
+  Stoic_Camarade
 
 TARGETS                     ← This list appears
-  Stoic_Companion
-  Stoic_Companion Watch App  ← Click this one!
+  Stoic_Camarade
+  Stoic_Camarade Watch App  ← Click this one!
   [other targets...]
 ```
 

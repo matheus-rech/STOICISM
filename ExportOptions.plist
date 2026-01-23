@@ -20,8 +20,8 @@
     <string>automatic</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>com.stoic.companion.watchkitapp</key>
-        <string>Stoic Companion Watch App Store</string>
+        <key>com.stoic.camarade.watchkitapp</key>
+        <string>Stoic Camarade Watch App Store</string>
     </dict>
 </dict>
 </plist>

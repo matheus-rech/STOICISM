@@ -2,7 +2,7 @@
 
 ## Files Ready to Add (All 6 files are already in the correct directory)
 
-Located in: `/Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Companion Watch App/`
+Located in: `/Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Camarade Watch App/`
 
 1. ✅ `MementoMoriDisplayView.swift` (284 lines)
 2. ✅ `TodaysPrioritiesView.swift` (339 lines)
@@ -16,14 +16,14 @@ Located in: `/Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Companion W
 ### Method 1: Drag and Drop (Easiest) ⭐
 
 1. **Open Xcode project** (already done - it's opening now!)
-   - File: `Stoic_Companion.xcodeproj`
+   - File: `Stoic_Camarade.xcodeproj`
 
 2. **In Xcode's Project Navigator (left sidebar)**:
-   - Find the "Stoic_Companion Watch App" folder (blue icon)
-   - Right-click on it → **"Add Files to 'Stoic_Companion'..."**
+   - Find the "Stoic_Camarade Watch App" folder (blue icon)
+   - Right-click on it → **"Add Files to 'Stoic_Camarade'..."**
 
 3. **In the file picker**:
-   - Navigate to: `Stoic_Companion Watch App` folder
+   - Navigate to: `Stoic_Camarade Watch App` folder
    - Select all 6 files:
      - ⬜ MementoMoriDisplayView.swift
      - ⬜ TodaysPrioritiesView.swift
@@ -34,7 +34,7 @@ Located in: `/Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Companion W
 
 4. **In the dialog box, ensure**:
    - ✅ **"Copy items if needed"** is UNCHECKED (files are already in correct location)
-   - ✅ **"Add to targets"** → Check "Stoic_Companion Watch App"
+   - ✅ **"Add to targets"** → Check "Stoic_Camarade Watch App"
    - ✅ **"Create groups"** is selected (NOT "Create folder references")
 
 5. **Click "Add"**
@@ -48,16 +48,16 @@ If the files were created after Xcode opened, they might not appear in the picke
 1. **Close Xcode completely** (⌘Q)
 2. **Reopen the project**:
    ```bash
-   open Stoic_Companion.xcodeproj
+   open Stoic_Camarade.xcodeproj
    ```
 3. **Follow Method 1 steps again** - files should now appear
 
 ## Verify the Files Were Added
 
 ### Quick Check:
-1. In Xcode Project Navigator, look for the 6 new files under "Stoic_Companion Watch App"
+1. In Xcode Project Navigator, look for the 6 new files under "Stoic_Camarade Watch App"
 2. Click on any file - it should open in the editor
-3. Look at the right panel → "Target Membership" → "Stoic_Companion Watch App" should be checked
+3. Look at the right panel → "Target Membership" → "Stoic_Camarade Watch App" should be checked
 
 ### Build Test:
 ```bash
@@ -77,7 +77,7 @@ If build succeeds → ✅ Files are properly integrated!
 
 ### Option 2: Simulator
 
-1. **Select target**: "Stoic_Companion Watch App" scheme
+1. **Select target**: "Stoic_Camarade Watch App" scheme
 2. **Select device**: "Apple Watch Series 11 (42mm)"
 3. **Run**: ⌘R (or Product → Run)
 
@@ -138,7 +138,7 @@ NavigationLink(destination: BoxBreathingDisplayView()) {
 ## Troubleshooting
 
 ### Issue: "Cannot find [Component] in scope"
-**Fix**: Ensure the file is added to the "Stoic_Companion Watch App" target (check Target Membership in File Inspector)
+**Fix**: Ensure the file is added to the "Stoic_Camarade Watch App" target (check Target Membership in File Inspector)
 
 ### Issue: "Build failed - duplicate symbols"
 **Fix**: Check that files aren't duplicated in Build Phases → Compile Sources
@@ -183,5 +183,5 @@ If you encounter any issues:
 ---
 
 **Created**: 2026-01-22
-**Project**: Stoic Companion watchOS App
+**Project**: Stoic Camarade watchOS App
 **Source**: HTML mockup conversion with html-to-swiftui-converter skill

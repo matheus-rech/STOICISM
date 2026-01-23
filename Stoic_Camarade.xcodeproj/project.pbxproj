@@ -1,0 +1,1258 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0109CF186B454E8B8C602D60 /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1962B368DFC74ADD88A04DF2 /* AppIntents.framework */; };
+		0253D58C893594E5ECA3568D /* BackendAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF90444CC060CA8CEA7829F2 /* BackendAPIServiceTests.swift */; };
+		032759D6302941A69AA12DAB /* ToolsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5570DC90F242D69464C013 /* ToolsGridView.swift */; };
+		189736C8DBE84801AEEB999B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3A2435D9542C3A81BF3AB /* PersistenceManager.swift */; };
+		2375C6D82B6F4CD78C4D391F /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B5DEDE881461EA880ED81 /* GeminiService.swift */; };
+		2AB4208C421E4ED08FD9E323 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2F7E088CE4806B4615162 /* ContentView.swift */; };
+		33B7307B6A75452EB7AEC973 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E063D01E7ACD453093CBBBC4 /* NotificationManager.swift */; };
+		3DE2899A935CB769C32253AF /* PhilosopherLibraryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E43E149AB3B8BBDBB5F4B8 /* PhilosopherLibraryViewTests.swift */; };
+		49C3A1F58B0042E3AFF74261 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9085C813D7874E6EA75F65BC /* Config.swift */; };
+		4BB1E0A45EA145C7AA129DA0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A666E999B364E6C88B57AAE /* FavoritesView.swift */; };
+		520B0DE08DB148D48D7422C9 /* StoicQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1844B87D691E4D6097E9DC75 /* StoicQuotes.json */; };
+		54BF3CBA5B2F41C088FB3BAC /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15897FA7557143948EE6A11E /* JournalView.swift */; };
+		55805580D01D47459DF487DE /* TomorrowFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E89BD5DB2CF44F6876170CF /* TomorrowFocusView.swift */; };
+		574A9994C76C49EC9C71793B /* NegativeVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64148D955A5A4127985F6A1A /* NegativeVisualizationView.swift */; };
+		5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */; };
+		60B6EED071D3475F9DA145FC /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44230E5DDF4B8DBD0B31EC /* ChallengesView.swift */; };
+		61518664E2C64DEA82F3D602 /* SOSPanicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967468A79FB41D7B231CC28 /* SOSPanicView.swift */; };
+		633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */; };
+		742DE5BE0C5F421183737D94 /* PhilosopherLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */; };
+		7B31FD1539334F4A9BFB4AC4 /* LLMServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6AEA3E793433BB268D93A /* LLMServiceFactory.swift */; };
+		7D7346DB88534EFCB3FA8CE6 /* MementoMoriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4A39BDE1A4CBAB75CC541 /* MementoMoriView.swift */; };
+		7F8C40545AAE41FAA89EBA7F /* VirtueLoggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0693CA6D694ADD9BF27BFA /* VirtueLoggingView.swift */; };
+		8000EDEC7EB8480EA9D6F6CC /* StoicIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DFD8AD0EF9458881D5E032 /* StoicIntents.swift */; };
+		806EC27F1A1D4A47BA2458AC /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B716C4F0D4F758969A03D /* BreathingView.swift */; };
+		9C650428E2C849A087C033D8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2B6856A53C4FF38EB1E054 /* HealthKit.framework */; };
+		A45A71066243461A804444C9 /* LLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CC740D7FB54515ABF1A8FD /* LLMService.swift */; };
+		A579E3ACD1C04D7195846217 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3588714C32B74461B379FC5A /* ComplicationController.swift */; };
+		B27B38C9DCCE43C7B50D086F /* Stoic_CamaradeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AEC7D6A14433EBCAD5C84 /* Stoic_CamaradeApp.swift */; };
+		B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */; };
+		B5C88269BF2C4FE3AEE44B04 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793763899E834F42BE2C7664 /* SettingsView.swift */; };
+		B902B221D42746DDAD64CC66 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502F70881194B48AC43CFFF /* OpenAIService.swift */; };
+		C45761B950454815B78F449A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D71FB02E9254FE3B3AA9563 /* SwiftUI.framework */; };
+		CAB0109EA1A94D349D31612B /* EveningAuditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5926A94FF84475EB5DB82A6 /* EveningAuditView.swift */; };
+		CDA3392952464BE6AFB9597B /* ConsultMarcusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B31F90F7CB420FBE82589F /* ConsultMarcusView.swift */; };
+		D7D55DEF89694579B4322153 /* BackendAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */; };
+		D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */; };
+		DFE25ED78A48488FB7AB31A5 /* ClaudeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4661AADC2E54DAD88964CCA /* ClaudeService.swift */; };
+		F7578C864C9F43159CB81491 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFE4A16B32E47DFB51D0C70 /* UserNotifications.framework */; };
+		FB1A120BE9AD4C638F01B6B6 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2261CC6E48848F6A932B52B /* HistoryView.swift */; };
+		FCFB2024A62FB4F6AAE6FF9B /* PhilosopherMatchingFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */; };
+		FF85256D2F186FDD008BD212 /* Stoic_Camarade Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FF85256C2F186FDD008BD212 /* Stoic_Camarade Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FF92A386D7DA4A5E957D703D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9647512824E45F39FCE2D23 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		FFC22C6B2F1EBF9A00BF79FD /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			dependencyFile = "$(DERIVED_FILES_DIR)/$(INPUT_FILE_PATH).d";
+			fileType = wrapper.scnassets;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# copySceneKitAssets\n";
+		};
+		FFC22C6C2F1EBFA700BF79FD /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.swift;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# $(SWIFT_EXEC)\n";
+		};
+		FFC22C6E2F1EBFDB00BF79FD /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.c;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# <com.apple.compilers.gcc>\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		FF8525572F186FDD008BD212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF8525482F186FDB008BD212;
+			remoteInfo = Stoic_Camarade;
+		};
+		FF8525612F186FDD008BD212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF8525482F186FDB008BD212;
+			remoteInfo = Stoic_Camarade;
+		};
+		FF85256E2F186FDD008BD212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF85256B2F186FDD008BD212;
+			remoteInfo = "Stoic_Camarade Watch App";
+		};
+		FF85257C2F186FDE008BD212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF85256B2F186FDD008BD212;
+			remoteInfo = "Stoic_Camarade Watch App";
+		};
+		FF8525862F186FDE008BD212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF8525412F186FDB008BD212 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF85256B2F186FDD008BD212;
+			remoteInfo = "Stoic_Camarade Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF8525922F186FDE008BD212 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FF85256D2F186FDD008BD212 /* Stoic_Camarade Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDisplayCardView.swift; sourceTree = "<group>"; };
+		11DFD8AD0EF9458881D5E032 /* StoicIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoicIntents.swift; sourceTree = "<group>"; };
+		140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysPrioritiesView.swift; sourceTree = "<group>"; };
+		15897FA7557143948EE6A11E /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		1844B87D691E4D6097E9DC75 /* StoicQuotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StoicQuotes.json; sourceTree = "<group>"; };
+		1962B368DFC74ADD88A04DF2 /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = System/Library/Frameworks/AppIntents.framework; sourceTree = SDKROOT; };
+		1A8B716C4F0D4F758969A03D /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
+		2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingDisplayView.swift; sourceTree = "<group>"; };
+		2967468A79FB41D7B231CC28 /* SOSPanicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSPanicView.swift; sourceTree = "<group>"; };
+		2B0693CA6D694ADD9BF27BFA /* VirtueLoggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtueLoggingView.swift; sourceTree = "<group>"; };
+		3588714C32B74461B379FC5A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		3D71FB02E9254FE3B3AA9563 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIService.swift; sourceTree = "<group>"; };
+		4A666E999B364E6C88B57AAE /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MementoMoriDisplayView.swift; sourceTree = "<group>"; };
+		5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherMatchingFlowTests.swift; sourceTree = "<group>"; };
+		5AD4A39BDE1A4CBAB75CC541 /* MementoMoriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MementoMoriView.swift; sourceTree = "<group>"; };
+		5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationDisplayView.swift; sourceTree = "<group>"; };
+		5E2AEC7D6A14433EBCAD5C84 /* Stoic_CamaradeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stoic_CamaradeApp.swift; sourceTree = "<group>"; };
+		64148D955A5A4127985F6A1A /* NegativeVisualizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeVisualizationView.swift; sourceTree = "<group>"; };
+		6502F70881194B48AC43CFFF /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		6FC6AEA3E793433BB268D93A /* LLMServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMServiceFactory.swift; sourceTree = "<group>"; };
+		793763899E834F42BE2C7664 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7F5570DC90F242D69464C013 /* ToolsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsGridView.swift; sourceTree = "<group>"; };
+		7F6B5DEDE881461EA880ED81 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		9085C813D7874E6EA75F65BC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		90F2F7E088CE4806B4615162 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9E89BD5DB2CF44F6876170CF /* TomorrowFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowFocusView.swift; sourceTree = "<group>"; };
+		A1B31F90F7CB420FBE82589F /* ConsultMarcusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultMarcusView.swift; sourceTree = "<group>"; };
+		A4661AADC2E54DAD88964CCA /* ClaudeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeService.swift; sourceTree = "<group>"; };
+		B2261CC6E48848F6A932B52B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		BC44230E5DDF4B8DBD0B31EC /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
+		BFFE4A16B32E47DFB51D0C70 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		C8CC740D7FB54515ABF1A8FD /* LLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMService.swift; sourceTree = "<group>"; };
+		CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherLibraryView.swift; sourceTree = "<group>"; };
+		CC2B6856A53C4FF38EB1E054 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D5926A94FF84475EB5DB82A6 /* EveningAuditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningAuditView.swift; sourceTree = "<group>"; };
+		DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesMenuView.swift; sourceTree = "<group>"; };
+		E063D01E7ACD453093CBBBC4 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		EFB3A2435D9542C3A81BF3AB /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		F1E43E149AB3B8BBDBB5F4B8 /* PhilosopherLibraryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilosopherLibraryViewTests.swift; sourceTree = "<group>"; };
+		F9647512824E45F39FCE2D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF16C4902F23A2D5007DCF7F /* Stoic_Camarade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stoic_Camarade.entitlements; sourceTree = "<group>"; };
+		FF8525492F186FDB008BD212 /* Stoic_Camarade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stoic_Camarade.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8525562F186FDD008BD212 /* Stoic_CamaradeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stoic_CamaradeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8525602F186FDD008BD212 /* Stoic_CamaradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stoic_CamaradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF85256C2F186FDD008BD212 /* Stoic_Camarade Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stoic_Camarade Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF85257B2F186FDE008BD212 /* Stoic_Camarade Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic_Camarade Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8525852F186FDE008BD212 /* Stoic_Camarade Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stoic_Camarade Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF90444CC060CA8CEA7829F2 /* BackendAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIServiceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FF85257E2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Stoic_Camarade Watch AppTests";
+			sourceTree = "<group>";
+		};
+		FF8525882F186FDE008BD212 /* Stoic_Camarade Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Stoic_Camarade Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF8525462F186FDB008BD212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525532F186FDD008BD212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF85255D2F186FDD008BD212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525692F186FDD008BD212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C650428E2C849A087C033D8 /* HealthKit.framework in Frameworks */,
+				F7578C864C9F43159CB81491 /* UserNotifications.framework in Frameworks */,
+				C45761B950454815B78F449A /* SwiftUI.framework in Frameworks */,
+				0109CF186B454E8B8C602D60 /* AppIntents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525782F186FDE008BD212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525822F186FDE008BD212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		531E767F0D464B1A88458498 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC2B6856A53C4FF38EB1E054 /* HealthKit.framework */,
+				BFFE4A16B32E47DFB51D0C70 /* UserNotifications.framework */,
+				3D71FB02E9254FE3B3AA9563 /* SwiftUI.framework */,
+				1962B368DFC74ADD88A04DF2 /* AppIntents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF8525402F186FDB008BD212 = {
+			isa = PBXGroup;
+			children = (
+				FF16C4902F23A2D5007DCF7F /* Stoic_Camarade.entitlements */,
+				FF8525702F186FDD008BD212 /* Stoic_Camarade Watch App */,
+				FF85257E2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */,
+				FF8525882F186FDE008BD212 /* Stoic_Camarade Watch AppUITests */,
+				FF85254A2F186FDB008BD212 /* Products */,
+				531E767F0D464B1A88458498 /* Frameworks */,
+				FFCD8A0F2F1F5756002797B4 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		FF85254A2F186FDB008BD212 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF8525492F186FDB008BD212 /* Stoic_Camarade.app */,
+				FF8525562F186FDD008BD212 /* Stoic_CamaradeTests.xctest */,
+				FF8525602F186FDD008BD212 /* Stoic_CamaradeUITests.xctest */,
+				FF85256C2F186FDD008BD212 /* Stoic_Camarade Watch App.app */,
+				FF85257B2F186FDE008BD212 /* Stoic_Camarade Watch AppTests.xctest */,
+				FF8525852F186FDE008BD212 /* Stoic_Camarade Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF8525702F186FDD008BD212 /* Stoic_Camarade Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				5AD4A39BDE1A4CBAB75CC541 /* MementoMoriView.swift */,
+				1A8B716C4F0D4F758969A03D /* BreathingView.swift */,
+				64148D955A5A4127985F6A1A /* NegativeVisualizationView.swift */,
+				4A666E999B364E6C88B57AAE /* FavoritesView.swift */,
+				793763899E834F42BE2C7664 /* SettingsView.swift */,
+				D5926A94FF84475EB5DB82A6 /* EveningAuditView.swift */,
+				3588714C32B74461B379FC5A /* ComplicationController.swift */,
+				1844B87D691E4D6097E9DC75 /* StoicQuotes.json */,
+				7F5570DC90F242D69464C013 /* ToolsGridView.swift */,
+				6502F70881194B48AC43CFFF /* OpenAIService.swift */,
+				E063D01E7ACD453093CBBBC4 /* NotificationManager.swift */,
+				F9647512824E45F39FCE2D23 /* Assets.xcassets */,
+				2967468A79FB41D7B231CC28 /* SOSPanicView.swift */,
+				9085C813D7874E6EA75F65BC /* Config.swift */,
+				6FC6AEA3E793433BB268D93A /* LLMServiceFactory.swift */,
+				7F6B5DEDE881461EA880ED81 /* GeminiService.swift */,
+				EFB3A2435D9542C3A81BF3AB /* PersistenceManager.swift */,
+				15897FA7557143948EE6A11E /* JournalView.swift */,
+				2B0693CA6D694ADD9BF27BFA /* VirtueLoggingView.swift */,
+				11DFD8AD0EF9458881D5E032 /* StoicIntents.swift */,
+				A4661AADC2E54DAD88964CCA /* ClaudeService.swift */,
+				BC44230E5DDF4B8DBD0B31EC /* ChallengesView.swift */,
+				C8CC740D7FB54515ABF1A8FD /* LLMService.swift */,
+				A1B31F90F7CB420FBE82589F /* ConsultMarcusView.swift */,
+				9E89BD5DB2CF44F6876170CF /* TomorrowFocusView.swift */,
+				B2261CC6E48848F6A932B52B /* HistoryView.swift */,
+				5E2AEC7D6A14433EBCAD5C84 /* Stoic_CamaradeApp.swift */,
+				90F2F7E088CE4806B4615162 /* ContentView.swift */,
+				40CFB47A636F4940A39D7D68 /* BackendAPIService.swift */,
+				CAACA89E1FE043D783CE9BE9 /* PhilosopherLibraryView.swift */,
+				4D8CD014C72B42F0969206B7 /* MementoMoriDisplayView.swift */,
+				140CFB697E3C46E3B7312EA7 /* TodaysPrioritiesView.swift */,
+				0DBD8BA380A44CB091E603A7 /* QuoteDisplayCardView.swift */,
+				DA107CF86DAF4380B2F09392 /* FavoritesMenuView.swift */,
+				5E25C1871BFA41549EDD186B /* AffirmationDisplayView.swift */,
+				2932C53B0C6445D990A2B4EF /* BoxBreathingDisplayView.swift */,
+			);
+			path = "Stoic_Camarade Watch App";
+			sourceTree = "<group>";
+		};
+		FFCD8A0F2F1F5756002797B4 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FF90444CC060CA8CEA7829F2 /* BackendAPIServiceTests.swift */,
+				5016718CDA1CFDC994F88FD4 /* PhilosopherMatchingFlowTests.swift */,
+				F1E43E149AB3B8BBDBB5F4B8 /* PhilosopherLibraryViewTests.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF8525482F186FDB008BD212 /* Stoic_Camarade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8525932F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade" */;
+			buildPhases = (
+				FF8525452F186FDB008BD212 /* Sources */,
+				FF8525462F186FDB008BD212 /* Frameworks */,
+				FF8525472F186FDB008BD212 /* Resources */,
+				FF8525922F186FDE008BD212 /* Embed Watch Content */,
+			);
+			buildRules = (
+				FFC22C6C2F1EBFA700BF79FD /* PBXBuildRule */,
+				FFC22C6B2F1EBF9A00BF79FD /* PBXBuildRule */,
+			);
+			dependencies = (
+				FF85256F2F186FDD008BD212 /* PBXTargetDependency */,
+			);
+			name = Stoic_Camarade;
+			packageProductDependencies = (
+			);
+			productName = Stoic_Camarade;
+			productReference = FF8525492F186FDB008BD212 /* Stoic_Camarade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF8525552F186FDD008BD212 /* Stoic_CamaradeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8525962F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_CamaradeTests" */;
+			buildPhases = (
+				FF8525522F186FDD008BD212 /* Sources */,
+				FF8525532F186FDD008BD212 /* Frameworks */,
+				FF8525542F186FDD008BD212 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF8525582F186FDD008BD212 /* PBXTargetDependency */,
+			);
+			name = Stoic_CamaradeTests;
+			packageProductDependencies = (
+			);
+			productName = Stoic_CamaradeTests;
+			productReference = FF8525562F186FDD008BD212 /* Stoic_CamaradeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF85255F2F186FDD008BD212 /* Stoic_CamaradeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF8525992F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_CamaradeUITests" */;
+			buildPhases = (
+				FF85255C2F186FDD008BD212 /* Sources */,
+				FF85255D2F186FDD008BD212 /* Frameworks */,
+				FF85255E2F186FDD008BD212 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF8525622F186FDD008BD212 /* PBXTargetDependency */,
+			);
+			name = Stoic_CamaradeUITests;
+			packageProductDependencies = (
+			);
+			productName = Stoic_CamaradeUITests;
+			productReference = FF8525602F186FDD008BD212 /* Stoic_CamaradeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FF85256B2F186FDD008BD212 /* Stoic_Camarade Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF85258F2F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade Watch App" */;
+			buildPhases = (
+				FF8525682F186FDD008BD212 /* Sources */,
+				FF8525692F186FDD008BD212 /* Frameworks */,
+				FF85256A2F186FDD008BD212 /* Resources */,
+			);
+			buildRules = (
+				FFC22C6E2F1EBFDB00BF79FD /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "Stoic_Camarade Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Stoic_Camarade Watch App";
+			productReference = FF85256C2F186FDD008BD212 /* Stoic_Camarade Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF85257A2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF85259C2F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade Watch AppTests" */;
+			buildPhases = (
+				FF8525772F186FDE008BD212 /* Sources */,
+				FF8525782F186FDE008BD212 /* Frameworks */,
+				FF8525792F186FDE008BD212 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF85257D2F186FDE008BD212 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FF85257E2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */,
+			);
+			name = "Stoic_Camarade Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Stoic_Camarade Watch AppTests";
+			productReference = FF85257B2F186FDE008BD212 /* Stoic_Camarade Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF8525842F186FDE008BD212 /* Stoic_Camarade Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF85259F2F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade Watch AppUITests" */;
+			buildPhases = (
+				FF8525812F186FDE008BD212 /* Sources */,
+				FF8525822F186FDE008BD212 /* Frameworks */,
+				FF8525832F186FDE008BD212 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF8525872F186FDE008BD212 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FF8525882F186FDE008BD212 /* Stoic_Camarade Watch AppUITests */,
+			);
+			name = "Stoic_Camarade Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Stoic_Camarade Watch AppUITests";
+			productReference = FF8525852F186FDE008BD212 /* Stoic_Camarade Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF8525412F186FDB008BD212 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					FF8525482F186FDB008BD212 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FF8525552F186FDD008BD212 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FF8525482F186FDB008BD212;
+					};
+					FF85255F2F186FDD008BD212 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FF8525482F186FDB008BD212;
+					};
+					FF85256B2F186FDD008BD212 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					FF85257A2F186FDE008BD212 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FF85256B2F186FDD008BD212;
+					};
+					FF8525842F186FDE008BD212 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = FF85256B2F186FDD008BD212;
+					};
+				};
+			};
+			buildConfigurationList = FF8525442F186FDB008BD212 /* Build configuration list for PBXProject "Stoic_Camarade" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF8525402F186FDB008BD212;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FF85254A2F186FDB008BD212 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF8525482F186FDB008BD212 /* Stoic_Camarade */,
+				FF8525552F186FDD008BD212 /* Stoic_CamaradeTests */,
+				FF85255F2F186FDD008BD212 /* Stoic_CamaradeUITests */,
+				FF85256B2F186FDD008BD212 /* Stoic_Camarade Watch App */,
+				FF85257A2F186FDE008BD212 /* Stoic_Camarade Watch AppTests */,
+				FF8525842F186FDE008BD212 /* Stoic_Camarade Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF8525472F186FDB008BD212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525542F186FDD008BD212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF85255E2F186FDD008BD212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF85256A2F186FDD008BD212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520B0DE08DB148D48D7422C9 /* StoicQuotes.json in Resources */,
+				FF92A386D7DA4A5E957D703D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525792F186FDE008BD212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525832F186FDE008BD212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF8525452F186FDB008BD212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525522F186FDD008BD212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF85255C2F186FDD008BD212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525682F186FDD008BD212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7346DB88534EFCB3FA8CE6 /* MementoMoriView.swift in Sources */,
+				806EC27F1A1D4A47BA2458AC /* BreathingView.swift in Sources */,
+				574A9994C76C49EC9C71793B /* NegativeVisualizationView.swift in Sources */,
+				4BB1E0A45EA145C7AA129DA0 /* FavoritesView.swift in Sources */,
+				B5C88269BF2C4FE3AEE44B04 /* SettingsView.swift in Sources */,
+				CAB0109EA1A94D349D31612B /* EveningAuditView.swift in Sources */,
+				A579E3ACD1C04D7195846217 /* ComplicationController.swift in Sources */,
+				032759D6302941A69AA12DAB /* ToolsGridView.swift in Sources */,
+				B902B221D42746DDAD64CC66 /* OpenAIService.swift in Sources */,
+				33B7307B6A75452EB7AEC973 /* NotificationManager.swift in Sources */,
+				61518664E2C64DEA82F3D602 /* SOSPanicView.swift in Sources */,
+				49C3A1F58B0042E3AFF74261 /* Config.swift in Sources */,
+				7B31FD1539334F4A9BFB4AC4 /* LLMServiceFactory.swift in Sources */,
+				2375C6D82B6F4CD78C4D391F /* GeminiService.swift in Sources */,
+				189736C8DBE84801AEEB999B /* PersistenceManager.swift in Sources */,
+				54BF3CBA5B2F41C088FB3BAC /* JournalView.swift in Sources */,
+				7F8C40545AAE41FAA89EBA7F /* VirtueLoggingView.swift in Sources */,
+				8000EDEC7EB8480EA9D6F6CC /* StoicIntents.swift in Sources */,
+				DFE25ED78A48488FB7AB31A5 /* ClaudeService.swift in Sources */,
+				60B6EED071D3475F9DA145FC /* ChallengesView.swift in Sources */,
+				A45A71066243461A804444C9 /* LLMService.swift in Sources */,
+				CDA3392952464BE6AFB9597B /* ConsultMarcusView.swift in Sources */,
+				55805580D01D47459DF487DE /* TomorrowFocusView.swift in Sources */,
+				FB1A120BE9AD4C638F01B6B6 /* HistoryView.swift in Sources */,
+				B27B38C9DCCE43C7B50D086F /* Stoic_CamaradeApp.swift in Sources */,
+				2AB4208C421E4ED08FD9E323 /* ContentView.swift in Sources */,
+				D7D55DEF89694579B4322153 /* BackendAPIService.swift in Sources */,
+				742DE5BE0C5F421183737D94 /* PhilosopherLibraryView.swift in Sources */,
+				D9FCF92013AA4F43BA8B7098 /* TodaysPrioritiesView.swift in Sources */,
+				5A62B714A50D419EBFDABE47 /* FavoritesMenuView.swift in Sources */,
+				B3F748C095FD464EB0057FF5 /* AffirmationDisplayView.swift in Sources */,
+				633F0AB9DAC7491995980C33 /* BoxBreathingDisplayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525772F186FDE008BD212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0253D58C893594E5ECA3568D /* BackendAPIServiceTests.swift in Sources */,
+				FCFB2024A62FB4F6AAE6FF9B /* PhilosopherMatchingFlowTests.swift in Sources */,
+				3DE2899A935CB769C32253AF /* PhilosopherLibraryViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8525812F186FDE008BD212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF8525582F186FDD008BD212 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF8525482F186FDB008BD212 /* Stoic_Camarade */;
+			targetProxy = FF8525572F186FDD008BD212 /* PBXContainerItemProxy */;
+		};
+		FF8525622F186FDD008BD212 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF8525482F186FDB008BD212 /* Stoic_Camarade */;
+			targetProxy = FF8525612F186FDD008BD212 /* PBXContainerItemProxy */;
+		};
+		FF85256F2F186FDD008BD212 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF85256B2F186FDD008BD212 /* Stoic_Camarade Watch App */;
+			targetProxy = FF85256E2F186FDD008BD212 /* PBXContainerItemProxy */;
+		};
+		FF85257D2F186FDE008BD212 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF85256B2F186FDD008BD212 /* Stoic_Camarade Watch App */;
+			targetProxy = FF85257C2F186FDE008BD212 /* PBXContainerItemProxy */;
+		};
+		FF8525872F186FDE008BD212 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF85256B2F186FDD008BD212 /* Stoic_Camarade Watch App */;
+			targetProxy = FF8525862F186FDE008BD212 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FF85258D2F186FDE008BD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF85258E2F186FDE008BD212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FF8525902F186FDE008BD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Stoic_Camarade Watch App/Stoic_Camarade.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info_Watch.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Camarade;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stoic.camarade.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		FF8525912F186FDE008BD212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Stoic_Camarade Watch App/Stoic_Camarade.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info_Watch.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Camarade;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stoic.camarade.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		FF8525942F186FDE008BD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Stoic_Camarade.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=watchos*]" = Z2U6JRPZ53;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Camarade;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "Matheus-Rech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "Stoic Matheus";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		FF8525952F186FDE008BD212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Stoic_Camarade.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=watchos*]" = Z2U6JRPZ53;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Stoic_Camarade;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=watchos*]" = "Stoic Matheus";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF8525972F186FDE008BD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-CamaradeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stoic_Camarade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stoic_Camarade";
+			};
+			name = Debug;
+		};
+		FF8525982F186FDE008BD212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-CamaradeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stoic_Camarade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stoic_Camarade";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF85259A2F186FDE008BD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-CamaradeUITests";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = "Matheus-Rech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = Stoic_Camarade;
+			};
+			name = Debug;
+		};
+		FF85259B2F186FDE008BD212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-CamaradeUITests";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=watchos*]" = "Matheus-Rech";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = Stoic_Camarade;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF85259D2F186FDE008BD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stoic_Camarade Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stoic_Camarade Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		FF85259E2F186FDE008BD212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stoic_Camarade Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stoic_Camarade Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		FF8525A02F186FDE008BD212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Stoic_Camarade Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		FF8525A12F186FDE008BD212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z2U6JRPZ53;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Test.Stoic-Camarade-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Stoic_Camarade Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF8525442F186FDB008BD212 /* Build configuration list for PBXProject "Stoic_Camarade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF85258D2F186FDE008BD212 /* Debug */,
+				FF85258E2F186FDE008BD212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF85258F2F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8525902F186FDE008BD212 /* Debug */,
+				FF8525912F186FDE008BD212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8525932F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8525942F186FDE008BD212 /* Debug */,
+				FF8525952F186FDE008BD212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8525962F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_CamaradeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8525972F186FDE008BD212 /* Debug */,
+				FF8525982F186FDE008BD212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF8525992F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_CamaradeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF85259A2F186FDE008BD212 /* Debug */,
+				FF85259B2F186FDE008BD212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF85259C2F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF85259D2F186FDE008BD212 /* Debug */,
+				FF85259E2F186FDE008BD212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF85259F2F186FDE008BD212 /* Build configuration list for PBXNativeTarget "Stoic_Camarade Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF8525A02F186FDE008BD212 /* Debug */,
+				FF8525A12F186FDE008BD212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF8525412F186FDB008BD212 /* Project object */;
+}

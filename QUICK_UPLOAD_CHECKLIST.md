@@ -1,4 +1,4 @@
-o# ⚡ QUICK UPLOAD CHECKLIST - Stoic Companion to App Store
+o# ⚡ QUICK UPLOAD CHECKLIST - Stoic Camarade to App Store
 
 **Xcode is OPEN. Follow these steps in order.**
 
@@ -15,7 +15,7 @@ Click dropdown → Select: "Any watchOS Device (arm64)"
 
 **Looks like:**
 ```
-Stoic_Companion Watch App > Any watchOS Device (arm64)
+Stoic_Camarade Watch App > Any watchOS Device (arm64)
 ```
 
 ⚠️ **MUST be device, NOT simulator!**
@@ -24,8 +24,8 @@ Stoic_Companion Watch App > Any watchOS Device (arm64)
 
 ### 2️⃣ Verify Signing (1 minute)
 
-1. Click "Stoic_Companion" (left sidebar, blue icon)
-2. Select target: "Stoic_Companion Watch App"
+1. Click "Stoic_Camarade" (left sidebar, blue icon)
+2. Select target: "Stoic_Camarade Watch App"
 3. Tab: "Signing & Capabilities"
 4. Check:
    - ✅ Team: Z2U6JRPZ53
@@ -80,7 +80,7 @@ Product → Archive
 **URL:** https://appstoreconnect.apple.com
 
 **Steps:**
-1. Navigate to: **My Apps → Stoic Companion → Activity**
+1. Navigate to: **My Apps → Stoic Camarade → Activity**
 2. Wait 10-60 minutes for processing
 3. When ready: Fill out app information
 4. Upload screenshots (required!)

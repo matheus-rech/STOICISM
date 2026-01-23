@@ -1,11 +1,11 @@
-# 🧪 Stoic Companion - Testing Guide
+# 🧪 Stoic Camarade - Testing Guide
 
 ## Quick Test in Xcode Simulator
 
 ### 1. Open Project
 ```bash
-cd /Users/matheusrech/Pictures/StoicCompanion/Stoic_Companion
-open Stoic_Companion.xcodeproj
+cd /Users/matheusrech/Pictures/StoicCompanion/Stoic_Camarade
+open Stoic_Camarade.xcodeproj
 ```
 
 ### 2. Select Watch Simulator
@@ -94,7 +94,7 @@ Expected behavior:
 On actual watch:
 1. Install app
 2. Wait 5-10 minutes for Siri indexing
-3. Try: "Hey Siri, get Stoic Companion wisdom"
+3. Try: "Hey Siri, get Stoic Camarade wisdom"
 
 Expected: Siri speaks a stoic quote
 
@@ -157,9 +157,9 @@ The app is **designed to work without API keys**:
 ### Issue: App Won't Build
 **Solution**:
 ```bash
-cd /Users/matheusrech/Pictures/StoicCompanion/Stoic_Companion
-xcodebuild -scheme "Stoic_Companion Watch App" clean
-open Stoic_Companion.xcodeproj
+cd /Users/matheusrech/Pictures/StoicCompanion/Stoic_Camarade
+xcodebuild -scheme "Stoic_Camarade Watch App" clean
+open Stoic_Camarade.xcodeproj
 # Product → Clean Build Folder (⇧⌘K)
 # Product → Build (⌘B)
 ```
@@ -205,10 +205,10 @@ If you want to test via command line:
 
 ```bash
 #!/bin/bash
-cd /Users/matheusrech/Pictures/StoicCompanion/Stoic_Companion
+cd /Users/matheusrech/Pictures/StoicCompanion/Stoic_Camarade
 
 echo "Building watchOS app..."
-xcodebuild -scheme "Stoic_Companion Watch App" \
+xcodebuild -scheme "Stoic_Camarade Watch App" \
   -configuration Debug \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)' \
   -allowProvisioningUpdates \
@@ -217,7 +217,7 @@ xcodebuild -scheme "Stoic_Companion Watch App" \
 echo "Installing on simulator..."
 xcrun simctl boot "Apple Watch Series 11 (42mm)"
 xcrun simctl install "Apple Watch Series 11 (42mm)" \
-  "./Build/Products/Debug-watchsimulator/Stoic_Companion Watch App.app"
+  "./Build/Products/Debug-watchsimulator/Stoic_Camarade Watch App.app"
 
 echo "Launching app..."
 xcrun simctl launch "Apple Watch Series 11 (42mm)" \

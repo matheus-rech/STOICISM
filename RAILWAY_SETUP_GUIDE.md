@@ -13,7 +13,7 @@
 
 1. Go to: https://platform.openai.com/api-keys
 2. Click **"+ Create new secret key"**
-3. Name: "Stoic Companion RAG"
+3. Name: "Stoic Camarade RAG"
 4. Click **Create secret key**
 5. **COPY THE KEY** (starts with `sk-proj-...`)
    - ⚠️ You can only see it once!

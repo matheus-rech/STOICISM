@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Stoic Companion** is a watchOS-only context-aware stoic wisdom app for Apple Watch. It delivers personalized quotes from Marcus Aurelius, Epictetus, and Seneca based on real-time health data (heart rate, HRV, activity) and daily rhythms, using AI-powered quote selection and Nano Banana Pro image generation.
+**Stoic Camarade** is a watchOS-only context-aware stoic wisdom app for Apple Watch. It delivers personalized quotes from Marcus Aurelius, Epictetus, and Seneca based on real-time health data (heart rate, HRV, activity) and daily rhythms, using AI-powered quote selection and Nano Banana Pro image generation.
 
-The project root contains the Xcode project at: `Stoic_Companion.xcodeproj`
+The project root contains the Xcode project at: `Stoic_Camarade.xcodeproj`
 
 ## Build Commands
 
@@ -14,34 +14,34 @@ All commands should be run from the repository root (`/path/to/STOICISM-main/`):
 
 ```bash
 # Build for watchOS Simulator (MUST use -allowProvisioningUpdates)
-xcodebuild -scheme "Stoic_Companion Watch App" \
+xcodebuild -scheme "Stoic_Camarade Watch App" \
   -configuration Debug \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)' \
   -allowProvisioningUpdates \
   build
 
 # Clean build
-xcodebuild -scheme "Stoic_Companion Watch App" clean
+xcodebuild -scheme "Stoic_Camarade Watch App" clean
 
 # Run all tests (uses Swift Testing framework, not XCTest)
-xcodebuild test -scheme "Stoic_Companion Watch App" \
+xcodebuild test -scheme "Stoic_Camarade Watch App" \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)' \
   -allowProvisioningUpdates
 
 # Run specific test class
-xcodebuild test -scheme "Stoic_Companion Watch App" \
+xcodebuild test -scheme "Stoic_Camarade Watch App" \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)' \
-  -only-testing:"Stoic_Companion Watch AppTests/BackendAPIServiceTests" \
+  -only-testing:"Stoic_Camarade Watch AppTests/BackendAPIServiceTests" \
   -allowProvisioningUpdates
 
 # Run single test
-xcodebuild test -scheme "Stoic_Companion Watch App" \
+xcodebuild test -scheme "Stoic_Camarade Watch App" \
   -destination 'platform=watchOS Simulator,name=Apple Watch Series 11 (42mm)' \
-  -only-testing:"Stoic_Companion Watch AppTests/BackendAPIServiceTests/testHealthCheck" \
+  -only-testing:"Stoic_Camarade Watch AppTests/BackendAPIServiceTests/testHealthCheck" \
   -allowProvisioningUpdates
 
 # Open in Xcode
-open Stoic_Companion.xcodeproj
+open Stoic_Camarade.xcodeproj
 
 # List available Watch simulators
 xcrun simctl list devices available | grep Watch
@@ -55,7 +55,7 @@ xcrun simctl boot "Apple Watch Series 11 (42mm)"
 
 # Install (path varies based on DerivedData)
 xcrun simctl install "Apple Watch Series 11 (42mm)" \
-  "/path/to/DerivedData/Build/Products/Debug-watchsimulator/Stoic_Companion Watch App.app"
+  "/path/to/DerivedData/Build/Products/Debug-watchsimulator/Stoic_Camarade Watch App.app"
 
 # Launch
 xcrun simctl launch "Apple Watch Series 11 (42mm)" "Test.Stoic-Companion.watchkitapp"
@@ -80,8 +80,8 @@ import Testing
 - Run single test: Use `-only-testing:"TargetName/TestClassName/testMethod"`
 
 **Test Organization**:
-- Unit tests: `Stoic_Companion Watch AppTests/`
-- UI tests: `Stoic_Companion Watch AppUITests/`
+- Unit tests: `Stoic_Camarade Watch AppTests/`
+- UI tests: `Stoic_Camarade Watch AppUITests/`
 - Test targets must be properly configured in Xcode project
 
 ## Architecture
@@ -90,8 +90,8 @@ import Testing
 
 ```
 STOICISM-main/                          # Repository root
-├── Stoic_Companion.xcodeproj           # Xcode project file
-├── Stoic_Companion Watch App/          # Main watchOS app source
+├── Stoic_Camarade.xcodeproj           # Xcode project file
+├── Stoic_Camarade Watch App/          # Main watchOS app source
 │   ├── ContentView.swift               # Main UI + HealthDataManager + QuoteManager + Onboarding
 │   ├── Config.swift                    # LLM/RAG config + API keys (embedded RAGService)
 │   ├── BackendAPIService.swift         # Backend integration (philosopher matching, profiles)
@@ -107,8 +107,8 @@ STOICISM-main/                          # Repository root
 │   ├── ToolsGridView.swift             # Quick access tools + PremiumAssets design system
 │   ├── StoicQuotes.json                # Quote database (30+ quotes, local fallback)
 │   └── [Feature Views]                 # JournalView, BreathingView, etc.
-├── Stoic_Companion Watch AppTests/     # Unit tests (Swift Testing)
-├── Stoic_Companion Watch AppUITests/   # UI tests
+├── Stoic_Camarade Watch AppTests/     # Unit tests (Swift Testing)
+├── Stoic_Camarade Watch AppUITests/   # UI tests
 ├── stoic-knowledge-base/               # Separate Python FastAPI backend
 │   ├── api/stoic_api.py                # FastAPI service (deployed to Railway)
 │   ├── data/                           # 2,160 processed passages with embeddings
@@ -345,15 +345,15 @@ Task {
 
 ### Xcode Configuration
 
-**Scheme**: Single scheme named **"Stoic_Companion Watch App"**
+**Scheme**: Single scheme named **"Stoic_Camarade Watch App"**
 - Includes both Watch App and Watch App Extension targets
 - **MUST** use `-allowProvisioningUpdates` flag in all xcodebuild commands
 - Environment variables can be set in: Product → Scheme → Edit Scheme → Run → Arguments
 
 **Target Membership** (when adding new files):
-- Swift files → "Stoic_Companion Watch App" target
-- Test files → "Stoic_Companion Watch AppTests" target
-- UI test files → "Stoic_Companion Watch AppUITests" target
+- Swift files → "Stoic_Camarade Watch App" target
+- Test files → "Stoic_Camarade Watch AppTests" target
+- UI test files → "Stoic_Camarade Watch AppUITests" target
 
 **Common Xcode Build Issues**:
 | Error | Solution |
@@ -450,9 +450,9 @@ static let useLLMAPI = false
 ### Siri Commands
 
 All phrases must include `\(.applicationName)` per App Intents requirement:
-- "Get Stoic Companion wisdom"
-- "Good morning Stoic Companion"
-- "I need Stoic Companion calm"
+- "Get Stoic Camarade wisdom"
+- "Good morning Stoic Camarade"
+- "I need Stoic Camarade calm"
 
 ### Feature Views
 
@@ -580,7 +580,7 @@ GitHub Actions workflow at `.github/workflows/objective-c-xcode.yml`:
 
 ### HealthKit Entitlements
 
-The app requires HealthKit access (`Stoic_Companion.entitlements`):
+The app requires HealthKit access (`Stoic_Camarade.entitlements`):
 ```xml
 <key>com.apple.developer.healthkit</key>
 <true/>

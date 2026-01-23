@@ -1,4 +1,4 @@
-# 🚀 START HERE: Publishing Stoic Companion to App Store
+# 🚀 START HERE: Publishing Stoic Camarade to App Store
 
 **Status**: ✅ Xcode is OPEN and ready!
 **Time to App Store Connect**: ~30 minutes
@@ -10,7 +10,7 @@
 
 ✅ **Xcode Project**: OPEN in Xcode
 ✅ **Team ID**: Z2U6JRPZ53 configured
-✅ **Bundle ID**: com.stoic.companion.watchkitapp
+✅ **Bundle ID**: com.stoic.camarade.watchkitapp
 ✅ **All Documentation**: Created and ready
 
 ---
@@ -178,8 +178,8 @@ open APP_STORE_CONNECT_COMPLETE_GUIDE.md
 
 ### Your App Details
 ```
-App Name:      Stoic Companion
-Bundle ID:     com.stoic.companion.watchkitapp
+App Name:      Stoic Camarade
+Bundle ID:     com.stoic.camarade.watchkitapp
 Team ID:       Z2U6JRPZ53
 Platform:      watchOS
 Version:       1.0 (or current version)

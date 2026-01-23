@@ -1,0 +1,47 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild archive -scheme "Stoic_Companion Watch App" -project Stoic_Companion.xcodeproj -configuration Release -archivePath ./build/StoicCompanion.xcarchive -destination generic/platform=watchOS -allowProvisioningUpdates "CODE_SIGN_IDENTITY=Apple Distribution" CODE_SIGN_STYLE=Automatic DEVELOPMENT_TEAM=Z2U6JRPZ53
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = Apple Distribution
+    CODE_SIGN_STYLE = Automatic
+    DEVELOPMENT_TEAM = Z2U6JRPZ53
+
+note: Using codesigning identity override: Apple Distribution
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Stoic_Companion Watch App' in project 'Stoic_Companion' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Companion Watch App/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 6ed490c0f7067eaf42a6912080602048
+Build description path: /Users/matheusrech/Library/Developer/Xcode/DerivedData/Stoic_Companion-azpsqkeiioaiafcsguasigrispqh/Build/Intermediates.noindex/ArchiveIntermediates/Stoic_Companion Watch App/IntermediateBuildFilesPath/XCBuildData/6ed490c0f7067eaf42a6912080602048.xcbuilddata
+/Users/matheusrech/Downloads/deploy/STOICISM-main/Stoic_Companion.xcodeproj: error: Stoic_Companion Watch App has conflicting provisioning settings. Stoic_Companion Watch App is automatically signed, but provisioning profile Stoic Companion Watch App Store has been manually specified. Set the provisioning profile value to "Automatic" in the build settings editor, or switch to manual signing in the Signing & Capabilities editor. (in target 'Stoic_Companion Watch App' from project 'Stoic_Companion')
+** ARCHIVE FAILED **
+
+
+The following build commands failed:
+	Archiving project Stoic_Companion with scheme Stoic_Companion Watch App
+(1 failure)

@@ -1,6 +1,6 @@
 # Stoic Knowledge Base
 
-A RAG (Retrieval-Augmented Generation) knowledge base of Stoic philosophy for the Stoic Companion Apple Watch app.
+A RAG (Retrieval-Augmented Generation) knowledge base of Stoic philosophy for the Stoic Camarade Apple Watch app.
 
 ## Live API ✅
 
