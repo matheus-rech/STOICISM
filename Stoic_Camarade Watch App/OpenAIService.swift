@@ -7,10 +7,24 @@
 
 import Foundation
 
-class OpenAIService: LLMService {
+class OpenAIService: LLMServiceBase {
     private let apiKey: String
     private let model: LLMModel
     private let baseURL: String
+
+    /// Fallback quote when quotes array is empty (Seneca)
+    var emptyArrayFallbackQuote: StoicQuote {
+        return StoicQuote(
+            id: "fallback_seneca_001",
+            text: "We suffer more often in imagination than in reality.",
+            author: "Seneca",
+            book: "Letters from a Stoic",
+            contexts: ["anxiety", "perspective", "wisdom"],
+            timeOfDay: nil,
+            heartRateContext: nil,
+            activityContext: nil
+        )
+    }
 
     /// Initialize OpenAI service
     /// - Parameters:
@@ -94,45 +108,7 @@ class OpenAIService: LLMService {
         return quote
     }
 
-    private func buildPrompt(context: HealthContext, quotes: [StoicQuote]) -> String {
-        let quotesJson = quotes.map { quote in
-            """
-            {
-                "id": "\(quote.id)",
-                "text": "\(quote.text)",
-                "author": "\(quote.author)",
-                "contexts": \(quote.contexts)
-            }
-            """
-        }.joined(separator: ",\n")
-
-        return """
-        You are a wise stoic companion helping someone by selecting the perfect quote for their current moment.
-
-        Current Context:
-        - Heart Rate: \(context.heartRate.map { "\(Int($0)) bpm" } ?? "unknown")
-        - Time of Day: \(context.timeOfDay ?? "unknown")
-        - Stress Level: \(context.stressLevel)
-        - Active: \(context.isActive)
-        - Primary Context: \(context.primaryContext)
-        - Active Calories Today: \(context.activeCalories.map { "\(Int($0)) kcal" } ?? "unknown")
-        - Steps Today: \(context.steps.map { "\(Int($0))" } ?? "unknown")
-
-        Available Quotes:
-        [\(quotesJson)]
-
-        Based on this person's current physiological and temporal context, select the single most appropriate stoic quote that would be most helpful and meaningful right now.
-
-        Consider:
-        1. If stressed (elevated heart rate), choose quotes about control and acceptance
-        2. If morning, choose quotes about intention and starting the day
-        3. If evening, choose quotes about reflection and contentment
-        4. If inactive, choose quotes about action and urgency
-        5. If active, choose quotes about discipline and strength
-
-        Respond ONLY with the quote ID (e.g., "ma_001" or "ep_003" or "se_005"). Nothing else.
-        """
-    }
+    // buildPrompt() is now provided by LLMServiceBase protocol extension
 
     private func callOpenAI(prompt: String) async throws -> String {
         guard let url = URL(string: baseURL) else {
@@ -213,49 +189,5 @@ class OpenAIService: LLMService {
         return cleaned
     }
 
-    private func selectQuoteFallback(context: HealthContext, quotes: [StoicQuote]) -> StoicQuote {
-        // Guard against empty quote array
-        guard !quotes.isEmpty else {
-            // Return a hardcoded fallback quote if array is empty
-            return StoicQuote(
-                id: "fallback_seneca_001",
-                text: "We suffer more often in imagination than in reality.",
-                author: "Seneca",
-                book: "Letters from a Stoic",
-                contexts: ["anxiety", "perspective", "wisdom"],
-                timeOfDay: nil,
-                heartRateContext: nil,
-                activityContext: nil
-            )
-        }
-
-        // Fallback logic if API fails
-        let filtered = quotes.filter { quote in
-            var matches = false
-
-            // Match on time of day
-            if let timeOfDay = context.timeOfDay,
-               let quoteTime = quote.timeOfDay,
-               (quoteTime == timeOfDay || quoteTime == "any") {
-                matches = true
-            }
-
-            // Match on context
-            if quote.contexts.contains(context.primaryContext) {
-                matches = true
-            }
-
-            // Match on stress/heart rate
-            if context.stressLevel == .elevated || context.stressLevel == .high {
-                if quote.heartRateContext == "elevated" {
-                    matches = true
-                }
-            }
-
-            return matches
-        }
-
-        // Return random from filtered, or random from all (safe now since we checked isEmpty)
-        return filtered.randomElement() ?? quotes.randomElement()!
-    }
+    // selectQuoteFallback() is now provided by LLMServiceBase protocol extension
 }
